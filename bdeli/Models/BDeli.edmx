@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bdel1142_B.DeliModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bD_Booking">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateBooking" Type="nvarchar" MaxLength="50" />
+          <Property Name="TimeBooking" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Note" Type="nvarchar" MaxLength="200" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="bD_Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="bD_Images">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="image1" Type="nvarchar" MaxLength="50" />
+          <Property Name="image2" Type="nvarchar" MaxLength="50" />
+          <Property Name="image3" Type="nvarchar" MaxLength="50" />
+          <Property Name="image4" Type="nvarchar" MaxLength="50" />
+          <Property Name="image5" Type="nvarchar" MaxLength="50" />
+          <Property Name="image6" Type="nvarchar" MaxLength="50" />
+          <Property Name="image7" Type="nvarchar" MaxLength="50" />
+          <Property Name="image8" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="bD_Introduce">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="30" />
+          <Property Name="Images" Type="nvarchar" MaxLength="200" />
+          <Property Name="Images1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Subtitle" Type="nvarchar" MaxLength="30" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="bD_Service">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Images1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title1" Type="nvarchar" MaxLength="40" />
+          <Property Name="Description1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Images2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title2" Type="nvarchar" MaxLength="40" />
+          <Property Name="Description2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Images3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title3" Type="nvarchar" MaxLength="40" />
+          <Property Name="Description3" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="bD_Slide">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Images" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="bD_Video">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Video" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="bdel1142_BDeliModelStoreContainer">
+          <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Contact" EntityType="Self.bD_Contact" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Images" EntityType="Self.bD_Images" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Service" EntityType="Self.bD_Service" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Video" EntityType="Self.bD_Video" Schema="bdel1142_BDeli" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bdel1142_B.DeliModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="bDeliEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bD_Booking" EntityType="bdel1142_B.DeliModel.bD_Booking" />
+          <EntitySet Name="bD_Contact" EntityType="bdel1142_B.DeliModel.bD_Contact" />
+          <EntitySet Name="bD_Images" EntityType="bdel1142_B.DeliModel.bD_Images" />
+          <EntitySet Name="bD_Introduce" EntityType="bdel1142_B.DeliModel.bD_Introduce" />
+          <EntitySet Name="bD_Service" EntityType="bdel1142_B.DeliModel.bD_Service" />
+          <EntitySet Name="bD_Slide" EntityType="bdel1142_B.DeliModel.bD_Slide" />
+          <EntitySet Name="bD_Video" EntityType="bdel1142_B.DeliModel.bD_Video" />
+        </EntityContainer>
+        <EntityType Name="bD_Booking">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateBooking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TimeBooking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Images">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="image1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Introduce">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Images" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Images1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Subtitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Service">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Images1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Description1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Images2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Description2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Images3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Description3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Slide">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Images" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Video">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Video" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bdel1142_BDeliModelStoreContainer" CdmEntityContainer="bDeliEntities">
+          <EntitySetMapping Name="bD_Booking">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Booking">
+              <MappingFragment StoreEntitySet="bD_Booking">
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TimeBooking" ColumnName="TimeBooking" />
+                <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Contact">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Contact">
+              <MappingFragment StoreEntitySet="bD_Contact">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Images">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Images">
+              <MappingFragment StoreEntitySet="bD_Images">
+                <ScalarProperty Name="image8" ColumnName="image8" />
+                <ScalarProperty Name="image7" ColumnName="image7" />
+                <ScalarProperty Name="image6" ColumnName="image6" />
+                <ScalarProperty Name="image5" ColumnName="image5" />
+                <ScalarProperty Name="image4" ColumnName="image4" />
+                <ScalarProperty Name="image3" ColumnName="image3" />
+                <ScalarProperty Name="image2" ColumnName="image2" />
+                <ScalarProperty Name="image1" ColumnName="image1" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Introduce">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Introduce">
+              <MappingFragment StoreEntitySet="bD_Introduce">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Subtitle" ColumnName="Subtitle" />
+                <ScalarProperty Name="Images1" ColumnName="Images1" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Service">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Service">
+              <MappingFragment StoreEntitySet="bD_Service">
+                <ScalarProperty Name="Description3" ColumnName="Description3" />
+                <ScalarProperty Name="Title3" ColumnName="Title3" />
+                <ScalarProperty Name="Images3" ColumnName="Images3" />
+                <ScalarProperty Name="Description2" ColumnName="Description2" />
+                <ScalarProperty Name="Title2" ColumnName="Title2" />
+                <ScalarProperty Name="Images2" ColumnName="Images2" />
+                <ScalarProperty Name="Description1" ColumnName="Description1" />
+                <ScalarProperty Name="Title1" ColumnName="Title1" />
+                <ScalarProperty Name="Images1" ColumnName="Images1" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Slide">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Slide">
+              <MappingFragment StoreEntitySet="bD_Slide">
+                <ScalarProperty Name="Images" ColumnName="Images" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Video">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Video">
+              <MappingFragment StoreEntitySet="bD_Video">
+                <ScalarProperty Name="Video" ColumnName="Video" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

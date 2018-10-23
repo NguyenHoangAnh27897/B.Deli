@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdeliModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bD_Booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateBooking" Type="DateTime" Precision="0" />
+    <Property Name="TimeBooking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sdt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Images">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="image1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="image8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Introduce">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Subtitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Images1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Images1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Description1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Images2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Description2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Images3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Description3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Slide">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Images" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Video">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="bdeliEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" />
+    <EntitySet Name="bD_Contacts" EntityType="Self.bD_Contacts" />
+    <EntitySet Name="bD_Images" EntityType="Self.bD_Images" />
+    <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" />
+    <EntitySet Name="bD_Service" EntityType="Self.bD_Service" />
+    <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" />
+    <EntitySet Name="bD_Video" EntityType="Self.bD_Video" />
+  </EntityContainer>
+</Schema>

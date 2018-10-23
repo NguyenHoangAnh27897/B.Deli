@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdeliModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bD_Booking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateBooking" Type="date" />
+    <Property Name="TimeBooking" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="bD_Contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sdt" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="bD_Images">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="image1" Type="nvarchar" MaxLength="50" />
+    <Property Name="image2" Type="nvarchar" MaxLength="50" />
+    <Property Name="image3" Type="nvarchar" MaxLength="50" />
+    <Property Name="image4" Type="nvarchar" MaxLength="50" />
+    <Property Name="image5" Type="nvarchar" MaxLength="50" />
+    <Property Name="image6" Type="nvarchar" MaxLength="50" />
+    <Property Name="image7" Type="nvarchar" MaxLength="50" />
+    <Property Name="image8" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="bD_Introduce">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="30" />
+    <Property Name="Images" Type="nvarchar" MaxLength="200" />
+    <Property Name="Subtitle" Type="nvarchar" MaxLength="30" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Images1" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="bD_Service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Images1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="40" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Images2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="40" />
+    <Property Name="Description2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Images3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title3" Type="nvarchar" MaxLength="40" />
+    <Property Name="Description3" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="bD_Slide">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="bD_Video">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="bdeliModelStoreContainer">
+    <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" Schema="dbo" Table="bD.Booking" store:Type="Tables" />
+    <EntitySet Name="bD_Contacts" EntityType="Self.bD_Contacts" Schema="dbo" Table="bD.Contacts" store:Type="Tables" />
+    <EntitySet Name="bD_Images" EntityType="Self.bD_Images" Schema="dbo" Table="bD.Images" store:Type="Tables" />
+    <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" Schema="dbo" Table="bD.Introduce" store:Type="Tables" />
+    <EntitySet Name="bD_Service" EntityType="Self.bD_Service" Schema="dbo" Table="bD.Service" store:Type="Tables" />
+    <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" Schema="dbo" Table="bD.Slide" store:Type="Tables" />
+    <EntitySet Name="bD_Video" EntityType="Self.bD_Video" Schema="dbo" Table="bD.Video" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

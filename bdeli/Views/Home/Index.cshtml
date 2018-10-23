@@ -1,0 +1,336 @@
+﻿@model IEnumerable<bdeli.Models.HomeMaster>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- About Us Area Start -->
+<div scroll-spy="true" id="about-us" class="about-us-block section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h1>@Model.FirstOrDefault().intro.FirstOrDefault().Title</h1>
+                    <div class="section-border"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-lg-3 wow fadeInLeft">
+                <img src="~/Content/b.Deli/Assets/img/about-img-1.png" alt="">
+            </div>
+            <div class="col-6 col-lg-3 wow fadeInLeft">
+                <img src="~/Content/b.Deli/Assets/img/about-img-2.png" alt="">
+            </div>
+            <div class="col-12 col-lg-6">
+                <h3>@Model.FirstOrDefault().intro.FirstOrDefault().Subtitle</h3>
+                <p>@Model.FirstOrDefault().intro.FirstOrDefault().Description</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Us Area End -->
+<!-- Our Team Area Start -->
+<div scroll-spy="true" id="our-team" class="team-block section-padding section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h1>Dịch vụ của chúng tôi</h1>
+                    <div class="section-border"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row team-wrapper wow fadeInUp">
+            <div class="col-md-4">
+                <div class="single-team-item text-center">
+                    <img src="@Model.FirstOrDefault().ser.FirstOrDefault().Images1" alt="">
+                    <h5>@Model.FirstOrDefault().ser.FirstOrDefault().Title1</h5>
+                    <!-- <p class="subtitle">Owner</p> -->
+                    <p>@Model.FirstOrDefault().ser.FirstOrDefault().Description1</p><br><br>
+                    <p><a class="btn cafetora-small-btn" data-toggle="modal" data-target="#team-one" href="#">Tìm hiểu thêm</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-team-item text-center">
+                    <img src="@Model.FirstOrDefault().ser.FirstOrDefault().Images2" alt="">
+                    <h5>@Model.FirstOrDefault().ser.FirstOrDefault().Title2</h5>
+                    <!-- <p class="subtitle">Chef</p> -->
+                    <p>@Model.FirstOrDefault().ser.FirstOrDefault().Description2</p><br><br>
+                    <p><a class="btn cafetora-small-btn" data-toggle="modal" data-target="#team-two" href="#">Tìm hiểu thêm</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-team-item text-center">
+                    <img src="@Model.FirstOrDefault().ser.FirstOrDefault().Images3" alt="">
+                    <h5>@Model.FirstOrDefault().ser.FirstOrDefault().Title3</h5>
+                    <!-- <p class="subtitle">Waiter</p> -->
+                    <p>@Model.FirstOrDefault().ser.FirstOrDefault().Description3</p><br><br>
+                    <p><a class="btn cafetora-small-btn" data-toggle="modal" data-target="#team-three" href="#">Tìm hiểu thêm</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Team 1 Content  Start-->
+<div class="modal fade" id="team-one" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body team-single-modal">
+                <div class="top-area text-center">
+                    <img src="~/Content/b.Deli/Assets/img/team-bg-1.png" alt="">
+                    <h5>Montu Pagla</h5>
+                    <p class="subtitle">Owner</p>
+                    <ul>
+                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="http://pinterest.com/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="content-area">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+
+                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Team 1 Content End-->
+<!-- Team 2 Content  Start-->
+<div class="modal fade" id="team-two" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body team-single-modal">
+                <div class="top-area text-center">
+                    <img src="~/Content/b.Deli/Assets/img/team-bg-2.png" alt="">
+                    <h5>Jorina Bua</h5>
+                    <p class="subtitle">Chef</p>
+                    <ul>
+                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="http://pinterest.com/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="content-area">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+
+                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Team 2 Content End-->
+<!-- Team 3 Content  Start-->
+<div class="modal fade" id="team-three" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body team-single-modal">
+                <div class="top-area text-center">
+                    <img src="~/Content/b.Deli/Assets/img/team-bg-3.png" alt="">
+                    <h5>Rohim Kamla</h5>
+                    <p class="subtitle">Waiter</p>
+                    <ul>
+                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="http://pinterest.com/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="content-area">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+
+                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Team 3 Content End-->
+<!-- Our Team Area End -->
+<!-- Gallery Area Start -->
+<div scroll-spy="true" id="pic-gallery" class="gallery-block section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading dark">
+                    <h1>Hình ảnh</h1>
+                    <div class="section-border"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Gallery 1st Row Start -->
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 01" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image1"><i class="fa fa-plus"></i> <img src="@Model.FirstOrDefault().image.FirstOrDefault().image1" alt=""></a>
+            </div>
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 02" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image2"><i class="fa fa-plus"></i> <img src="@Model.FirstOrDefault().image.FirstOrDefault().image2" alt=""></a>
+            </div>
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 03" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image3"><i class="fa fa-plus"></i> <img src="@Model.FirstOrDefault().image.FirstOrDefault().image3" alt=""></a>
+            </div>
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 04" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image4"><i class="fa fa-plus"></i> <img src="~@Model.FirstOrDefault().image.FirstOrDefault().image4" alt=""></a>
+            </div>
+            <!-- Gallery 1st Row End -->
+            <!-- Gallery 2nd Row Start -->
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 05" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image5"><i class="fa fa-plus"></i> <img src="@Model.FirstOrDefault().image.FirstOrDefault().image5" alt=""></a>
+            </div>
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 06" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image6"><i class="fa fa-plus"></i> <img src="@Model.FirstOrDefault().image.FirstOrDefault().image6" alt=""></a>
+            </div>
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 07" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image7"><i class="fa fa-plus"></i> <img src="@Model.FirstOrDefault().image.FirstOrDefault().image7" alt=""></a>
+            </div>
+            <div class="col-sm-3">
+                <a title="Lorem Ipsum 08" class="gallery-lightbox" href="@Model.FirstOrDefault().image.FirstOrDefault().image8"><i class="fa fa-plus"></i> <img src="@Model.FirstOrDefault().image.FirstOrDefault().image8" alt=""></a>
+            </div>
+            <!-- Gallery 2nd Row End -->
+        </div>
+    </div>
+</div>
+<!-- Gallery Area End -->
+<!-- Video Section Start-->
+
+<div class="video-section section-padding cafetora-overlay text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a onclick="changeVideo('UejYL2yYOL8')"><i class="fa fa-play-circle"></i></a>
+                <h1>@Model.FirstOrDefault().video.FirstOrDefault().Title</h1>
+                <p>@Model.FirstOrDefault().video.FirstOrDefault().Description</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Video Popup -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-label="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content video">
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="iframeYoutube" class="embed-responsive-item" width="816" height="459" src="https://www.youtube.com/embed/UejYL2yYOL8"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Video Section End -->
+<!-- Booking Area Start -->
+<div scroll-spy="true" id="reservation" class="booking-block section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h1>Đặt Bàn</h1>
+                    <div class="section-border"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-lg-3">
+                <div class="booking-info">
+                    <h5>Thời gian mở cửa</h5>
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td><strong>Thứ Hai</strong></td>
+                                <td>10am - 11pm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thứ Ba</strong></td>
+                                <td>10am - 11pm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thứ Tư</strong></td>
+                                <td>10am - 11pm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thứ Năm</strong></td>
+                                <td>10am - 11pm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thứ Sáu</strong></td>
+                                <td>10am - 11pm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thứ Bảy</strong></td>
+                                <td>9am - 12am</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Chủ Nhật</strong></td>
+                                <td>9am - 12am</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-lg-9">
+                <div class="booking-form">
+                    <h5>Đặt trước</h5>
+                    <form action="/home/save" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input id="client-name" name="name" type="text" placeholder="Họ và Tên" required="required">
+                                <input id="client-email" name="email" type="email" placeholder="Email" required="required">
+                                <input id="booking-date" name="date" type="text" placeholder="Ngày đặt" required="required">
+                                <input id="booking-time" name="time" type="text" placeholder="Thời gian đặt" required="required">
+                            </div>
+                            <div class="col-md-6">
+                                <input id="guest" name="guest" type="text" placeholder="Số lượng khách" required="required">
+                                <textarea name="message" id="client-message" cols="30" rows="10" placeholder="Lời nhắn"></textarea>
+                                <button class="btn cafetora-fullwidth-btn" type="submit">Đặt bàn ngay!</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-response"></div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Booking Area End -->
+<!-- Google Map Area Start -->
+<div class="map">
+    <div class="gmap">
+        <div id="map1"></div>
+    </div>
+</div>
+<!-- Google Map Area End -->

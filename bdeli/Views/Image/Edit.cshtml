@@ -1,0 +1,380 @@
+﻿
+
+@model IQueryable<bdeli.Models.bD_Images>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    string[] arrStr;
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Chỉnh sửa hình ảnh</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa hình ảnh</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/image/edit" method="post" enctype="multipart/form-data">
+
+                                <div class="row ">
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image1 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image1.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image1.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images1" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images1" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image1" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images1" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image2 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image2.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image2.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images2" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images2" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image2" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images2" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image3 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image3.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image3.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images3" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images3" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image3" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images3" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image4 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image4.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image4.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images4" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images4" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image4" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images4" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image5 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image5.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image5.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images5" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images5" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image5" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images5" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image6 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image6.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image6.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images6" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images6" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image6" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images6" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image7 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image7.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image1.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images7" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images7" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image7" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images7" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        @if (Model.FirstOrDefault().image8 != null)
+                                        {
+                                            if (Model.FirstOrDefault().image8.Contains(","))
+                                            {
+                                                arrStr = Model.FirstOrDefault().image8.Split(',');
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images8" accept="image/*" multiple="multiple" />
+                                                    <div class="row">
+                                                        @foreach (var img in arrStr)
+                                                        {
+
+                                                            <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageHome/@img') center center no-repeat / cover;">
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                    <br />
+                                                    <input type="file" name="images8" accept="image/*" multiple="multiple" />
+                                                    <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image8" style="width:100%" />
+                                                </div>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
+                                                <br />
+                                                <input type="file" name="images8" accept="image/*" multiple="multiple" />
+                                            </div>
+                                        }
+                                    </div>
+                                <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/Webmaster/js/ckeditor/ckeditor.js"></script>
+<script src="~/Content/Webmaster/js/ckeditor/samples/js/sample.js"></script>
+<script>
+    CKEDITOR.replace('textb');
+    CKEDITOR.replace('texta');
+    CKEDITOR.replace('textc');
+
+</script>
+
