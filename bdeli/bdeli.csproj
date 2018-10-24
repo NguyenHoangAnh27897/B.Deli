@@ -168,6 +168,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\b.Deli\BookingController.cs" />
+    <Compile Include="Controllers\b.Deli\GiftController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
     <Compile Include="Controllers\WebMaster\BookingController.cs" />
@@ -209,6 +211,9 @@
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Service.cs">
+      <DependentUpon>BDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_Settings.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Slide.cs">
@@ -778,6 +783,8 @@
     <Content Include="Views\Image\Edit.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Booking\Index.cshtml" />
+    <Content Include="Views\Gift\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

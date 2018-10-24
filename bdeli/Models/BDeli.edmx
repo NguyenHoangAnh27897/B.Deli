@@ -67,6 +67,14 @@
           <Property Name="Title3" Type="nvarchar" MaxLength="40" />
           <Property Name="Description3" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="bD_Settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="bD_Slide">
           <Key>
             <PropertyRef Name="id" />
@@ -91,6 +99,7 @@
           <EntitySet Name="bD_Images" EntityType="Self.bD_Images" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Service" EntityType="Self.bD_Service" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Settings" EntityType="Self.bD_Settings" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Video" EntityType="Self.bD_Video" Schema="bdel1142_BDeli" store:Type="Tables" />
         </EntityContainer>
@@ -106,6 +115,7 @@
           <EntitySet Name="bD_Service" EntityType="bdel1142_B.DeliModel.bD_Service" />
           <EntitySet Name="bD_Slide" EntityType="bdel1142_B.DeliModel.bD_Slide" />
           <EntitySet Name="bD_Video" EntityType="bdel1142_B.DeliModel.bD_Video" />
+          <EntitySet Name="bD_Settings" EntityType="bdel1142_B.DeliModel.bD_Settings" />
         </EntityContainer>
         <EntityType Name="bD_Booking">
           <Key>
@@ -186,6 +196,14 @@
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Video" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -274,6 +292,15 @@
             <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Video">
               <MappingFragment StoreEntitySet="bD_Video">
                 <ScalarProperty Name="Video" ColumnName="Video" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Settings">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Settings">
+              <MappingFragment StoreEntitySet="bD_Settings">
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="id" ColumnName="id" />

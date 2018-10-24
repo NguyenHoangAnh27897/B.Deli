@@ -8,6 +8,7 @@
     <EntitySet Name="bD_Service" EntityType="bdel1142_B.DeliModel.bD_Service" />
     <EntitySet Name="bD_Slide" EntityType="bdel1142_B.DeliModel.bD_Slide" />
     <EntitySet Name="bD_Video" EntityType="bdel1142_B.DeliModel.bD_Video" />
+    <EntitySet Name="bD_Settings" EntityType="bdel1142_B.DeliModel.bD_Settings" />
   </EntityContainer>
   <EntityType Name="bD_Booking">
     <Key>
@@ -88,5 +89,13 @@
     <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Video" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Settings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
