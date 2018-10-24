@@ -26,31 +26,22 @@ namespace bdeli.Controllers.WebMaster
             }
         }
         [HttpPost]
-        public ActionResult Edit(string title, string description, HttpPostedFileBase[] images)
+        public ActionResult Edit(string title, string description, HttpPostedFileBase images)
         {
             if (Session["Authentication"] != null)
             {
                 string Images = "";
                 if (images != null)
                 {
-                    foreach (HttpPostedFileBase file in images)
+                    if (images.ContentLength > 0)
                     {
-                        if (file != null)
-                        {
-                            if (file.ContentLength > 0)
-                            {
-                                var filename = Path.GetFileName(file.FileName);
-                                var fname = filename.Replace(" ", "_");
-                                var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
-                                file.SaveAs(path);
-                                Images += fname + ",";
-                            }
-                        }
+                        var filename = Path.GetFileName(images.FileName);
+                        var fname = filename.Replace(" ", "_");
+                        var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
+                        images.SaveAs(path);
+                        Images += fname;
                     }
-                    if (Images != "" && Images.Contains(","))
-                    {
-                        Images = Images.Remove(Images.Length - 1);
-                    }
+
                 }
                 var home = db.bD_Slide.Find(1);
                 home.Title = title;
@@ -69,6 +60,6 @@ namespace bdeli.Controllers.WebMaster
             }
         }
 
-    
+
     }
 }

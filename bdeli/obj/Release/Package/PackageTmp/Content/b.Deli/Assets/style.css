@@ -1,0 +1,1053 @@
+/*------------------------------------------------------------------
+
+[TABLE OF CONTENTS]
+
+	01. Global Styles
+    02. Preloaders
+    03. Buttons
+    04. Intro Section
+    05. Header Section
+		5.1. Header and Sticky Bar
+		5.2. Logo
+		5.3. Main Menu
+    06. About Us Section
+    07. Our Menu Section
+    08. Gallery Section
+    09. Our Team Section
+	10. Video Section
+	11. Testimonial Section
+	12. Booking Form Section
+	13. Google Map Section
+    14. Footer Area
+	15. Copyright
+
+-------------------------------------------------------------------*/
+
+/*-----------------------------
+ 1. Global Styles 
+-------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya:700,700i|Lora:400,700');
+
+body {
+    color: #F1B41C;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alegreya', serif;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 20px 0;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 0px;
+}
+
+.cafetora-overlay {
+    position: relative;
+}
+
+.cafetora-overlay:before {
+    background-color: #000;
+    content:"";
+    height:100%;
+    left:0;
+    opacity:0.6;
+    position: absolute;
+    top:0;
+    width:100%;
+}
+
+.cafetora-overlay-white {
+    position: relative;
+}
+
+.cafetora-overlay-white:before {
+    background-color: #000000;
+    content:"";
+    height:100%;
+    left:0;
+    opacity:0.9;
+    position: absolute;
+    top:0;
+    width:100%;
+}
+
+.section-heading {
+    display: block;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-heading h1 {
+    font-size: 55px;
+}
+
+.section-heading.dark h1 {
+    color: #F1B41C;
+}
+
+.section-border {
+    background: #F1B41C;
+    height: 5px;
+    margin: 15px auto 0;
+    width: 85px;
+}
+
+.small-border {
+    background: #F1B41C;
+    height: 3px;
+    margin: 25px 0;
+    width: 45px;
+}
+
+.section-gray {
+    background-color: #000000;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.subtitle {
+    color: #F1B41C;
+    display: inline-block;
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*-----------------------------
+2. Preloaders
+-------------------------------*/
+.spinner {
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+  background-color: #F1B41C;
+  border-radius: 100%;  
+  height: 40px;
+  margin: 100px auto;
+  width: 40px;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.cafetora-site-preloader-wrap {
+    background: #000000 none repeat scroll 0 0;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+.cafetora-site-preloader-wrap .spinner {
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    top: 50%;
+}
+
+/*-----------------------------
+3. Buttons
+-------------------------------*/
+
+.cafetora-small-btn {
+    -webkit-transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property: color;
+    background: #F1B41C;
+    border-radius: 0;
+    border: none;
+    color: #000000;
+    margin-top: 10px;
+    padding: 5px 15px;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: color;
+}
+
+.cafetora-small-btn:before {
+  -webkit-transform-origin: 0 50%;
+  -webkit-transform: scaleX(0);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  background: #000000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+
+.cafetora-small-btn:hover, .cafetora-small-btn:focus, .cafetora-small-btn:active {
+  color: #F1B41C;
+}
+
+.cafetora-fullwidth-btn {
+    -webkit-transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    background: #F1B41C;
+    border-radius: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color: #000000;
+    overflow: hidden;
+    padding: 8px 15px;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+    width: 100%;
+}
+
+.cafetora-fullwidth-btn:hover {
+    background: #000000;
+    color: #F1B41C;
+}
+
+.cafetora-medium-btn {
+    -webkit-transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property: color;
+    background: #F1B41C;
+    border-radius: 0;
+    border: none;
+    color: #000000;
+    padding: 11px 30px;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: color;
+}
+
+.cafetora-medium-btn:before {
+  -webkit-transform-origin: 0 50%;
+  -webkit-transform: scaleX(0);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  background: #000000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+
+.cafetora-medium-btn:hover, .cafetora-medium-btn:focus, .cafetora-medium-btn:active {
+  color: #F1B41C;
+}
+
+.cafetora-small-btn:hover:before, .cafetora-small-btn:focus:before, .cafetora-small-btn:active:before, .cafetora-medium-btn:hover:before, .cafetora-medium-btn:focus:before, .cafetora-medium-btn:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.white-btn {
+    background: #000000;
+    color: #F1B41C;
+    margin-left: 10px;
+}
+
+.white-btn:before {
+  background: #F1B41C;
+}
+
+.white-btn:hover, .white-btn:focus, .white-btn:active {
+  color: #000000;
+}
+
+/*-----------------------------
+4. Intro Section
+-------------------------------*/
+
+.intro {
+    background-color: #373B44;
+   
+    background-size: cover;
+    color: #F1B41C;
+    display: table;
+    height: 100vh;
+    margin: 0;
+    max-width: none;
+    padding: 0 5%;
+    width: 100%;
+}
+
+.intro .content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro-heading {
+  color: #F1B41C;
+  font-size: 55px;
+  position: relative;
+}
+
+.intro-heading .text-wrapper {
+  display: inline-block;
+  line-height: 1em;
+  padding-bottom: 0.15em;
+  padding-top: 0.1em;
+  position: relative;
+}
+
+.intro-heading .line {
+  background-color: #000000;
+  bottom: 0;
+  height: 3px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  transform-origin: 0.5 0;
+  width: 100%;
+}
+
+.intro-heading .ampersand {
+  font-style: italic;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.intro-heading .letters {
+  display: inline-block;
+  opacity: 0;
+  font-size: 40px;
+}
+
+.intro p {
+    max-width: 590px;
+}
+
+/*-----------------------------
+5. Header Section
+-------------------------------*/
+
+/* 5.1. Header and Sticky Bar */
+
+.header-area {
+    padding: 0 5%;
+    background: rgba(0, 0, 0, 1);
+    border-bottom: 1px solid #F1B41C;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.sticky + .our-menu-block {
+  padding-top: 190px;
+}
+
+/* 5.2. Logo */
+
+.logo img {
+    max-width: 270px;
+    padding: 25px 0;
+}
+
+.logo a {
+    color: #000000;
+}
+
+.logo a:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    opacity: 0.9;
+}
+
+.logo h1 {
+    display: inline-block;
+    font-size: 50px;
+    margin: 0;
+    padding: 0px;
+}
+
+/* 5.3. Main Menu */
+
+.main-menu ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.main-menu li a {
+    color: #F1B41C;
+    display: block;
+    font-weight: 700;
+    padding: 30px 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.main-menu li:hover > a {
+    color: #F1B41C;
+    text-decoration: none;
+}
+
+.main-menu li {
+    -webkit-transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    vertical-align: middle;
+}
+
+.main-menu li:before {
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: left, right;
+  -webkit-transition-timing-function: ease-out;
+  background: #F1B41C;
+  content: "";
+  height: 4px;
+  left: 51%;
+  position: absolute;
+  right: 51%;
+  top: 0;
+  transition-duration: 0.3s;
+  transition-property: left, right;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+
+.main-menu li:hover:before, .main-menu li:focus:before, .main-menu li:active:before, .main-menu li.active:before {
+  left: 0;
+  right: 0;
+}
+
+.responsive-menu-wrap {
+    display: none;
+}
+
+/*-----------------------------
+6. About Us Section
+-------------------------------*/
+.about-us-block img {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    outline-offset: -12px;
+    outline: 4px solid #F1B41C;
+    transition: all 0.3s;
+}
+
+.about-us-block img:hover {
+  outline-offset: 0px;
+}
+
+.about-us-block .col-md-3 {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+/*-----------------------------
+7. Our Menu Section
+-------------------------------*/
+.our-menu-block {
+    background: #000;
+}
+
+.single-menu-item {
+  margin: 0 0 30px;
+}
+
+.single-menu-item h5 {
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.pricing {
+    background: #F1B41C;
+    border-radius: 3px;
+    color: #000;
+    display: inline-block;
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0px 7px 2px;
+}
+
+.single-menu-item p {
+    margin: 5px 0;
+}
+
+.menu-lightbox {
+    display: block;
+    position: relative;
+}
+
+.menu-lightbox i.fa {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 0.3s ease 0s;
+    color: #000000;
+    font-size: 16px;
+    left: 50%;
+    line-height: 1.5;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    transition: all 0.3s ease 0s;
+    visibility: hidden;
+    width: 20px;
+    z-index: -1;
+}
+.menu-lightbox:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 0.2s ease 0s;
+    background: #000000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease 0s;
+    visibility: hidden;
+    width: 100%;
+    z-index: -1;
+    border-radius: 50%;
+}
+.menu-lightbox:hover i.fa {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    top: 50%;
+    visibility: visible;
+    z-index: 2;
+}
+.menu-lightbox:hover:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    opacity: 0.7;
+    visibility: visible;
+    z-index: 1;
+}
+
+.single-menu-item img {
+    border-radius: 50%;
+    border: 3px solid #F1B41C;
+    max-width: 100%;
+    height: 115px;
+}
+
+.dotsCont {
+    position: relative;
+    z-index: 9;
+}
+
+.our-menu-block .owl-dots.dotsCont {
+    margin-top: 20px;
+}
+
+.our-menu-block .owl-theme .owl-dot {
+    color: #000000;
+    background: #F1B41C;
+    padding: 10px 40px;
+    cursor: pointer;
+     -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    position: relative;
+}
+
+.our-menu-block .owl-theme .owl-dot:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    color: #F1B41C;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.our-menu-block .owl-theme .owl-dot:hover, .our-menu-block .owl-theme .owl-dot:focus, .our-menu-block .owl-theme .owl-dot:active {
+    color: #F1B41C;
+}
+.our-menu-block .owl-theme .owl-dot:hover:before, .our-menu-block .owl-theme .owl-dot:focus:before, .our-menu-block .owl-theme .owl-dot:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.our-menu-block .owl-dot.active {
+    background: #000000;
+    color: #F1B41C;
+}
+
+/*-----------------------------
+8. Gallery Section
+-------------------------------*/
+
+.gallery-block {
+    background: #000000 url('img/broken_noise.png') repeat scroll center; /* Background pattern from Toptal Subtle Patterns (https://www.toptal.com/designers/subtlepatterns/) */
+    padding-bottom: 0;
+}
+
+.gallery-block .col-sm-3 {
+    padding: 0;
+}
+
+.gallery-lightbox {
+    display: block;
+    position: relative;
+}
+.gallery-lightbox img {
+    width: 100%;
+}
+
+.gallery-lightbox i.fa {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 0.3s ease 0s;
+    color: #F1B41C;
+    font-size: 25px;
+    left: 50%;
+    line-height: 1.5;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    transition: all 0.3s ease 0s;
+    visibility: hidden;
+    width: 20px;
+    z-index: -1;
+}
+.gallery-lightbox:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 0.2s ease 0s;
+    background: #000000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease 0s;
+    visibility: hidden;
+    width: 100%;
+    z-index: -1;
+}
+.gallery-lightbox:hover i.fa {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    top: 50%;
+    visibility: visible;
+    z-index: 2;
+}
+.gallery-lightbox:hover:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    opacity: 0.7;
+    visibility: visible;
+    z-index: 1;
+}
+
+/*-----------------------------
+9. Our Team Section
+-------------------------------*/
+
+.team-wrapper {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+.single-team-item h5, .team-single-modal h5 {
+    margin-bottom: 5px;
+}
+
+.single-team-item img, .team-single-modal img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 8px solid #F1B41C;
+    margin-bottom: 15px;
+    max-height: 320px;
+}
+
+.single-team-item p, .team-single-modal .top-area p {
+    margin: 5px 0;
+}
+
+.team-single-modal i.fa {
+    font-size: 20px;
+    color: #000000;
+}
+.team-single-modal i.fa:hover {
+    color: #F1B41C;
+}
+
+.team-single-modal ul {
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+}
+.team-single-modal ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+.team-single-modal ul li:last-child {
+    margin-right: 0px;
+}
+
+/*-----------------------------
+10. Video Section
+-------------------------------*/
+
+.video-section {
+    background: #0B0B0B url('img/video-bg.jpg') no-repeat fixed center;
+    background-size: cover;
+    object-fit: cover;
+    color: #F1B41C;
+}
+
+.video-section h1{
+    font-size:55px;
+}
+
+.video-section p {
+    margin: 5px 0 0;
+}
+
+.video-section span {
+    font-style: italic;
+}
+
+.video .modal-body {
+    padding: 15px;
+}
+
+.video-section .fa {
+    font-size: 80px;
+    color: #F1B41C;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 50%;
+    height: 81px;
+    width: 81px;
+    margin-bottom: 20px;
+}
+
+.video-section .fa:hover {
+    color: #000000;
+    background: #F1B41C;
+}
+
+/*-----------------------------
+11. Testimonial Section
+-------------------------------*/
+.review-stars {
+    list-style: outside none none;
+    margin: 10px auto 5px;
+    padding: 0;
+    font-size: 12px;
+}
+
+.review-stars li {
+    display: inline-block;
+}
+
+.review-stars i.fa {
+    color: #F1B41C;
+    margin: 0;
+    padding: 0;
+}
+
+.circle-testimonial-item img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 8px solid #F1B41C;
+    margin-bottom: 15px;
+}
+
+.circle-testimonial-item p {
+    margin: 5px 0;
+}
+
+.testimonial-slide-item-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.testimonial-slide-item-tablecell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #F1B41C;
+}
+
+/*-----------------------------
+12. Booking Form Section
+-------------------------------*/
+
+.booking-block {
+    background: url('img/booking-bg.png') repeat scroll left top; /* Background pattern from Toptal Subtle Patterns (https://www.toptal.com/designers/subtlepatterns/) */
+}
+
+.booking-block h5 {
+    margin-bottom: 30px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="number"] {
+    border: 1px solid #F1B41C;
+    margin-bottom: 15px;
+    padding: 7px;
+    width: 100%;
+}
+input[type="text"],input[type="email"] , input[type="number"] textarea{ background: black;}
+::-webkit-input-placeholder {
+   color: #F1B41C;
+}
+
+
+.booking-form input:focus, .booking-form textarea:focus {
+    border: 1px solid #F1B41C;
+}
+
+.booking-form textarea {
+    height: 91px;
+    border: 1px solid #F1B41C;
+    margin-bottom: 15px;
+    padding: 7px;
+    width: 100%;
+}
+
+.booking-info .table td {
+    padding: 3px 0;
+}
+
+/*-----------------------------    
+13. Google Map Section
+-------------------------------*/
+
+.gmap_outer {
+    overflow: hidden;
+    position: relative;
+}
+.gmap {
+    padding: 0;
+    height: 400px;
+}
+.gmap.border {
+    box-shadow: -2px 0 9px -2px #F1B41CF1B41C;
+    padding: 8px;
+}
+#map1 {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+    -webkit-backface-visibility: hidden;  /* Fix for transition flickering */
+}
+
+/*-----------------------------
+14. Footer Area
+-------------------------------*/
+.footer-top-area {
+    border-top: 1px solid  #F1B41C;
+    border-bottom: 1px solid  #F1B41C;
+}
+
+.footer-top-area a {
+    /*color: #F1B41C;*/
+}
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact i.fa {
+    margin-right: 8px;
+}
+
+.footer-contact ul li:first-child i.fa {
+    margin-right: 5px;
+}
+
+.footer-contact ul li:last-child i.fa {
+    margin-right: 12px;
+}
+
+.footer-social ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social i.fa {
+    font-size: 22px;
+    color: #F1B41C;
+    margin-right: 5px;
+}
+.footer-top-area a:hover, .footer-social i.fa:hover {
+    color: rgba(241, 180, 28, 0.5);
+}
+.footer-social ul li {
+    display: inline-block;
+    
+}
+.footer-social ul li:last-child {
+    margin-right: 0px;
+}
+
+/* Instafeed */
+#instafeed a {
+    display: inline-block;
+    width: 30%;
+    margin-right: 3%;
+}
+
+#instafeed a:hover {
+    opacity: 0.8;
+}
+
+/* Newsletter */
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    border: 1px solid #F1B41C;
+    margin-bottom: 15px;
+    padding: 7px;
+    width: 100%;
+}
+
+.newsletter-form input:focus {
+    border: 1px solid #F1B41C;
+}
+
+/*-----------------------------
+15. Copyright
+-------------------------------*/
+
+.footer-copyright-area {
+    padding: 12px 0;
+    background: #000000;
+    color: #F1B41C;
+}
+
+.footer-copyright-area a {
+    color: #F1B41C;
+}
+
+.footer-copyright-area a:hover {
+    color: #000000;
+}
+
+.foot-credit {
+    text-align: right;
+}
+
+/* Back to Top Button */
+
+.go-top {
+	background-color: rgba(241, 180, 28, 1);
+	bottom: 2em;
+	color: #000000;
+	display: none;
+	font-size: 12px;
+	padding: 1em;
+	position: fixed;
+	right: 2em;
+	text-decoration: none;
+    -webkit-transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+}
+
+.go-top:hover {
+	background-color: rgba(0, 0, 0, 1);
+    color: #F1B41C;
+}

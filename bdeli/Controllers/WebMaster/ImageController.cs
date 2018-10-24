@@ -38,7 +38,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images1.SaveAs(path);
-                        images1 += fname + ",";
+                        images1 += fname;
                     }
                 }
 
@@ -51,7 +51,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images2.SaveAs(path);
-                        images2 += fname + ",";
+                        images2 += fname;
                     }
                 }
 
@@ -64,7 +64,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images3.SaveAs(path);
-                        images3 += fname + ",";
+                        images3 += fname;
                     }
                 }
 
@@ -77,7 +77,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images4.SaveAs(path);
-                        images4 += fname + ",";
+                        images4 += fname;
                     }
                 }
 
@@ -90,7 +90,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images5.SaveAs(path);
-                        images5 += fname + ",";
+                        images5 += fname;
                     }
                 }
 
@@ -103,7 +103,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images6.SaveAs(path);
-                        images6 += fname + ",";
+                        images6 += fname;
                     }
                 }
 
@@ -116,7 +116,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images7.SaveAs(path);
-                        images7 += fname + ",";
+                        images7 += fname;
                     }
                 }
 
@@ -129,7 +129,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         Images8.SaveAs(path);
-                        images8 += fname + ",";
+                        images8 += fname;
                     }
                 }
 

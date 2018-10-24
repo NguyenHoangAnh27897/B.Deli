@@ -16,9 +16,15 @@ namespace bdeli.Controllers.WebMaster
         {
             if (Session["Authentication"] != null)
             {
-           
-                var rs = db.bD_Service.Where(st => st.id == 1);
-                return View(rs);
+                try
+                {
+                    var rs = db.bD_Service.Where(st => st.id == 1);
+                    return View(rs);
+                }catch(Exception ex)
+                {
+                    return RedirectToAction("Index", "Error");
+                }
+                
             }
             else
             {
@@ -43,7 +49,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         images1.SaveAs(path);
-                        Images1 += fname + ",";
+                        Images1 += fname ;
                     }
                 }
 
@@ -56,7 +62,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         images2.SaveAs(path);
-                        Images2 += fname + ",";
+                        Images2 += fname;
                     }
                 }
                 string Images3 = "";
@@ -68,7 +74,7 @@ namespace bdeli.Controllers.WebMaster
                         var fname = filename.Replace(" ", "_");
                         var path = Path.Combine(Server.MapPath("~/Images/b.Deli/imageHome"), fname);
                         images3.SaveAs(path);
-                        Images3 += fname + ",";
+                        Images3 += fname;
                     }
                 }
                 var home = db.bD_Service.Find(1);
