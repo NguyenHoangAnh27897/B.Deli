@@ -655,6 +655,83 @@ p {
 }
 
 /*-----------------------------
+8. Custom
+-------------------------------*/
+.gap-escape {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f1b41c57, #F1B41C, #f1b41c57);
+    background-image: -moz-linear-gradient(left, #f1b41c57, #F1B41C, #f1b41c57);
+    background-image: -ms-linear-gradient(left, #f1b41c57, #F1B41C, #f1b41c57);
+    background-image: -o-linear-gradient(left, #f1b41c57, #F1B41C, #f1b41c57);
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: #000000; /*#CCCCCC;*/
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #F1B41C;
+	background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent);
+}
+
+.table.table-custom thead th {
+    border-bottom: 2px solid #F1B41C;
+    background-color: #F1B41C;
+    color: #000000;
+}
+
+.table.table-custom td, .table.table-custom th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 1px solid #F1B41C;
+}
+
+.table.table-custom td input[type=number] {
+    border: 1px solid #F1B41C;
+    width: 75%;
+    margin: 0 auto;
+    color: #F1B41C;
+    background: black;
+}
+
+.table.table-custom td input[type=number]:focus, .table.table-custom td input[type=number]:focus {
+    border: 1px solid #F1B41C;
+}
+
+.callNext i {
+    cursor: pointer;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 0;
+    right: 1.5em;
+    transform: translateY(-2.7em);
+    margin-top: 0 !important;
+}
+
+.owl-carousel .owl-nav button.owl-next, 
+.owl-carousel .owl-nav button.owl-prev {
+    color: #000000;
+}
+
+.relative {
+    position: relative;
+    z-index: 0 !important;
+}
+/*-----------------------------
 8. Gallery Section
 -------------------------------*/
 

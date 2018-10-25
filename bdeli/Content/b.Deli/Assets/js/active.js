@@ -43,15 +43,28 @@
         });
 
         // Testimonial Slider
-        $(".testimonial-slides").owlCarousel({
+        $(".typeGift").owlCarousel({
             items: 1,
-            nav: false,
-            dots: true,
-            autoplay: true,
+            nav: true,
+            dots: false,
+            autoplay: false,
             animateOut: 'slideOutDown',
             animateIn: 'flipInX',
             loop: true,
-            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            navText: [$('i.type_prev'), $('i.type_next')],
+            mouseDrag: false,
+            touchDrag: false,
+        });
+
+        $(".paginate_call").owlCarousel({
+            items: 1,
+            nav: true,
+            dots: false,
+            autoplay: false,
+            animateOut: 'slideOutDown',
+            animateIn: 'flipInX',
+            loop: true,
+            navText: [$('i.pagination_prev'), $('i.pagination_next')],
             mouseDrag: false,
             touchDrag: false,
         });
