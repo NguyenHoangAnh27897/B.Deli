@@ -14,5 +14,6 @@ namespace bdeli.Models
         public IQueryable<bD_Service> ser { get; set; }
         public IQueryable<bD_Contact> con { get; set; }
         public IQueryable<bD_Introduce> intro { get; set; }
+        public IQueryable<bD_Settings> set { get; set; }
     }
 }

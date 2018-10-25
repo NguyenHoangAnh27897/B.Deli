@@ -31,6 +31,9 @@
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Hotline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="bD_Images">
     <Key>
@@ -64,13 +67,13 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Images1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Title1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-    <Property Name="Description1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description1" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Images2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Title2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-    <Property Name="Description2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Images3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Title3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-    <Property Name="Description3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description3" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="bD_Slide">
     <Key>

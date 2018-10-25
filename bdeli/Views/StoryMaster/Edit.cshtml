@@ -124,8 +124,8 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput4">Nội dung </label>
-                                            <input type="text" class="form-control" placeholder="" name="des" value="@Model.FirstOrDefault().Description">
+                                            <label for="exampleFormControlInput4">Description (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
+                                            <textarea name="des" class="form-control" maxlength="1000" rows="20" cols="50" style="height: 200px">@Model.FirstOrDefault().Description</textarea>
                                         </div>
 
 
@@ -147,4 +147,10 @@
 <script src="~/Content/Webmaster/js/ckeditor/samples/js/sample.js"></script>
 <script>
         CKEDITOR.replace('editor');
+</script>
+<script>
+    CKEDITOR.replace('textb');
+    CKEDITOR.replace('texta');
+    CKEDITOR.replace('textc');
+
 </script>

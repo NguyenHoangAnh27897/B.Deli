@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!-- Template Preloader Start -->
 <!-- About Us Area Start -->
 <div scroll-spy="true" id="about-us" class="about-us-block section-padding">
     <div class="container">
@@ -18,10 +19,10 @@
 
         <div class="row">
             <div class="col-6 col-lg-3 wow fadeInLeft">
-                <img src="~/Content/b.Deli/Assets/img/about-img-1.png" alt="">
+                <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().intro.FirstOrDefault().Images" alt="">
             </div>
             <div class="col-6 col-lg-3 wow fadeInLeft">
-                <img src="~/Content/b.Deli/Assets/img/about-img-2.png" alt="">
+                <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().intro.FirstOrDefault().Images1" alt="">
             </div>
             <div class="col-12 col-lg-6">
                 <h3>@Model.FirstOrDefault().intro.FirstOrDefault().Subtitle</h3>
@@ -301,15 +302,26 @@
                 <div class="booking-form">
                     <h5>Đặt trước</h5>
                     <form action="/home/save" method="post">
+                        @Html.AntiForgeryToken()
                         <div class="row">
                             <div class="col-md-6">
-                                <input id="client-name" name="name" type="text" placeholder="Họ và Tên" required="required">
-                                <input id="client-email" name="email" type="email" placeholder="Email" required="required">
-                                <input id="booking-date" name="date" type="text" placeholder="Ngày đặt" required="required">
-                                <input id="booking-time" name="time" type="text" placeholder="Thời gian đặt" required="required">
+                                <input id="client-name" name="name" type="text" placeholder="Họ và Tên" minlength="1" maxlength="30" required>
+                                <input id="client-email" name="email" type="email" placeholder="Địa chỉ Email" required>
+                                <input id="client-tel" class="half-w" name="tel" type="tel" placeholder="Số điện thoại" required>
+                                <input id="guest" class="half-w" name="guest" type="number" placeholder="Số lượng khách" required="required">
+                                <input id="booking-date" name="date" type="text" onfocus="(this.type='date')" placeholder="Ngày đặt" required>
                             </div>
                             <div class="col-md-6">
-                                <input id="guest" name="guest" type="text" placeholder="Số lượng khách" required="required">
+                                <div>
+                                    <input id="booking-hour" class="booking-time" name="time" type="number" placeholder="Giờ" min="1" max="12" maxlength="2" required>
+                                    &nbsp;:&nbsp;
+                                    <input id="booking-minutes" class="booking-time" name="time" type="number" placeholder="Phút" min="0" max="60" maxlength="2" required>
+                                    <select id="booking-type" class="booking-time" required>
+                                        <option value="" disabled selected>SA/CH</option>
+                                        <option value="AM">SA</option>
+                                        <option value="PM">CH</option>
+                                    </select>
+                                </div>
                                 <textarea name="message" id="client-message" cols="30" rows="10" placeholder="Lời nhắn"></textarea>
                                 <button class="btn cafetora-fullwidth-btn" type="submit">Đặt bàn ngay!</button>
                             </div>

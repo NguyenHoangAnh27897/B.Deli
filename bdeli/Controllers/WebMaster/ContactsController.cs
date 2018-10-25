@@ -24,7 +24,7 @@ namespace bdeli.Controllers.WebMaster
         }
 
         [HttpPost]
-        public ActionResult Edit(string email, string sdt, string add)
+        public ActionResult Edit(string email, string sdt, string add, string hot, string title, string des)
         {
             if (Session["Authentication"] != null)
             {
@@ -32,6 +32,9 @@ namespace bdeli.Controllers.WebMaster
                 home.Address = add;
                 home.Email = email;
                 home.Phone = sdt;
+                home.Hotline = hot;
+                home.Title = title;
+                home.Description = des;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Edit");

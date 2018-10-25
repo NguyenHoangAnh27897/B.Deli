@@ -16,8 +16,15 @@ namespace bdeli.Controllers.WebMaster
         {
             if (Session["Authentication"] != null)
             {
-                var rs = db.bD_Introduce.Where(s => s.id == 1);
-                return View(rs);
+                try
+                {
+                    var rs = db.bD_Introduce.Where(s => s.id == 1);
+                    return View(rs);
+                }catch(Exception ex)
+                {
+                    return RedirectToAction("Index", "Error");
+                }
+
             }
             else
             {

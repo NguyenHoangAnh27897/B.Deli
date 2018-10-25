@@ -18,6 +18,9 @@
     <EntitySetMapping Name="bD_Contact">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Contact">
         <MappingFragment StoreEntitySet="bD_Contact">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Hotline" ColumnName="Hotline" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Email" ColumnName="Email" />

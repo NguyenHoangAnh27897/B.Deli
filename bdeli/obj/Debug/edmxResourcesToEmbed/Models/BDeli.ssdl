@@ -21,6 +21,9 @@
     <Property Name="Email" Type="nvarchar" MaxLength="100" />
     <Property Name="Phone" Type="nvarchar" MaxLength="20" />
     <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Hotline" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="bD_Images">
     <Key>
@@ -54,13 +57,13 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Images1" Type="nvarchar" MaxLength="50" />
     <Property Name="Title1" Type="nvarchar" MaxLength="40" />
-    <Property Name="Description1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="1000" />
     <Property Name="Images2" Type="nvarchar" MaxLength="50" />
     <Property Name="Title2" Type="nvarchar" MaxLength="40" />
-    <Property Name="Description2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description2" Type="nvarchar" MaxLength="1000" />
     <Property Name="Images3" Type="nvarchar" MaxLength="50" />
     <Property Name="Title3" Type="nvarchar" MaxLength="40" />
-    <Property Name="Description3" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description3" Type="nvarchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="bD_Settings">
     <Key>
