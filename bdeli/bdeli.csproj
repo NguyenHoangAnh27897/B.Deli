@@ -168,7 +168,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\b.Deli\BookingController.cs" />
     <Compile Include="Controllers\b.Deli\GiftController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
@@ -176,6 +175,7 @@
     <Compile Include="Controllers\WebMaster\ContactsController.cs" />
     <Compile Include="Controllers\WebMaster\HomeMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ImageController.cs" />
+    <Compile Include="Controllers\WebMaster\OpenTimeMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ServiceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\StoryMasterController.cs" />
     <Compile Include="Controllers\WebMaster\VideoController.cs" />
@@ -210,10 +210,10 @@
     <Compile Include="Models\bD_Introduce.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\bD_Service.cs">
+    <Compile Include="Models\bD_OpenTime.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\bD_Settings.cs">
+    <Compile Include="Models\bD_Service.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Slide.cs">
@@ -783,8 +783,8 @@
     <Content Include="Views\Image\Edit.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Booking\Index.cshtml" />
     <Content Include="Views\Gift\Index.cshtml" />
+    <Content Include="Views\OpenTimeMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

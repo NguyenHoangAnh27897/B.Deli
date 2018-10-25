@@ -8,7 +8,7 @@
     <EntitySet Name="bD_Service" EntityType="bdel1142_B.DeliModel.bD_Service" />
     <EntitySet Name="bD_Slide" EntityType="bdel1142_B.DeliModel.bD_Slide" />
     <EntitySet Name="bD_Video" EntityType="bdel1142_B.DeliModel.bD_Video" />
-    <EntitySet Name="bD_Settings" EntityType="bdel1142_B.DeliModel.bD_Settings" />
+    <EntitySet Name="bD_OpenTime" EntityType="bdel1142_B.DeliModel.bD_OpenTime" />
   </EntityContainer>
   <EntityType Name="bD_Booking">
     <Key>
@@ -31,6 +31,9 @@
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Hotline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="bD_Images">
     <Key>
@@ -64,13 +67,13 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Images1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Title1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-    <Property Name="Description1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description1" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Images2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Title2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-    <Property Name="Description2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Images3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Title3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-    <Property Name="Description3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Description3" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="bD_Slide">
     <Key>
@@ -90,12 +93,24 @@
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Video" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="bD_Settings">
+  <EntityType Name="bD_OpenTime">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="monend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tueend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wenend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thuend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="friend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="satend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sunend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -3,7 +3,7 @@
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<!---->
 <!-- About Us Area Start -->
 <div scroll-spy="true" id="about-us" class="about-us-block section-padding">
     <div class="container">
@@ -18,10 +18,10 @@
 
         <div class="row">
             <div class="col-6 col-lg-3 wow fadeInLeft">
-                <img src="~/Content/b.Deli/Assets/img/about-img-1.png" alt="">
+                <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().intro.FirstOrDefault().Images" alt="">
             </div>
             <div class="col-6 col-lg-3 wow fadeInLeft">
-                <img src="~/Content/b.Deli/Assets/img/about-img-2.png" alt="">
+                <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().intro.FirstOrDefault().Images1" alt="">
             </div>
             <div class="col-12 col-lg-6">
                 <h3>@Model.FirstOrDefault().intro.FirstOrDefault().Subtitle</h3>
@@ -68,7 +68,7 @@
                     <h5>@Model.FirstOrDefault().ser.FirstOrDefault().Title3</h5>
                     <!-- <p class="subtitle">Waiter</p> -->
                     <p>@Model.FirstOrDefault().ser.FirstOrDefault().Description3</p><br><br>
-                    <p><a class="btn cafetora-small-btn" data-toggle="modal" data-target="#team-three" href="#">Tìm hiểu thêm</a></p>
+                    <p><a class="btn cafetora-small-btn" href="/gift/index">Tìm hiểu thêm</a></p>
                 </div>
             </div>
         </div>
@@ -77,31 +77,313 @@
 
 <!-- Team 1 Content  Start-->
 <div class="modal fade" id="team-one" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-body team-single-modal">
-                <div class="top-area text-center">
-                    <img src="~/Content/b.Deli/Assets/img/team-bg-1.png" alt="">
-                    <h5>Montu Pagla</h5>
-                    <p class="subtitle">Owner</p>
-                    <ul>
-                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-                        <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-                        <li><a href="http://pinterest.com/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
-                    </ul>
-                </div>
-                <div class="content-area">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                <button type="button" class="close text-warning" data-dismiss="modal">&times;</button>
+                <!-- Our Menu Area Start -->
+                <div scroll-spy="true" id="our-menu" class="our-menu-block section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-heading">
+                                    <h1>Thực đơn của chúng tôi</h1>
+                                    <div class="section-border"></div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. </p>
+                        <div class="owl-carousel owl-theme menu-slider">
+                            <!-- Breakfast Slider Start -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Aloo paratha" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-1.png">
+                                                            <i class="fa fa-plus"></i>
+                                                            <img src="~/Content/b.Deli/Assets/img/menu-img-1.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Aloo paratha</h5>
+                                                        <p class="pricing">$ 1.15</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Beef sandwich" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-2.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-2.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Beef sandwich</h5>
+                                                        <p class="pricing">$ 10.99</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Cheese toast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-3.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-3.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Cheese toast</h5>
+                                                        <p class="pricing">$ 4.30</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Doughnut Delight" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-4.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-4.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Doughnut Delight</h5>
+                                                        <p class="pricing">$ 22.50</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Instant breakfast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-5.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-5.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Instant breakfast</h5>
+                                                        <p class="pricing">$ 5.45</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Muesli Tarka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-6.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-6.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Muesli Tarka</h5>
+                                                        <p class="pricing">$ 6.10</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Breakfast Slider End -->
+                            <!-- Lunch Slider Start -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Indian Special" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-7.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-7.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Indian Special</h5>
+                                                        <p class="pricing">$ 50.25</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Chinese Pack" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-8.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-8.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Chinese Pack</h5>
+                                                        <p class="pricing">$ 80.00</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Thai Supreme" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-9.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-9.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Thai Supreme</h5>
+                                                        <p class="pricing">$ 45.20</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="US Dish" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-10.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-10.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>US Dish</h5>
+                                                        <p class="pricing">$ 35.15</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Lunch Pack Light" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-11.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-11.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Lunch Pack Light</h5>
+                                                        <p class="pricing">$ 30.45</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Lunch Pack Combo" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-12.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-12.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Lunch Pack Combo</h5>
+                                                        <p class="pricing">$ 80.80</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Lunch Slider End -->
+                            <!-- Dinner Slider Start -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Pizzasta Prime<" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-13.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-13.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Pizzasta Prime</h5>
+                                                        <p class="pricing">$ 40.15</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Burgerita Bomb" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-14.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-14.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Burgerita Bomb</h5>
+                                                        <p class="pricing">$ 60.75</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Dosa Dhamaka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-15.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-15.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Dosa Dhamaka</h5>
+                                                        <p class="pricing">$ 90.55</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Soupy Super" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-16.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-16.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Soupy Super</h5>
+                                                        <p class="pricing">$ 70.25</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Chicken Chakra" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-17.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-17.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Chicken Chakra</h5>
+                                                        <p class="pricing">$ 10.55</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <a title="Sea Struck" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-18.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-18.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5>Sea Struck</h5>
+                                                        <p class="pricing">$ 50.25</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dinner Slider End -->
+
+                        </div>
+                        <div class="owl-theme">
+                            <div class="owl-dots dotsCont">
+                                <div class="owl-dot">Món khai vị</div>
+                                <div class="owl-dot">Món chính</div>
+                                <div class="owl-dot">Món tráng miệng</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Our Menu Area End -->
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
-            </div>
+            @*<div class="modal-footer">
+                    <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
+                </div>*@
         </div>
 
     </div>
@@ -109,68 +391,318 @@
 <!-- Team 1 Content End-->
 <!-- Team 2 Content  Start-->
 <div class="modal fade" id="team-two" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-body team-single-modal">
-                <div class="top-area text-center">
-                    <img src="~/Content/b.Deli/Assets/img/team-bg-2.png" alt="">
-                    <h5>Jorina Bua</h5>
-                    <p class="subtitle">Chef</p>
-                    <ul>
-                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-                        <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-                        <li><a href="http://pinterest.com/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
-                    </ul>
-                </div>
-                <div class="content-area">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                <button type="button" class="close text-warning" data-dismiss="modal">&times;</button>
+                <!-- Our Menu Area Start -->
+                <div scroll-spy="true" id="our-menu" class="our-menu-block section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-heading">
+                                    <h1>Thực đơn của chúng tôi</h1>
+                                    <div class="section-border"></div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. </p>
+                        <div class="owl-carousel owl-theme menu-slider-2">
+                            <!-- Breakfast Slider Start -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Aloo paratha" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-1.png">
+                                                            <i class="fa fa-plus"></i>
+                                                            <img src="~/Content/b.Deli/Assets/img/menu-img-1.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Aloo paratha</h5>
+                                                        <p class="pricing">$ 1.15</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Beef sandwich" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-2.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-2.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Beef sandwich</h5>
+                                                        <p class="pricing">$ 10.99</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Cheese toast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-3.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-3.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Cheese toast</h5>
+                                                        <p class="pricing">$ 4.30</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Doughnut Delight" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-4.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-4.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Doughnut Delight</h5>
+                                                        <p class="pricing">$ 22.50</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Instant breakfast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-5.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-5.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Instant breakfast</h5>
+                                                        <p class="pricing">$ 5.45</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Muesli Tarka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-6.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-6.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Muesli Tarka</h5>
+                                                        <p class="pricing">$ 6.10</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Breakfast Slider End -->
+                            <!-- Lunch Slider Start -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Indian Special" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-7.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-7.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Indian Special</h5>
+                                                        <p class="pricing">$ 50.25</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Chinese Pack" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-8.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-8.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Chinese Pack</h5>
+                                                        <p class="pricing">$ 80.00</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Thai Supreme" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-9.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-9.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Thai Supreme</h5>
+                                                        <p class="pricing">$ 45.20</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="US Dish" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-10.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-10.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>US Dish</h5>
+                                                        <p class="pricing">$ 35.15</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Lunch Pack Light" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-11.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-11.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Lunch Pack Light</h5>
+                                                        <p class="pricing">$ 30.45</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Lunch Pack Combo" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-12.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-12.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Lunch Pack Combo</h5>
+                                                        <p class="pricing">$ 80.80</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Lunch Slider End -->
+                            <!-- Dinner Slider Start -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Pizzasta Prime<" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-13.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-13.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Pizzasta Prime</h5>
+                                                        <p class="pricing">$ 40.15</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Burgerita Bomb" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-14.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-14.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Burgerita Bomb</h5>
+                                                        <p class="pricing">$ 60.75</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Dosa Dhamaka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-15.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-15.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Dosa Dhamaka</h5>
+                                                        <p class="pricing">$ 90.55</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-menu-wrapper">
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Soupy Super" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-16.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-16.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Soupy Super</h5>
+                                                        <p class="pricing">$ 70.25</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Chicken Chakra" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-17.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-17.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Chicken Chakra</h5>
+                                                        <p class="pricing">$ 10.55</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-menu-item">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <a title="Sea Struck" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-18.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-18.png" alt=""></a>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <h5>Sea Struck</h5>
+                                                        <p class="pricing">$ 50.25</p>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Dinner Slider End -->
+
+                        </div>
+                        <div class="owl-theme">
+                            <div class="owl-dots dotsCont-2">
+                                <div class="owl-dot">Món khai vị</div>
+                                <div class="owl-dot">Món chính</div>
+                                <div class="owl-dot">Món tráng miệng</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Our Menu Area End -->
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
-            </div>
+            @*<div class="modal-footer">
+                    <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
+                </div>*@
         </div>
 
     </div>
 </div>
 <!-- Team 2 Content End-->
-<!-- Team 3 Content  Start-->
-<div class="modal fade" id="team-three" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-body team-single-modal">
-                <div class="top-area text-center">
-                    <img src="~/Content/b.Deli/Assets/img/team-bg-3.png" alt="">
-                    <h5>Rohim Kamla</h5>
-                    <p class="subtitle">Waiter</p>
-                    <ul>
-                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-                        <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-                        <li><a href="http://pinterest.com/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
-                    </ul>
-                </div>
-                <div class="content-area">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
-
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. </p>
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn cafetora-small-btn" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- Team 3 Content End-->
 <!-- Our Team Area End -->
 <!-- Gallery Area Start -->
 <div scroll-spy="true" id="pic-gallery" class="gallery-block section-padding">
@@ -218,7 +750,6 @@
 </div>
 <!-- Gallery Area End -->
 <!-- Video Section Start-->
-
 <div class="video-section section-padding cafetora-overlay text-center">
     <div class="container">
         <div class="row">
@@ -230,9 +761,6 @@
         </div>
     </div>
 </div>
-
-
-
 <!-- Video Popup -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-label="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -246,7 +774,6 @@
     </div>
 </div>
 <!--Video Section End -->
-<!-- Booking Area Start -->
 <div scroll-spy="true" id="reservation" class="booking-block section-padding">
     <div class="container">
         <div class="row">
@@ -266,7 +793,7 @@
                         <tbody>
                             <tr>
                                 <td><strong>Thứ Hai</strong></td>
-                                <td>10am - 11pm</td>
+                                <td>@Model.FirstOrDefault().time.FirstOrDefault().mon - @Model.FirstOrDefault().time.FirstOrDefault().monend</td>
                             </tr>
                             <tr>
                                 <td><strong>Thứ Ba</strong></td>
@@ -300,16 +827,27 @@
             <div class="col-md-8 col-lg-9">
                 <div class="booking-form">
                     <h5>Đặt trước</h5>
-                    <form action="/home/save" method="post">
+                    <form action="/home/save">
+                        @Html.AntiForgeryToken()
                         <div class="row">
                             <div class="col-md-6">
-                                <input id="client-name" name="name" type="text" placeholder="Họ và Tên" required="required">
-                                <input id="client-email" name="email" type="email" placeholder="Email" required="required">
-                                <input id="booking-date" name="date" type="text" placeholder="Ngày đặt" required="required">
-                                <input id="booking-time" name="time" type="text" placeholder="Thời gian đặt" required="required">
+                                <input id="client-name" name="name" type="text" placeholder="Họ và Tên" minlength="1" maxlength="30" required>
+                                <input id="client-email" name="email" type="email" placeholder="Địa chỉ Email" required>
+                                <input id="client-tel" class="half-w" name="tel" type="tel" placeholder="Số điện thoại" required>
+                                <input id="guest" class="half-w" name="guest" type="number" placeholder="Số lượng khách" required="required">
+                                <input id="booking-date" name="date" type="text" onfocus="(this.type='date')" placeholder="Ngày đặt" required>
                             </div>
                             <div class="col-md-6">
-                                <input id="guest" name="guest" type="text" placeholder="Số lượng khách" required="required">
+                                <div>
+                                    <input id="booking-hour" class="booking-time" name="hour" type="number" placeholder="Giờ" min="1" max="12" maxlength="2" required>
+                                    &nbsp;:&nbsp;
+                                    <input id="booking-minutes" class="booking-time" name="minute" type="number" placeholder="Phút" min="0" max="60" maxlength="2" required>
+                                    <select id="booking-type" class="booking-time" name="time" required>
+                                        <option value="" disabled selected>AM/PM</option>
+                                        <option value="AM">AM</option>
+                                        <option value="PM">PM</option>
+                                    </select>
+                                </div>
                                 <textarea name="message" id="client-message" cols="30" rows="10" placeholder="Lời nhắn"></textarea>
                                 <button class="btn cafetora-fullwidth-btn" type="submit">Đặt bàn ngay!</button>
                             </div>
@@ -326,7 +864,6 @@
         </div>
     </div>
 </div>
-<!-- Booking Area End -->
 <!-- Google Map Area Start -->
 <div class="map">
     <div class="gmap">

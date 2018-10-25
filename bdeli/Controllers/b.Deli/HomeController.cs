@@ -21,6 +21,7 @@ namespace bdeli.Controllers
             var introduce = db.bD_Introduce.Where(st => st.id == 1);
             var service = db.bD_Service.Where(st => st.id == 1);
             var contact = db.bD_Contact.Where(st => st.id == 1);
+            var time = db.bD_OpenTime.Where(st => st.id == 1);
             //home.image = img;
             home.slide = sli;
             home.video = video;
@@ -28,6 +29,7 @@ namespace bdeli.Controllers
             home.intro = introduce;
             home.ser = service;
             home.image = img;
+            home.time = time;
             lst.Add(home);
             return View(lst);
            

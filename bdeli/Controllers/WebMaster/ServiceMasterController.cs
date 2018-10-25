@@ -51,7 +51,7 @@ namespace bdeli.Controllers.WebMaster
                         images1.SaveAs(path);
                         Images1 += fname ;
                     }
-                }
+                }   
 
                 string Images2 = "";
                 if (images2 != null)
@@ -99,7 +99,7 @@ namespace bdeli.Controllers.WebMaster
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Edit");
-            }
+            }   
             else
             {
                 return RedirectToAction("Login", "Webmaster");

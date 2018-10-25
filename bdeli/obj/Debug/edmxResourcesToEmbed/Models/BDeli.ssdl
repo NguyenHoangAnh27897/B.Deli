@@ -21,6 +21,9 @@
     <Property Name="Email" Type="nvarchar" MaxLength="100" />
     <Property Name="Phone" Type="nvarchar" MaxLength="20" />
     <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Hotline" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="bD_Images">
     <Key>
@@ -47,6 +50,26 @@
     <Property Name="Subtitle" Type="nvarchar" MaxLength="30" />
     <Property Name="Description" Type="nvarchar" MaxLength="1000" />
   </EntityType>
+  <EntityType Name="bD_OpenTime">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mon" Type="nvarchar" MaxLength="50" />
+    <Property Name="tue" Type="nvarchar" MaxLength="50" />
+    <Property Name="wen" Type="nvarchar" MaxLength="50" />
+    <Property Name="thu" Type="nvarchar" MaxLength="50" />
+    <Property Name="fri" Type="nvarchar" MaxLength="50" />
+    <Property Name="sat" Type="nvarchar" MaxLength="50" />
+    <Property Name="sun" Type="nvarchar" MaxLength="50" />
+    <Property Name="monend" Type="nvarchar" MaxLength="50" />
+    <Property Name="tueend" Type="nvarchar" MaxLength="50" />
+    <Property Name="wenend" Type="nvarchar" MaxLength="50" />
+    <Property Name="thuend" Type="nvarchar" MaxLength="50" />
+    <Property Name="friend" Type="nvarchar" MaxLength="50" />
+    <Property Name="satend" Type="nvarchar" MaxLength="50" />
+    <Property Name="sunend" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="bD_Service">
     <Key>
       <PropertyRef Name="id" />
@@ -54,21 +77,13 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Images1" Type="nvarchar" MaxLength="50" />
     <Property Name="Title1" Type="nvarchar" MaxLength="40" />
-    <Property Name="Description1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="1000" />
     <Property Name="Images2" Type="nvarchar" MaxLength="50" />
     <Property Name="Title2" Type="nvarchar" MaxLength="40" />
-    <Property Name="Description2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Description2" Type="nvarchar" MaxLength="1000" />
     <Property Name="Images3" Type="nvarchar" MaxLength="50" />
     <Property Name="Title3" Type="nvarchar" MaxLength="40" />
-    <Property Name="Description3" Type="nvarchar" MaxLength="200" />
-  </EntityType>
-  <EntityType Name="bD_Settings">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Title" Type="nvarchar" MaxLength="50" />
-    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description3" Type="nvarchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="bD_Slide">
     <Key>
@@ -93,8 +108,8 @@
     <EntitySet Name="bD_Contact" EntityType="Self.bD_Contact" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Images" EntityType="Self.bD_Images" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" Schema="bdel1142_BDeli" store:Type="Tables" />
+    <EntitySet Name="bD_OpenTime" EntityType="Self.bD_OpenTime" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Service" EntityType="Self.bD_Service" Schema="bdel1142_BDeli" store:Type="Tables" />
-    <EntitySet Name="bD_Settings" EntityType="Self.bD_Settings" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Video" EntityType="Self.bD_Video" Schema="bdel1142_BDeli" store:Type="Tables" />
   </EntityContainer>
