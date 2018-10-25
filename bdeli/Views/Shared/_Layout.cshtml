@@ -5,7 +5,7 @@
     HomeMaster home = new HomeMaster();
     var sli = db.bD_Slide.Where(st => st.id == 1);
     var contact = db.bD_Contact.Where(st => st.id == 1);
-    var setting = db.bD_Settings.Where(st => st.id == 1);
+    var setting = db.bD_OpenTime.Where(st => st.id == 1);
     home.slide = sli;
     home.con = contact;
     List<HomeMaster> lst = new List<HomeMaster>();
