@@ -25,6 +25,17 @@
     <Property Name="Title" Type="nvarchar" MaxLength="50" />
     <Property Name="Description" Type="nvarchar" MaxLength="200" />
   </EntityType>
+  <EntityType Name="bD_Gift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="bD_Images">
     <Key>
       <PropertyRef Name="id" />
@@ -94,6 +105,13 @@
     <Property Name="Description" Type="nvarchar" MaxLength="1000" />
     <Property Name="Images" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="bD_TypeGift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="bD_Video">
     <Key>
       <PropertyRef Name="id" />
@@ -106,11 +124,13 @@
   <EntityContainer Name="bdel1142_BDeliModelStoreContainer">
     <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Contact" EntityType="Self.bD_Contact" Schema="bdel1142_BDeli" store:Type="Tables" />
+    <EntitySet Name="bD_Gift" EntityType="Self.bD_Gift" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Images" EntityType="Self.bD_Images" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_OpenTime" EntityType="Self.bD_OpenTime" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Service" EntityType="Self.bD_Service" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" Schema="bdel1142_BDeli" store:Type="Tables" />
+    <EntitySet Name="bD_TypeGift" EntityType="Self.bD_TypeGift" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Video" EntityType="Self.bD_Video" Schema="bdel1142_BDeli" store:Type="Tables" />
   </EntityContainer>
 </Schema>

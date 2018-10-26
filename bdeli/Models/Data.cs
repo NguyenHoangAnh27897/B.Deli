@@ -16,4 +16,17 @@ namespace bdeli.Models
         public IQueryable<bD_Introduce> intro { get; set; }
         public IQueryable<bD_OpenTime> time { get; set; }
     }
+    public class GiftMaster
+    {
+       
+        public List<bD_TypeGift> type { get; set; }
+        public IEnumerable<bD_Gift> gift { get; set; }
+    }
+
+    public class Gift
+    {
+        public IQueryable<bD_Contact> con { get; set; }
+        public List<bD_Gift> gft { get; set; }
+        public List<bD_TypeGift> tpe { get; set; }
+    }
 }

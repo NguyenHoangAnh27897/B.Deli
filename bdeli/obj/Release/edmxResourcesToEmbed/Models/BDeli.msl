@@ -18,6 +18,9 @@
     <EntitySetMapping Name="bD_Contact">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Contact">
         <MappingFragment StoreEntitySet="bD_Contact">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Hotline" ColumnName="Hotline" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -85,6 +88,47 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_OpenTime">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_OpenTime">
+        <MappingFragment StoreEntitySet="bD_OpenTime">
+          <ScalarProperty Name="sunend" ColumnName="sunend" />
+          <ScalarProperty Name="satend" ColumnName="satend" />
+          <ScalarProperty Name="friend" ColumnName="friend" />
+          <ScalarProperty Name="thuend" ColumnName="thuend" />
+          <ScalarProperty Name="wenend" ColumnName="wenend" />
+          <ScalarProperty Name="tueend" ColumnName="tueend" />
+          <ScalarProperty Name="monend" ColumnName="monend" />
+          <ScalarProperty Name="sun" ColumnName="sun" />
+          <ScalarProperty Name="sat" ColumnName="sat" />
+          <ScalarProperty Name="fri" ColumnName="fri" />
+          <ScalarProperty Name="thu" ColumnName="thu" />
+          <ScalarProperty Name="wen" ColumnName="wen" />
+          <ScalarProperty Name="tue" ColumnName="tue" />
+          <ScalarProperty Name="mon" ColumnName="mon" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Gift">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Gift">
+        <MappingFragment StoreEntitySet="bD_Gift">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_TypeGift">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_TypeGift">
+        <MappingFragment StoreEntitySet="bD_TypeGift">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

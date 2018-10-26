@@ -173,6 +173,7 @@
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
     <Compile Include="Controllers\WebMaster\BookingController.cs" />
     <Compile Include="Controllers\WebMaster\ContactsController.cs" />
+    <Compile Include="Controllers\WebMaster\GiftMasterController.cs" />
     <Compile Include="Controllers\WebMaster\HomeMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ImageController.cs" />
     <Compile Include="Controllers\WebMaster\OpenTimeMasterController.cs" />
@@ -204,6 +205,9 @@
     <Compile Include="Models\bD_Contact.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\bD_Gift.cs">
+      <DependentUpon>BDeli.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\bD_Images.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
@@ -217,6 +221,9 @@
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Slide.cs">
+      <DependentUpon>BDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_TypeGift.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Video.cs">
@@ -785,9 +792,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Gift\Index.cshtml" />
     <Content Include="Views\OpenTimeMaster\Edit.cshtml" />
+    <Content Include="Views\GiftMaster\List.cshtml" />
+    <Content Include="Views\GiftMaster\Create.cshtml" />
+    <Content Include="Views\GiftMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\b.Deli\imageGift\" />
     <Folder Include="Images\b.Deli\imageHome\" />
   </ItemGroup>
   <ItemGroup>

@@ -30,6 +30,17 @@
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="bD_Gift">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="bD_Images">
           <Key>
             <PropertyRef Name="id" />
@@ -99,6 +110,13 @@
           <Property Name="Description" Type="nvarchar" MaxLength="1000" />
           <Property Name="Images" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="bD_TypeGift">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="bD_Video">
           <Key>
             <PropertyRef Name="id" />
@@ -111,11 +129,13 @@
         <EntityContainer Name="bdel1142_BDeliModelStoreContainer">
           <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Contact" EntityType="Self.bD_Contact" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Gift" EntityType="Self.bD_Gift" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Images" EntityType="Self.bD_Images" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_OpenTime" EntityType="Self.bD_OpenTime" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Service" EntityType="Self.bD_Service" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_TypeGift" EntityType="Self.bD_TypeGift" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Video" EntityType="Self.bD_Video" Schema="bdel1142_BDeli" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -131,6 +151,8 @@
           <EntitySet Name="bD_Slide" EntityType="bdel1142_B.DeliModel.bD_Slide" />
           <EntitySet Name="bD_Video" EntityType="bdel1142_B.DeliModel.bD_Video" />
           <EntitySet Name="bD_OpenTime" EntityType="bdel1142_B.DeliModel.bD_OpenTime" />
+          <EntitySet Name="bD_Gift" EntityType="bdel1142_B.DeliModel.bD_Gift" />
+          <EntitySet Name="bD_TypeGift" EntityType="bdel1142_B.DeliModel.bD_TypeGift" />
         </EntityContainer>
         <EntityType Name="bD_Booking">
           <Key>
@@ -234,6 +256,24 @@
           <Property Name="friend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="satend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="sunend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Gift">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_TypeGift">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -349,6 +389,26 @@
                 <ScalarProperty Name="tue" ColumnName="tue" />
                 <ScalarProperty Name="mon" ColumnName="mon" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Gift">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Gift">
+              <MappingFragment StoreEntitySet="bD_Gift">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_TypeGift">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_TypeGift">
+              <MappingFragment StoreEntitySet="bD_TypeGift">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

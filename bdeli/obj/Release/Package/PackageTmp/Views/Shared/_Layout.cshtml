@@ -1,8 +1,15 @@
-﻿@model IEnumerable<bdeli.Models.HomeMaster>
+﻿
 @using bdeli.Models
 @{
     bDeliEntities db = new bDeliEntities();
-
+    HomeMaster home = new HomeMaster();
+    var sli = db.bD_Slide.Where(st => st.id == 1);
+    var contact = db.bD_Contact.Where(st => st.id == 1);
+    var setting = db.bD_OpenTime.Where(st => st.id == 1);
+    home.slide = sli;
+    home.con = contact;
+    List<HomeMaster> lst = new List<HomeMaster>();
+    lst.Add(home);
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -60,35 +67,30 @@
 
 </head>
 <body>
-    <!-- Template Preloader Start -->
-    <div class="cafetora-site-preloader-wrap">
-        <div class="spinner"></div>
-    </div>
-    <!-- Template Preloader End -->
     <!-- Intro Area Start -->
 
-        <div class="intro cafetora-overlay"style=" background: url(../../Images/b.Deli/imageHome/@Model.FirstOrDefault().slide.FirstOrDefault().Images)">
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-7">
+    <div class="intro cafetora-overlay" style=" background: url(../../Images/b.Deli/imageHome/@lst.FirstOrDefault().slide.FirstOrDefault().Images)">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7">
 
-                            <h1 class="intro-heading">
-                                <span class="text-wrapper">
-                                    <span class="line line1"></span>
-                                    <span class="letters letters-left">@Model.FirstOrDefault().slide.FirstOrDefault().Title</span>
-                                    <span class="line line2"></span>
-                                </span>
-                            </h1>
-                            <p>@Model.FirstOrDefault().slide.FirstOrDefault().Description</p>
+                        <h1 class="intro-heading">
+                            <span class="text-wrapper">
+                                <span class="line line1"></span>
+                                <span class="letters letters-left">@lst.FirstOrDefault().slide.FirstOrDefault().Title</span>
+                                <span class="line line2"></span>
+                            </span>
+                        </h1>
+                        <p>@lst.FirstOrDefault().slide.FirstOrDefault().Description</p>
 
-                            <a class="btn cafetora-medium-btn" href="#about-us">Tìm hiểu thêm</a> <a class="btn cafetora-medium-btn white-btn" href="#reservation">Đặt Trước</a>
-                        </div>
+                        <a class="btn cafetora-medium-btn" href="#about-us">Tìm hiểu thêm</a> <a class="btn cafetora-medium-btn white-btn" href="#reservation">Đặt Trước</a>
                     </div>
                 </div>
             </div>
         </div>
-  
+    </div>
+
 
     <!-- Intro Area End -->
     <!-- Header Area Start -->
@@ -130,13 +132,14 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-widget">
-                        <h5>Liên hệ với chúng tôi</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        <h5>@lst.FirstOrDefault().con.FirstOrDefault().Title</h5>
+                        <p>@lst.FirstOrDefault().con.FirstOrDefault().Description</p>
                         <div class="footer-contact">
                             <ul>
-                                <li><a href="mailto:text@example.com"><i class="fa fa-envelope-o"></i>@Model.FirstOrDefault().con.FirstOrDefault().Email</a></li>
-                                <li><a href="tel:123-456-789"><i class="fa fa-phone"></i>@Model.FirstOrDefault().con.FirstOrDefault().Phone</a></li>
-                                <li><a href="https://maps.google.com/" target="_blank"><i class="fa fa-map-marker"></i>@Model.FirstOrDefault().con.FirstOrDefault().Address </a></li>
+                                <li><a><i class="fa fa-envelope-o"></i>@lst.FirstOrDefault().con.FirstOrDefault().Email</a></li>
+                                <li><a target="_blank"><i class="fa fa-map-marker"></i>@lst.FirstOrDefault().con.FirstOrDefault().Address </a></li>
+                                <li><a ><i class="fa fa-phone"></i>@lst.FirstOrDefault().con.FirstOrDefault().Phone</a></li>
+                                <li><a ><i class="fa fa-phone"></i>@lst.FirstOrDefault().con.FirstOrDefault().Hotline</a></li>
                             </ul>
                         </div>
                         <div class="footer-social">
@@ -149,11 +152,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+              <div class="col-md-4">
                     <div class="footer-widget">
-                        <h5>Instagram Feed</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        <div id="instafeed"></div>
+                        <h5>Fanpage</h5>
+                        @*<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>*@
+                        <div id="fb-root"></div>
+                        <div class="fb-page" 
+                             data-href="https://www.facebook.com/Chohoanhaem-457004028153673" 
+                             data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" 
+                             data-hide-cover="false" data-show-facepile="false">
+                            <blockquote cite="https://www.facebook.com/Chohoanhaem-457004028153673" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/Chohoanhaem-457004028153673">Chohoanhaem</a>
+                            </blockquote>
+                        </div>
+                        @*<div class="fb-page"
+                             data-href="https://www.facebook.com/Chohoanhaem-457004028153673"
+                             data-width="380"
+                             data-hide-cover="false"
+                             data-show-facepile="false"></div>*@
                     </div>
                 </div>
                 <div class="col-md-4">
