@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:04:55</publishTime>
     </File>
     <File Include="bin/bdeli.dll">
-      <publishTime>10/26/2018 08:31:39</publishTime>
+      <publishTime>10/27/2018 15:33:55</publishTime>
     </File>
     <File Include="bin/bdeli.pdb">
-      <publishTime>10/26/2018 08:31:39</publishTime>
+      <publishTime>10/27/2018 15:33:55</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/30/2018 04:51:46</publishTime>
@@ -1750,7 +1750,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/20/2018 11:29:07</publishTime>
     </File>
     <File Include="Models/BDeli.edmx.diagram">
-      <publishTime>10/25/2018 20:25:33</publishTime>
+      <publishTime>10/27/2018 15:31:25</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>10/19/2018 23:01:46</publishTime>
@@ -1800,11 +1800,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Error/Index.cshtml">
       <publishTime>10/20/2018 11:16:04</publishTime>
     </File>
+    <File Include="Views/FoodMaster/Create.cshtml">
+      <publishTime>10/27/2018 14:19:14</publishTime>
+    </File>
+    <File Include="Views/FoodMaster/Edit.cshtml">
+      <publishTime>10/27/2018 14:19:14</publishTime>
+    </File>
+    <File Include="Views/FoodMaster/List.cshtml">
+      <publishTime>10/27/2018 14:19:14</publishTime>
+    </File>
     <File Include="Views/Gift/Index.cshtml">
-      <publishTime>10/25/2018 21:18:13</publishTime>
+      <publishTime>10/27/2018 14:19:14</publishTime>
+    </File>
+    <File Include="Views/GiftMaster/Create.cshtml">
+      <publishTime>10/27/2018 14:19:14</publishTime>
+    </File>
+    <File Include="Views/GiftMaster/Edit.cshtml">
+      <publishTime>10/27/2018 14:19:14</publishTime>
+    </File>
+    <File Include="Views/GiftMaster/List.cshtml">
+      <publishTime>10/27/2018 14:19:14</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/25/2018 21:35:15</publishTime>
+      <publishTime>10/27/2018 14:54:53</publishTime>
     </File>
     <File Include="Views/HomeMaster/Edit.cshtml">
       <publishTime>10/25/2018 20:25:33</publishTime>
@@ -1816,13 +1834,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/25/2018 20:25:33</publishTime>
     </File>
     <File Include="Views/ServiceMaster/Edit.cshtml">
-      <publishTime>10/25/2018 20:25:33</publishTime>
+      <publishTime>10/27/2018 14:19:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>10/25/2018 21:12:41</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>10/25/2018 20:25:33</publishTime>
+      <publishTime>10/27/2018 14:19:14</publishTime>
     </File>
     <File Include="Views/StoryMaster/Edit.cshtml">
       <publishTime>10/25/2018 20:25:33</publishTime>
@@ -1843,7 +1861,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:00:31</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/24/2018 01:50:11</publishTime>
+      <publishTime>10/27/2018 15:33:59</publishTime>
     </File>
   </ItemGroup>
 </Project>

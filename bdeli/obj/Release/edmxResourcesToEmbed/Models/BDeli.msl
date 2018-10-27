@@ -4,111 +4,151 @@
     <EntitySetMapping Name="bD_Booking">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Booking">
         <MappingFragment StoreEntitySet="bD_Booking">
-          <ScalarProperty Name="Tel" ColumnName="Tel" />
-          <ScalarProperty Name="Note" ColumnName="Note" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
-          <ScalarProperty Name="TimeBooking" ColumnName="TimeBooking" />
-          <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+          <ScalarProperty Name="TimeBooking" ColumnName="TimeBooking" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="bD_Contact">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Contact">
         <MappingFragment StoreEntitySet="bD_Contact">
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Hotline" ColumnName="Hotline" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Hotline" ColumnName="Hotline" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Food">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Food">
+        <MappingFragment StoreEntitySet="bD_Food">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_FoodType">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_FoodType">
+        <MappingFragment StoreEntitySet="bD_FoodType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FoodType" ColumnName="FoodType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Gift">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Gift">
+        <MappingFragment StoreEntitySet="bD_Gift">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="bD_Images">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Images">
         <MappingFragment StoreEntitySet="bD_Images">
-          <ScalarProperty Name="image8" ColumnName="image8" />
-          <ScalarProperty Name="image7" ColumnName="image7" />
-          <ScalarProperty Name="image6" ColumnName="image6" />
-          <ScalarProperty Name="image5" ColumnName="image5" />
-          <ScalarProperty Name="image4" ColumnName="image4" />
-          <ScalarProperty Name="image3" ColumnName="image3" />
-          <ScalarProperty Name="image2" ColumnName="image2" />
-          <ScalarProperty Name="image1" ColumnName="image1" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="image1" ColumnName="image1" />
+          <ScalarProperty Name="image2" ColumnName="image2" />
+          <ScalarProperty Name="image3" ColumnName="image3" />
+          <ScalarProperty Name="image4" ColumnName="image4" />
+          <ScalarProperty Name="image5" ColumnName="image5" />
+          <ScalarProperty Name="image6" ColumnName="image6" />
+          <ScalarProperty Name="image7" ColumnName="image7" />
+          <ScalarProperty Name="image8" ColumnName="image8" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="bD_Introduce">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Introduce">
         <MappingFragment StoreEntitySet="bD_Introduce">
-          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Images1" ColumnName="Images1" />
           <ScalarProperty Name="Subtitle" ColumnName="Subtitle" />
-          <ScalarProperty Name="Images1" ColumnName="Images1" />
-          <ScalarProperty Name="Images" ColumnName="Images" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="bD_Service">
-      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Service">
-        <MappingFragment StoreEntitySet="bD_Service">
-          <ScalarProperty Name="Description3" ColumnName="Description3" />
-          <ScalarProperty Name="Title3" ColumnName="Title3" />
-          <ScalarProperty Name="Images3" ColumnName="Images3" />
-          <ScalarProperty Name="Description2" ColumnName="Description2" />
-          <ScalarProperty Name="Title2" ColumnName="Title2" />
-          <ScalarProperty Name="Images2" ColumnName="Images2" />
-          <ScalarProperty Name="Description1" ColumnName="Description1" />
-          <ScalarProperty Name="Title1" ColumnName="Title1" />
-          <ScalarProperty Name="Images1" ColumnName="Images1" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="bD_Slide">
-      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Slide">
-        <MappingFragment StoreEntitySet="bD_Slide">
-          <ScalarProperty Name="Images" ColumnName="Images" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="bD_Video">
-      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Video">
-        <MappingFragment StoreEntitySet="bD_Video">
-          <ScalarProperty Name="Video" ColumnName="Video" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="bD_OpenTime">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_OpenTime">
         <MappingFragment StoreEntitySet="bD_OpenTime">
-          <ScalarProperty Name="sunend" ColumnName="sunend" />
-          <ScalarProperty Name="satend" ColumnName="satend" />
-          <ScalarProperty Name="friend" ColumnName="friend" />
-          <ScalarProperty Name="thuend" ColumnName="thuend" />
-          <ScalarProperty Name="wenend" ColumnName="wenend" />
-          <ScalarProperty Name="tueend" ColumnName="tueend" />
-          <ScalarProperty Name="monend" ColumnName="monend" />
-          <ScalarProperty Name="sun" ColumnName="sun" />
-          <ScalarProperty Name="sat" ColumnName="sat" />
-          <ScalarProperty Name="fri" ColumnName="fri" />
-          <ScalarProperty Name="thu" ColumnName="thu" />
-          <ScalarProperty Name="wen" ColumnName="wen" />
-          <ScalarProperty Name="tue" ColumnName="tue" />
-          <ScalarProperty Name="mon" ColumnName="mon" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mon" ColumnName="mon" />
+          <ScalarProperty Name="tue" ColumnName="tue" />
+          <ScalarProperty Name="wen" ColumnName="wen" />
+          <ScalarProperty Name="thu" ColumnName="thu" />
+          <ScalarProperty Name="fri" ColumnName="fri" />
+          <ScalarProperty Name="sat" ColumnName="sat" />
+          <ScalarProperty Name="sun" ColumnName="sun" />
+          <ScalarProperty Name="monend" ColumnName="monend" />
+          <ScalarProperty Name="tueend" ColumnName="tueend" />
+          <ScalarProperty Name="wenend" ColumnName="wenend" />
+          <ScalarProperty Name="thuend" ColumnName="thuend" />
+          <ScalarProperty Name="friend" ColumnName="friend" />
+          <ScalarProperty Name="satend" ColumnName="satend" />
+          <ScalarProperty Name="sunend" ColumnName="sunend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Service">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Service">
+        <MappingFragment StoreEntitySet="bD_Service">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Images1" ColumnName="Images1" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Images2" ColumnName="Images2" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Images3" ColumnName="Images3" />
+          <ScalarProperty Name="Title3" ColumnName="Title3" />
+          <ScalarProperty Name="Description3" ColumnName="Description3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Slide">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Slide">
+        <MappingFragment StoreEntitySet="bD_Slide">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_TypeGift">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_TypeGift">
+        <MappingFragment StoreEntitySet="bD_TypeGift">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Video">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Video">
+        <MappingFragment StoreEntitySet="bD_Video">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

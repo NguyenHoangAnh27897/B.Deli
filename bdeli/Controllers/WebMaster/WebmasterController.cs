@@ -28,7 +28,7 @@ namespace bdeli.Controllers.WebMaster
         {
             if (Username.Equals("admin"))
             {
-                if (Password.Equals("1234"))
+                if (Password.Equals("bdeli"))
                 {
                     Session["Authentication"] = true;
                     return RedirectToAction("Index");

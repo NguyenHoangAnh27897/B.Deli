@@ -4,15 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9fe67645719c410f9b57a5cf7a27f865" Name="Diagram1">
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Booking" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Contact" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Images" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Introduce" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Service" Width="1.5" PointX="4.75" PointY="3.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Slide" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Video" Width="1.5" PointX="6.75" PointY="3.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_OpenTime" Width="1.5" PointX="0.75" PointY="7.75" />
+      <Diagram DiagramId="3102b8b25d3e4bb88a72d21b98df958e" Name="Diagram1">
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Booking" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Contact" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Food" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_FoodType" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Gift" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Images" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Introduce" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_OpenTime" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Service" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Slide" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_TypeGift" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Video" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

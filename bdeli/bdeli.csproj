@@ -173,6 +173,8 @@
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
     <Compile Include="Controllers\WebMaster\BookingController.cs" />
     <Compile Include="Controllers\WebMaster\ContactsController.cs" />
+    <Compile Include="Controllers\WebMaster\FoodMasterController.cs" />
+    <Compile Include="Controllers\WebMaster\GiftMasterController.cs" />
     <Compile Include="Controllers\WebMaster\HomeMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ImageController.cs" />
     <Compile Include="Controllers\WebMaster\OpenTimeMasterController.cs" />
@@ -183,44 +185,56 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BDeli.Context.cs">
+    <Compile Include="Models\bDeli.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDeli.Context.tt</DependentUpon>
+      <DependentUpon>bDeli.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BDeli.cs">
+    <Compile Include="Models\bDeli.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BDeli.Designer.cs">
+    <Compile Include="Models\bDeli.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDeli.edmx</DependentUpon>
+      <DependentUpon>bDeli.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Booking.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Contact.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_Food.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_FoodType.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_Gift.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Images.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Introduce.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_OpenTime.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Service.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Slide.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_TypeGift.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Video.cs">
-      <DependentUpon>BDeli.tt</DependentUpon>
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -700,15 +714,15 @@
     <Content Include="Global.asax" />
     <Content Include="Images\webmaster\icon\if_f-cross_256_282471.png" />
     <Content Include="Images\webmaster\logo\logoa3.png" />
-    <Content Include="Models\BDeli.Context.tt">
+    <Content Include="Models\bDeli.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDeli.edmx</DependentUpon>
-      <LastGenOutput>BDeli.Context.cs</LastGenOutput>
+      <DependentUpon>bDeli.edmx</DependentUpon>
+      <LastGenOutput>bDeli.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\BDeli.tt">
+    <Content Include="Models\bDeli.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BDeli.edmx</DependentUpon>
-      <LastGenOutput>BDeli.cs</LastGenOutput>
+      <DependentUpon>bDeli.edmx</DependentUpon>
+      <LastGenOutput>bDeli.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -740,12 +754,12 @@
     <Content Include="Content\Webmaster\js\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Content\Webmaster\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Content\Webmaster\js\ckeditor\skins\moono-lisa\readme.md" />
-    <EntityDeploy Include="Models\BDeli.edmx">
+    <EntityDeploy Include="Models\bDeli.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BDeli.Designer.cs</LastGenOutput>
+      <LastGenOutput>bDeli.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\BDeli.edmx.diagram">
-      <DependentUpon>BDeli.edmx</DependentUpon>
+    <Content Include="Models\bDeli.edmx.diagram">
+      <DependentUpon>bDeli.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -785,9 +799,17 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Gift\Index.cshtml" />
     <Content Include="Views\OpenTimeMaster\Edit.cshtml" />
+    <Content Include="Views\GiftMaster\List.cshtml" />
+    <Content Include="Views\GiftMaster\Create.cshtml" />
+    <Content Include="Views\GiftMaster\Edit.cshtml" />
+    <Content Include="Views\FoodMaster\List.cshtml" />
+    <Content Include="Views\FoodMaster\Create.cshtml" />
+    <Content Include="Views\FoodMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\b.Deli\imageFood\" />
+    <Folder Include="Images\b.Deli\imageGift\" />
     <Folder Include="Images\b.Deli\imageHome\" />
   </ItemGroup>
   <ItemGroup>

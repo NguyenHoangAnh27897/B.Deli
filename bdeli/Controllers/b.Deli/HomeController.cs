@@ -22,6 +22,8 @@ namespace bdeli.Controllers
             var service = db.bD_Service.Where(st => st.id == 1);
             var contact = db.bD_Contact.Where(st => st.id == 1);
             var time = db.bD_OpenTime.Where(st => st.id == 1);
+            var food = db.bD_Food.ToList();
+            var tfood = db.bD_FoodType.ToList();
             //home.image = img;
             home.slide = sli;
             home.video = video;
@@ -30,6 +32,8 @@ namespace bdeli.Controllers
             home.ser = service;
             home.image = img;
             home.time = time;
+            home.fod = food;
+            home.typ = tfood;
             lst.Add(home);
             return View(lst);
            

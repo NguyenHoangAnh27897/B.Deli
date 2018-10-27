@@ -98,273 +98,100 @@
                             <!-- Breakfast Slider Start -->
                             <div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Aloo paratha" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-1.png">
-                                                            <i class="fa fa-plus"></i>
-                                                            <img src="~/Content/b.Deli/Assets/img/menu-img-1.png" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Aloo paratha</h5>
-                                                        <p class="pricing">$ 1.15</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    {
+                                        if (item.Type == 1)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="single-menu-wrapper">
+                                                    <div class="single-menu-item">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <a title="Aloo paratha" class="menu-lightbox" href="/Images/b.Deli/imageFoodt/@item.Image">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    <img src="/Images/b.Deli/imageFoodt/@item.Image" alt="">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h5>@item.Name</h5>
+                                                                <p class="pricing">@item.Price</p>
+                                                                <p>@item.Description</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Beef sandwich" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-2.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-2.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Beef sandwich</h5>
-                                                        <p class="pricing">$ 10.99</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Cheese toast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-3.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-3.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Cheese toast</h5>
-                                                        <p class="pricing">$ 4.30</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Doughnut Delight" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-4.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-4.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Doughnut Delight</h5>
-                                                        <p class="pricing">$ 22.50</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Instant breakfast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-5.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-5.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Instant breakfast</h5>
-                                                        <p class="pricing">$ 5.45</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Muesli Tarka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-6.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-6.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Muesli Tarka</h5>
-                                                        <p class="pricing">$ 6.10</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Breakfast Slider End -->
                             <!-- Lunch Slider Start -->
                             <div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Indian Special" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-7.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-7.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Indian Special</h5>
-                                                        <p class="pricing">$ 50.25</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    {
+                                        if (item.Type == 2)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="single-menu-wrapper">
+                                                    <div class="single-menu-item">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <a title="Aloo paratha" class="menu-lightbox" href="/Images/b.Deli/imageFoodt/@item.Image">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    <img src="/Images/b.Deli/imageFoodt/@item.Image" alt="">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h5>@item.Name</h5>
+                                                                <p class="pricing">@item.Price</p>
+                                                                <p>@item.Description</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Chinese Pack" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-8.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-8.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Chinese Pack</h5>
-                                                        <p class="pricing">$ 80.00</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Thai Supreme" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-9.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-9.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Thai Supreme</h5>
-                                                        <p class="pricing">$ 45.20</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="US Dish" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-10.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-10.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>US Dish</h5>
-                                                        <p class="pricing">$ 35.15</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Lunch Pack Light" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-11.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-11.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Lunch Pack Light</h5>
-                                                        <p class="pricing">$ 30.45</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Lunch Pack Combo" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-12.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-12.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Lunch Pack Combo</h5>
-                                                        <p class="pricing">$ 80.80</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Lunch Slider End -->
                             <!-- Dinner Slider Start -->
                             <div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Pizzasta Prime<" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-13.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-13.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Pizzasta Prime</h5>
-                                                        <p class="pricing">$ 40.15</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    {
+                                        if (item.Type == 3)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="single-menu-wrapper">
+                                                    <div class="single-menu-item">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <a title="Aloo paratha" class="menu-lightbox" href="/Images/b.Deli/imageFoodt/@item.Image">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    <img src="/Images/b.Deli/imageFoodt/@item.Image" alt="">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h5>@item.Name</h5>
+                                                                <p class="pricing">@item.Price</p>
+                                                                <p>@item.Description</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Burgerita Bomb" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-14.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-14.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Burgerita Bomb</h5>
-                                                        <p class="pricing">$ 60.75</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Dosa Dhamaka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-15.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-15.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Dosa Dhamaka</h5>
-                                                        <p class="pricing">$ 90.55</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Soupy Super" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-16.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-16.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Soupy Super</h5>
-                                                        <p class="pricing">$ 70.25</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Chicken Chakra" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-17.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-17.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Chicken Chakra</h5>
-                                                        <p class="pricing">$ 10.55</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <a title="Sea Struck" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-18.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-18.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5>Sea Struck</h5>
-                                                        <p class="pricing">$ 50.25</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Dinner Slider End -->
@@ -372,9 +199,12 @@
                         </div>
                         <div class="owl-theme">
                             <div class="owl-dots dotsCont">
-                                <div class="owl-dot">Món khai vị</div>
-                                <div class="owl-dot">Món chính</div>
-                                <div class="owl-dot">Món tráng miệng</div>
+                                @foreach (var item in Model.FirstOrDefault().typ)
+                                {
+                                    <div class="owl-dot">@item.FoodType</div>
+                                }
+
+
                             </div>
                         </div>
                     </div>
@@ -412,273 +242,99 @@
                             <!-- Breakfast Slider Start -->
                             <div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Aloo paratha" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-1.png">
-                                                            <i class="fa fa-plus"></i>
-                                                            <img src="~/Content/b.Deli/Assets/img/menu-img-1.png" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Aloo paratha</h5>
-                                                        <p class="pricing">$ 1.15</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    {
+                                        if (item.Type == 1)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="single-menu-wrapper">
+                                                    <div class="single-menu-item">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <a title="Aloo paratha" class="menu-lightbox" href="/Images/b.Deli/imageFoodt/@item.Image">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    <img src="/Images/b.Deli/imageFoodt/@item.Image" alt="">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h5>@item.Name</h5>
+                                                                <p class="pricing">@item.Price</p>
+                                                                <p>@item.Description</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Beef sandwich" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-2.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-2.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Beef sandwich</h5>
-                                                        <p class="pricing">$ 10.99</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Cheese toast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-3.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-3.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Cheese toast</h5>
-                                                        <p class="pricing">$ 4.30</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Doughnut Delight" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-4.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-4.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Doughnut Delight</h5>
-                                                        <p class="pricing">$ 22.50</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Instant breakfast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-5.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-5.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Instant breakfast</h5>
-                                                        <p class="pricing">$ 5.45</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Muesli Tarka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-6.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-6.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Muesli Tarka</h5>
-                                                        <p class="pricing">$ 6.10</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Breakfast Slider End -->
                             <!-- Lunch Slider Start -->
                             <div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Indian Special" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-7.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-7.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Indian Special</h5>
-                                                        <p class="pricing">$ 50.25</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    {
+                                        if (item.Type == 2)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="single-menu-wrapper">
+                                                    <div class="single-menu-item">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <a title="Aloo paratha" class="menu-lightbox" href="/Images/b.Deli/imageFoodt/@item.Image">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    <img src="/Images/b.Deli/imageFoodt/@item.Image" alt="">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h5>@item.Name</h5>
+                                                                <p class="pricing">@item.Price</p>
+                                                                <p>@item.Description</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Chinese Pack" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-8.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-8.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Chinese Pack</h5>
-                                                        <p class="pricing">$ 80.00</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Thai Supreme" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-9.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-9.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Thai Supreme</h5>
-                                                        <p class="pricing">$ 45.20</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="US Dish" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-10.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-10.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>US Dish</h5>
-                                                        <p class="pricing">$ 35.15</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Lunch Pack Light" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-11.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-11.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Lunch Pack Light</h5>
-                                                        <p class="pricing">$ 30.45</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Lunch Pack Combo" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-12.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-12.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Lunch Pack Combo</h5>
-                                                        <p class="pricing">$ 80.80</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Lunch Slider End -->
                             <!-- Dinner Slider Start -->
                             <div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Pizzasta Prime<" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-13.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-13.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Pizzasta Prime</h5>
-                                                        <p class="pricing">$ 40.15</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
+                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    {
+                                        if (item.Type == 3)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="single-menu-wrapper">
+                                                    <div class="single-menu-item">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <a title="Aloo paratha" class="menu-lightbox" href="/Images/b.Deli/imageFoodt/@item.Image">
+                                                                    <i class="fa fa-plus"></i>
+                                                                    <img src="/Images/b.Deli/imageFoodt/@item.Image" alt="">
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <h5>@item.Name</h5>
+                                                                <p class="pricing">@item.Price</p>
+                                                                <p>@item.Description</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Burgerita Bomb" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-14.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-14.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Burgerita Bomb</h5>
-                                                        <p class="pricing">$ 60.75</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    }
 
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Dosa Dhamaka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-15.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-15.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Dosa Dhamaka</h5>
-                                                        <p class="pricing">$ 90.55</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-menu-wrapper">
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Soupy Super" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-16.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-16.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Soupy Super</h5>
-                                                        <p class="pricing">$ 70.25</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Chicken Chakra" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-17.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-17.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Chicken Chakra</h5>
-                                                        <p class="pricing">$ 10.55</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="single-menu-item">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <a title="Sea Struck" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-18.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-18.png" alt=""></a>
-                                                    </div>
-                                                    <div class="col-md-9">
-                                                        <h5>Sea Struck</h5>
-                                                        <p class="pricing">$ 50.25</p>
-                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Dinner Slider End -->
@@ -686,9 +342,11 @@
                         </div>
                         <div class="owl-theme">
                             <div class="owl-dots dotsCont-2">
-                                <div class="owl-dot">Món khai vị</div>
-                                <div class="owl-dot">Món chính</div>
-                                <div class="owl-dot">Món tráng miệng</div>
+                                @foreach (var item in Model.FirstOrDefault().typ)
+                                {
+                                    <div class="owl-dot">@item.FoodType</div>
+                                }
+
                             </div>
                         </div>
                     </div>

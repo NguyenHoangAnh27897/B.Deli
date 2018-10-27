@@ -1,4 +1,4 @@
-﻿@model IEnumerable<bdeli.Models.HomeMaster>
+﻿@model IEnumerable<bdeli.Models.Gift>
 @{
     ViewBag.Title = "Index";
     Layout = null;
@@ -188,144 +188,32 @@
                 <div class="col-sm-10">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="single-menu-wrapper">
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Aloo paratha" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-1.png">
-                                                    <i class="fa fa-plus"></i>
-                                                    <img src="~/Content/b.Deli/Assets/img/menu-img-1.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Aloo paratha</h5>
-                                                <p class="pricing">$ 1.15</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Beef sandwich" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-2.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-2.png" alt=""></a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Beef sandwich</h5>
-                                                <p class="pricing">$ 10.99</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Cheese toast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-3.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-3.png" alt=""></a>
+                            @foreach (var item in Model.FirstOrDefault().gft)
+                            {
+                                <div class="col-md-4">
+                                    <div class="single-menu-wrapper">
+                                        <div class="single-menu-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <a title="AlooParatha" class="menu-lightbox" href="/Images/b.Deli/imageGift/@item.Image">
+                                                        <i class="fa fa-plus"></i>
+                                                        <img src="/Images/b.Deli/imageGift/@item.Image" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5>@item.Name</h5>
+                                                    <p class="pricing">@string.Format("{0:n0}", item.Price)</p>
+                                                    <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                                                    <p>@item.Description</p>
+                                                </div>
                                             </div>
-                                            <div class="col-md-8">
-                                                <h5>Cheese toast</h5>
-                                                <p class="pricing">$ 4.30</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-menu-wrapper">
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Doughnut Delight" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-4.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-4.png" alt=""></a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Doughnut Delight</h5>
-                                                <p class="pricing">$ 22.50</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Instant breakfast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-5.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-5.png" alt=""></a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Instant breakfast</h5>
-                                                <p class="pricing">$ 5.45</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Muesli Tarka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-6.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-6.png" alt=""></a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Muesli Tarka</h5>
-                                                <p class="pricing">$ 6.10</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-menu-wrapper">
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Doughnut Delight" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-4.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-4.png" alt=""></a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Doughnut Delight</h5>
-                                                <p class="pricing">$ 22.50</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Instant breakfast" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-5.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-5.png" alt=""></a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Instant breakfast</h5>
-                                                <p class="pricing">$ 5.45</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-menu-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <a title="Muesli Tarka" class="menu-lightbox" href="~/Content/b.Deli/Assets/img/menu-img-6.png"><i class="fa fa-plus"></i> <img src="~/Content/b.Deli/Assets/img/menu-img-6.png" alt=""></a>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5>Muesli Tarka</h5>
-                                                <p class="pricing">$ 6.10</p>
-                                                <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -346,31 +234,13 @@
                         </div>
                         <div class="col-sm-12 list-group list-group-flush typeGift owl-carousel owl-theme">
                             <div class="typeGift_more">
-                                <a href="#" class="list-group-item">First item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                            </div>
-                            <div class="typeGift_more">
-                                <a href="#" class="list-group-item"> item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                                <a href="#" class="list-group-item"> item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                            </div>
-                            <div class="typeGift_more">
-                                <a href="#" class="list-group-item">First item</a>
-                                <a href="#" class="list-group-item"> item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                                <a href="#" class="list-group-item"> item</a>
-                            </div>
-                            <div class="typeGift_more">
-                                <a href="#" class="list-group-item"> item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                                <a href="#" class="list-group-item">Third item</a>
-                                <a href="#" class="list-group-item"> item</a>
-                            </div>
+                                @foreach (var item in Model.FirstOrDefault().tpe)
+                                {
+                                    <a href="#" class="list-group-item">@item.Type</a>
+                                    
+                                }
 
-                        </div>
+                            </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 pl-0">
@@ -378,60 +248,7 @@
                             <hr class="gap-escape" />
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 list-group list-group-flush">
-                            <div class="relative list-group-item d-flex justify-content-between align-items-center disabled active">
-                                Phân trang
-                                <div class="callNext">
-                                    <i class="pagination_prev fa fa-angle-left" aria-hidden="true"></i>
-                                    &nbsp;
-                                    <i class="pagination_next fa fa-angle-right" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="row">
-                                <div class="col-sm-12 list-group list-group-flush paginate_call owl-carousel owl-theme">
-                                    <div class="paginate_more">
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            First page
-                                            <span class="badge badge-warning badge-pill">1</span>
-                                        </a>
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            Second page
-                                            <span class="badge badge-warning badge-pill">2</span>
-                                        </a>
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            Third page
-                                            <span class="badge badge-warning badge-pill">3</span>
-                                        </a>
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            Four page
-                                            <span class="badge badge-warning badge-pill">4</span>
-                                        </a>
-                                    </div>
-                                    <div class="paginate_more">
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            First page
-                                            <span class="badge badge-warning badge-pill">1</span>
-                                        </a>
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            Second page
-                                            <span class="badge badge-warning badge-pill">2</span>
-                                        </a>
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            Third page
-                                            <span class="badge badge-warning badge-pill">3</span>
-                                        </a>
-                                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                                            Four page
-                                            <span class="badge badge-warning badge-pill">4</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
                 <!-- End -->
             </div>

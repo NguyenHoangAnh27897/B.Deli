@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="bdel1142_B.DeliModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="bDeliEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="bD_Booking" EntityType="bdel1142_B.DeliModel.bD_Booking" />
-    <EntitySet Name="bD_Contact" EntityType="bdel1142_B.DeliModel.bD_Contact" />
-    <EntitySet Name="bD_Images" EntityType="bdel1142_B.DeliModel.bD_Images" />
-    <EntitySet Name="bD_Introduce" EntityType="bdel1142_B.DeliModel.bD_Introduce" />
-    <EntitySet Name="bD_Service" EntityType="bdel1142_B.DeliModel.bD_Service" />
-    <EntitySet Name="bD_Slide" EntityType="bdel1142_B.DeliModel.bD_Slide" />
-    <EntitySet Name="bD_Video" EntityType="bdel1142_B.DeliModel.bD_Video" />
-    <EntitySet Name="bD_OpenTime" EntityType="bdel1142_B.DeliModel.bD_OpenTime" />
-  </EntityContainer>
   <EntityType Name="bD_Booking">
     <Key>
       <PropertyRef Name="id" />
@@ -34,6 +24,35 @@
     <Property Name="Hotline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Food">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bD_FoodType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FoodType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Gift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="bD_Images">
     <Key>
@@ -60,6 +79,26 @@
     <Property Name="Subtitle" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="bD_OpenTime">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="monend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tueend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wenend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thuend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="friend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="satend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sunend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="bD_Service">
     <Key>
       <PropertyRef Name="id" />
@@ -84,6 +123,13 @@
     <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Images" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="bD_TypeGift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="bD_Video">
     <Key>
       <PropertyRef Name="id" />
@@ -93,24 +139,18 @@
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Video" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="bD_OpenTime">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="mon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="tue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="wen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="thu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="fri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="sat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="sun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="monend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="tueend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="wenend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="thuend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="friend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="satend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="sunend" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
+  <EntityContainer Name="bDeliEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" />
+    <EntitySet Name="bD_Contact" EntityType="Self.bD_Contact" />
+    <EntitySet Name="bD_Food" EntityType="Self.bD_Food" />
+    <EntitySet Name="bD_FoodType" EntityType="Self.bD_FoodType" />
+    <EntitySet Name="bD_Gift" EntityType="Self.bD_Gift" />
+    <EntitySet Name="bD_Images" EntityType="Self.bD_Images" />
+    <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" />
+    <EntitySet Name="bD_OpenTime" EntityType="Self.bD_OpenTime" />
+    <EntitySet Name="bD_Service" EntityType="Self.bD_Service" />
+    <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" />
+    <EntitySet Name="bD_TypeGift" EntityType="Self.bD_TypeGift" />
+    <EntitySet Name="bD_Video" EntityType="Self.bD_Video" />
+  </EntityContainer>
 </Schema>
