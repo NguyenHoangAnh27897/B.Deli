@@ -1,0 +1,158 @@
+﻿@model IQueryable<bdeli.Models.bD_OpenTime>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Chỉnh sửa thời gian mở cửa</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa thời gian mở cửa</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/video/edit" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Thứ Hai </label>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="mon">
+                                                <option value="8AM">8AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="monend">
+                                                <option value="8PM">8PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Thứ Hai </label>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="mon">
+                                                <option value="8AM">8AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="monend">
+                                                <option value="8PM">8PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Thứ Hai </label>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="mon">
+                                                <option value="8AM">8AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="monend">
+                                                <option value="8PM">8PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Thứ Hai </label>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="mon">
+                                                <option value="8AM">8AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="monend">
+                                                <option value="8PM">8PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Thứ Hai </label>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="mon">
+                                                <option value="8AM">8AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="monend">
+                                                <option value="8PM">8PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Thứ Hai </label>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="mon">
+                                                <option value="8AM">8AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="monend">
+                                                <option value="8PM">8PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Thứ Hai </label>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="mon">
+                                                <option value="8AM">8AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" name="monend">
+                                                <option value="8PM">8PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/Webmaster/js/ckeditor/ckeditor.js"></script>
+<script src="~/Content/Webmaster/js/ckeditor/samples/js/sample.js"></script>
+<script>
+    CKEDITOR.replace('editor');
+</script>

@@ -80,8 +80,8 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput4">Nội dung (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ) </label>
-                                    <textarea name="texta">@Model.FirstOrDefault().Description</textarea>
+                                    <label for="exampleFormControlInput4">Description (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
+                                    <textarea name="des" class="form-control" maxlength="1000" rows="20" cols="50" style="height: 200px">@Model.FirstOrDefault().Description</textarea>
                                 </div>
 
                                 <input class="btn btn-primaryt" type="submit" value="Lưu" />
