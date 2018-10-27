@@ -35,5 +35,7 @@ namespace bdeli.Models
         public virtual DbSet<bD_OpenTime> bD_OpenTime { get; set; }
         public virtual DbSet<bD_Gift> bD_Gift { get; set; }
         public virtual DbSet<bD_TypeGift> bD_TypeGift { get; set; }
+        public virtual DbSet<bD_Food> bD_Food { get; set; }
+        public virtual DbSet<bD_FoodType> bD_FoodType { get; set; }
     }
 }

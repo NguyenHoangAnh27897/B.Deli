@@ -30,6 +30,24 @@
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="bD_Food">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Image" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="int" />
+        </EntityType>
+        <EntityType Name="bD_FoodType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FoodType" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="bD_Gift">
           <Key>
             <PropertyRef Name="ID" />
@@ -129,6 +147,8 @@
         <EntityContainer Name="bdel1142_BDeliModelStoreContainer">
           <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Contact" EntityType="Self.bD_Contact" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_Food" EntityType="Self.bD_Food" Schema="bdel1142_BDeli" store:Type="Tables" />
+          <EntitySet Name="bD_FoodType" EntityType="Self.bD_FoodType" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Gift" EntityType="Self.bD_Gift" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Images" EntityType="Self.bD_Images" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" Schema="bdel1142_BDeli" store:Type="Tables" />
@@ -153,6 +173,8 @@
           <EntitySet Name="bD_OpenTime" EntityType="bdel1142_B.DeliModel.bD_OpenTime" />
           <EntitySet Name="bD_Gift" EntityType="bdel1142_B.DeliModel.bD_Gift" />
           <EntitySet Name="bD_TypeGift" EntityType="bdel1142_B.DeliModel.bD_TypeGift" />
+          <EntitySet Name="bD_Food" EntityType="bdel1142_B.DeliModel.bD_Food" />
+          <EntitySet Name="bD_FoodType" EntityType="bdel1142_B.DeliModel.bD_FoodType" />
         </EntityContainer>
         <EntityType Name="bD_Booking">
           <Key>
@@ -274,6 +296,24 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="bD_Food">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+        </EntityType>
+        <EntityType Name="bD_FoodType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FoodType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -408,6 +448,26 @@
             <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_TypeGift">
               <MappingFragment StoreEntitySet="bD_TypeGift">
                 <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Food">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Food">
+              <MappingFragment StoreEntitySet="bD_Food">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_FoodType">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_FoodType">
+              <MappingFragment StoreEntitySet="bD_FoodType">
+                <ScalarProperty Name="FoodType" ColumnName="FoodType" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

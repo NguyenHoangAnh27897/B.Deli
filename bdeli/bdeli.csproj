@@ -173,6 +173,7 @@
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
     <Compile Include="Controllers\WebMaster\BookingController.cs" />
     <Compile Include="Controllers\WebMaster\ContactsController.cs" />
+    <Compile Include="Controllers\WebMaster\FoodMasterController.cs" />
     <Compile Include="Controllers\WebMaster\GiftMasterController.cs" />
     <Compile Include="Controllers\WebMaster\HomeMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ImageController.cs" />
@@ -203,6 +204,12 @@
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Contact.cs">
+      <DependentUpon>BDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_Food.cs">
+      <DependentUpon>BDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_FoodType.cs">
       <DependentUpon>BDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Gift.cs">
@@ -795,9 +802,13 @@
     <Content Include="Views\GiftMaster\List.cshtml" />
     <Content Include="Views\GiftMaster\Create.cshtml" />
     <Content Include="Views\GiftMaster\Edit.cshtml" />
+    <Content Include="Views\FoodMaster\List.cshtml" />
+    <Content Include="Views\FoodMaster\Create.cshtml" />
+    <Content Include="Views\FoodMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\b.Deli\imageFood\" />
     <Folder Include="Images\b.Deli\imageGift\" />
     <Folder Include="Images\b.Deli\imageHome\" />
   </ItemGroup>

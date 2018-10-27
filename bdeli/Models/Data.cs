@@ -15,6 +15,8 @@ namespace bdeli.Models
         public IQueryable<bD_Contact> con { get; set; }
         public IQueryable<bD_Introduce> intro { get; set; }
         public IQueryable<bD_OpenTime> time { get; set; }
+        public List<bD_Food> fod { get; set; }
+        public List<bD_FoodType> typ { get; set; }
     }
     public class GiftMaster
     {
@@ -28,5 +30,10 @@ namespace bdeli.Models
         public IQueryable<bD_Contact> con { get; set; }
         public List<bD_Gift> gft { get; set; }
         public List<bD_TypeGift> tpe { get; set; }
+    }
+    public class FoodMaster
+    {
+        public List<bD_FoodType> type { get; set; }
+        public IEnumerable<bD_Food> food { get; set; }
     }
 }

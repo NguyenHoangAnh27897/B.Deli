@@ -1,4 +1,4 @@
-﻿@model IEnumerable<bdeli.Models.bD_TypeGift>
+﻿@model IEnumerable<bdeli.Models.bD_FoodType>
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
@@ -13,7 +13,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Thêm mới quà tặng</li>
+                        <li class="breadcrumb-item active" aria-current="page">Thêm món ăn</li>
                     </ol>
                 </nav>
             </div>
@@ -25,14 +25,14 @@
                     <div class="single-form">
                         <div class="section-head">
                             <div class="title">
-                                <h4>Thêm mới quà tặng</h4>
+                                <h4>Thêm món ăn</h4>
                             </div>
                         </div>
-                        <form action="/giftmaster/create" method="post" enctype="multipart/form-data">
+                        <form action="/foodmaster/create" method="post" enctype="multipart/form-data">
                             <fieldset>
                                 <div class="form-group">
-                                    <label>Tên quà tặng</label>
-                                    <input type="text" id="namegift" name="namgift" class="form-control" placeholder="">
+                                    <label>Tên món ăn</label>
+                                    <input type="text" id="tenmonan" name="tenmonan" class="form-control" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label>Mô tả</label>
@@ -48,11 +48,11 @@
                                     <input type="text" style="width:50%" id="gia" name="gia" class="form-control input-numeral" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label ">Loại quà</label>
-                                    <select style="width:50%" id="loaigift" name="loaigift" class="form-control">
+                                    <label >Loại món ăn</label>
+                                    <select style="width:50%" id="loai" name="loaimonan" class="form-control">
                                         @foreach (var item in Model)
                                         {
-                                            <option value="@item.ID">@item.Type</option>
+                                            <option value="@item.ID">@item.FoodType</option>
                                         }
 
                                     </select>
@@ -66,3 +66,4 @@
         </div>
     </div>
 </div>
+

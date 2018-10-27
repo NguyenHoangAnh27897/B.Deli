@@ -11,6 +11,8 @@
     <EntitySet Name="bD_OpenTime" EntityType="bdel1142_B.DeliModel.bD_OpenTime" />
     <EntitySet Name="bD_Gift" EntityType="bdel1142_B.DeliModel.bD_Gift" />
     <EntitySet Name="bD_TypeGift" EntityType="bdel1142_B.DeliModel.bD_TypeGift" />
+    <EntitySet Name="bD_Food" EntityType="bdel1142_B.DeliModel.bD_Food" />
+    <EntitySet Name="bD_FoodType" EntityType="bdel1142_B.DeliModel.bD_FoodType" />
   </EntityContainer>
   <EntityType Name="bD_Booking">
     <Key>
@@ -132,5 +134,23 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Food">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bD_FoodType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FoodType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

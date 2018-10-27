@@ -1,5 +1,5 @@
-﻿@model  IEnumerable < bdeli.Models.GiftMaster >
-@{ 
+﻿@model IEnumerable<bdeli.Models.FoodMaster>
+@{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
     string[] arrStr;
@@ -14,7 +14,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Chỉnh sửa quà tặng</li>
+                        <li class="breadcrumb-item active" aria-current="page">Chỉnh sửa món ăn</li>
                     </ol>
                 </nav>
             </div>
@@ -26,23 +26,23 @@
                     <div class="single-form">
                         <div class="section-head">
                             <div class="title">
-                                <h4>Chỉnh sửa quà tặng</h4>
+                                <h4>Chỉnh sửa món ăn</h4>
                             </div>
                         </div>
-                        <form action="/giftmaster/edit" method="post" enctype="multipart/form-data">
+                        <form action="/foodmaster/edit" method="post" enctype="multipart/form-data">
                             <fieldset>
                                 <div class="form-group">
-                                    <label>Tên quà tặng</label>
-                                    <input type="text" id="namegift" name="namgift" class="form-control" value="@Model.FirstOrDefault().gift.FirstOrDefault().Name">
-                                    <input type="hidden" name="id" value="@Model.FirstOrDefault().gift.FirstOrDefault().ID"/>
+                                    <label>Tên món ăn</label>
+                                    <input type="text" id="tenmonan" name="tenmonan" class="form-control" value="@Model.FirstOrDefault().food.FirstOrDefault().Name">
+                                    <input type="hidden" name="id" value="@Model.FirstOrDefault().food.FirstOrDefault().ID" />
                                 </div>
                                 <div class="form-group">
                                     <label>Mô tả</label>
-                                    <input type="text" style=" height:100px" id="mota" name="mota" class="form-control" value="@Model.FirstOrDefault().gift.FirstOrDefault().Description">
+                                    <input type="text" style=" height:100px" id="mota" name="mota" class="form-control" value="@Model.FirstOrDefault().food.FirstOrDefault().Description">
                                 </div>
-                                @if (Model.FirstOrDefault().gift.FirstOrDefault().Image != null)
+                                @if (Model.FirstOrDefault().food.FirstOrDefault().Image != null)
                                 {
-                                    arrStr = Model.FirstOrDefault().gift.FirstOrDefault().Image.Split(',');
+                                    arrStr = Model.FirstOrDefault().food.FirstOrDefault().Image.Split(',');
                                     <div class="form-group">
                                         <label>Hình Ảnh</label>
                                         <input type="file" name="image" accept="image/*" multiple="multiple" />
@@ -50,31 +50,31 @@
                                             @foreach (var img in arrStr)
                                             {
 
-                                                <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageGift/@img') center center no-repeat / cover;">
+                                                <div class="col-sm-3 bg-slider" style="background: url('../../Images/b.Deli/imageFood/@img') center center no-repeat / cover;">
                                                 </div>
                                             }
                                         </div>
                                     </div>
                                 }
-                               
+
                                 else
                                 {
-                                <div class="form-group">
-                                    <label for="exampleFormControlFile1">Hình ảnh</label>
-                                    <br />
-                                    <input type="file" name="image" accept="image/*" multiple="multiple" />
-                                </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh</label>
+                                        <br />
+                                        <input type="file" name="image" accept="image/*" multiple="multiple" />
+                                    </div>
                                 }
                                 <div class="form-group">
                                     <label>Giá tiền</label>
-                                    <input type="text" style="width:50%" id="gia" name="gia" class="form-control input-numeral" value="@Model.FirstOrDefault().gift.FirstOrDefault().Price">
+                                    <input type="text" style="width:50%" id="gia" name="gia" class="form-control input-numeral" value="@Model.FirstOrDefault().food.FirstOrDefault().Price">
                                 </div>
                                 <div class="form-group">
-                                    <label ">Loại quà</label>
+                                    <label>Loại quà</label>
                                     <select style="width:50%" id="loaigift" name="loaigift" class="form-control">
                                         @foreach (var item in Model.FirstOrDefault().type)
                                         {
-                                            <option value="@item.ID">@item.Type</option>
+                                            <option value="@item.ID">@item.FoodType</option>
                                         }
 
                                     </select>
