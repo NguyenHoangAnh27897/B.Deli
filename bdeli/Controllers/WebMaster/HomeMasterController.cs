@@ -26,7 +26,7 @@ namespace bdeli.Controllers.WebMaster
             }
         }
         [HttpPost]
-        public ActionResult Edit(string title, string description, HttpPostedFileBase images)
+        public ActionResult Edit(string title, string des, HttpPostedFileBase images)
         {
             if (Session["Authentication"] != null)
             {
@@ -45,7 +45,7 @@ namespace bdeli.Controllers.WebMaster
                 }
                 var home = db.bD_Slide.Find(1);
                 home.Title = title;
-                home.Description = description;
+                home.Description = des;
                 if (Images != "")
                 {
                     home.Images = Images;

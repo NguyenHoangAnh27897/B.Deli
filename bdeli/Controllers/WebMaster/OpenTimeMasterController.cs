@@ -25,7 +25,7 @@ namespace bdeli.Controllers.WebMaster
         } 
 
         [HttpPost]
-        public ActionResult Edit(string mon, string tue, string wen, string thu, string fri, string sat, string sun)
+        public ActionResult Edit(string mon, string tue, string wen, string thu, string fri, string sat, string sun, string monend, string tueend, string wenend, string thuend, string friend, string satend, string sunend)
         {
             if (Session["Authentication"] != null)
             {
@@ -37,9 +37,16 @@ namespace bdeli.Controllers.WebMaster
                 home.fri = fri;
                 home.sat = sat;
                 home.sun = sun;
+                home.monend = monend;
+                home.tueend = tueend;
+                home.wenend = wenend;
+                home.thuend = thuend;
+                home.friend = friend;
+                home.satend = satend;
+                home.sunend = sunend;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                return View("Edit");
+                return RedirectToAction("Edit", "opentimemaster");
             }
             else
             {

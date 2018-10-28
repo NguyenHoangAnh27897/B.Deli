@@ -24,12 +24,12 @@ namespace bdeli.Controllers.WebMaster
         }
 
         [HttpPost]
-        public ActionResult Edit(string title, string description, HttpPostedFileBase[] images)
+        public ActionResult Edit(string title, string des, HttpPostedFileBase[] images)
         {
             if (Session["Authentication"] != null)
             {
                 var home = db.bD_Video.Find(1);
-                home.Description = description;
+                home.Description = des;
                 home.Title = title;
                 db.Entry(home).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
