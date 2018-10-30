@@ -811,6 +811,7 @@
     <Folder Include="Images\b.Deli\imageFood\" />
     <Folder Include="Images\b.Deli\imageGift\" />
     <Folder Include="Images\b.Deli\imageHome\" />
+    <Folder Include="Video\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

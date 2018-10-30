@@ -42,6 +42,29 @@
                                     <label for="exampleFormControlInput4">Description (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
                                     <textarea name="des" class="form-control" maxlength="1000" rows="20" cols="50" style="height: 200px">@Model.FirstOrDefault().Description</textarea>
                                 </div>
+
+                                @if (Model.FirstOrDefault().Video != null)
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Video hiển thị</label>
+                                        <br />
+                                        <input type="file" name="video" accept="video/*" />
+                                        <video  muted loop autoplay>
+                                            <source src="~/Video/@Model.FirstOrDefault().Video" type="video/mp4">
+                                            <source src="~/Content/NaturalLife/video/naturalLife.ogg" type="video/ogg">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Video hiển thị</label>
+                                        <br />
+                                        <input type="file" name="video" accept="video/*" />
+                                    </div>
+                                }
                                 <input class="btn btn-primaryt" type="submit" value="Lưu" />
                             </form>
                         </div>
