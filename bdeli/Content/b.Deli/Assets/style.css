@@ -60,7 +60,7 @@ p {
 }
 
 .modal-dialog {
-    max-width: 800px;
+    max-width: 100% !important;
 }
 
 .modal-body {
