@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-12 col-lg-3">
                     <div class="logo">
-                        <a href="#">
+                        <a href="/home/index">
                             <h1><img src="~/Content/b.Deli/Assets/img/logo.png" alt="Logo"></h1>
                         </a>
                     </div>
@@ -75,18 +75,18 @@
                     <div class="main-menu">
                         <ul id="navigation">
                             <!-- <li class="active"><a data-scroll href="#our-menu">Thực đơn</a></li> -->
-                            <li><a href="/">b.deli</a></li>
+                            <li><a href="/home/index">b.deli</a></li>
                             @*<li><a href="/">Dịch vụ</a></li>
                                 <li><a href="/">Hình ảnh</a></li>*@
                             <!-- <li><a data-scroll href="#testimonials">Góp ý</a></li>-->
                             <li><a data-scroll href="#reservation">Tặng quà ngay</a></li>
-                            <li>
+                            @*<li>
                                 <div class="dropdown">
                                     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="modal" data-target="#cart">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                     </button>
                                 </div>
-                            </li>
+                            </li>*@
                         </ul>
                     </div>
                     <!-- Mobile Menu Area Start -->
@@ -205,7 +205,7 @@
                                                 <div class="col-md-8">
                                                     <h5>@item.Name</h5>
                                                     <p class="pricing">@string.Format("{0:n0}", item.Price)</p>
-                                                    <a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                                                    @*<a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>*@
                                                     <p>@item.Description</p>
                                                 </div>
                                             </div>
@@ -303,7 +303,7 @@
                 <div class="col-md-4">
                     <div class="footer-widget">
                         <h5>Thông báo</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        <p>Nhận thông báo từ chúng tôi sớm nhất.</p>
                         <div class="newsletter-form">
                             <form action="" method="post" target="_blank">
                                 <input id="newsletter-email" type="email" name="EMAIL" placeholder="địa chỉ email của bạn">

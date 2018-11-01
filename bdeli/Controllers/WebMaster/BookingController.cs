@@ -14,7 +14,7 @@ namespace bdeli.Controllers.WebMaster
         {
             if (Session["Authentication"] != null)
             {
-                var rs = db.bD_Booking.Where(s => s.id == 1);
+                var rs = db.bD_Booking.ToList();
                 return View(rs);
             }
             else

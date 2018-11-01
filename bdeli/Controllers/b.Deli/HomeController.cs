@@ -40,7 +40,7 @@ namespace bdeli.Controllers
         }
 
         [HttpPost]
-        public ActionResult save(string name, string email, DateTime date, string time, int amount, string note)
+        public ActionResult Save(string name,string tel,int guest, string email, DateTime date, string time, string message, int hour, int minute)
         {
             try
             {
@@ -48,11 +48,12 @@ namespace bdeli.Controllers
                 book.Name = name;
                 book.Email = email;
                 book.DateBooking = date.ToString();
-                book.TimeBooking = time;
-                book.Amount = amount.ToString();
-                book.Note = note;
+                book.TimeBooking = hour.ToString() +":"+ minute.ToString()+" " + time;
+                book.Tel = tel;
+                book.Amount = guest.ToString();
+                book.Note = message;
                 db.bD_Booking.Add(book);
-                db.Entry(book).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
             catch
