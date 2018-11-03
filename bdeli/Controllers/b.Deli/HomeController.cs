@@ -24,6 +24,7 @@ namespace bdeli.Controllers
             var time = db.bD_OpenTime.Where(st => st.id == 1);
             var food = db.bD_Food.ToList();
             var tfood = db.bD_FoodType.ToList();
+			var account = db.bD_Account.Where(st => st.id == 1);
             //home.image = img;
             home.slide = sli;
             home.video = video;
@@ -34,33 +35,34 @@ namespace bdeli.Controllers
             home.time = time;
             home.fod = food;
             home.typ = tfood;
+			home.acc = account;
             lst.Add(home);
             return View(lst);
            
         }
 
-        [HttpPost]
-        public ActionResult Save(string name,string tel,int guest, string email, DateTime date, string time, string message, int hour, int minute)
-        {
-            try
-            {
-                var book = new bD_Booking();
-                book.Name = name;
-                book.Email = email;
-                book.DateBooking = date.ToString();
-                book.TimeBooking = hour.ToString() +":"+ minute.ToString()+" " + time;
-                book.Tel = tel;
-                book.Amount = guest.ToString();
-                book.Note = message;
-                db.bD_Booking.Add(book);
-                db.SaveChanges();
-                return RedirectToAction("Index", "Home");
-            }
-            catch
-            {
-                return RedirectToAction("Index", "Error");
-            }
-           
-        }
+		[HttpPost]
+		public ActionResult Save(string name, string tel, int guest, string email, DateTime date, string time, string message, int hour, int minute)
+		{
+			try
+			{
+				var book = new bD_Booking();
+				book.Name = name;
+				book.Email = email;
+				book.DateBooking = date.ToString();
+				book.TimeBooking = hour.ToString() + ":" + minute.ToString() + " " + time;
+				book.Tel = tel;
+				book.Amount = guest.ToString();
+				book.Note = message;
+				db.bD_Booking.Add(book);
+				db.SaveChanges();
+				return RedirectToAction("Index", "Home");
+			}
+			catch
+			{
+				return RedirectToAction("Index", "Error");
+			}
+
+		}
     }
 }

@@ -171,6 +171,7 @@
     <Compile Include="Controllers\b.Deli\GiftController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
+    <Compile Include="Controllers\WebMaster\AccountMasterController.cs" />
     <Compile Include="Controllers\WebMaster\BookingController.cs" />
     <Compile Include="Controllers\WebMaster\ContactsController.cs" />
     <Compile Include="Controllers\WebMaster\FoodMasterController.cs" />
@@ -199,6 +200,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bDeli.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_Account.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Booking.cs">
       <DependentUpon>bDeli.tt</DependentUpon>
@@ -805,6 +809,7 @@
     <Content Include="Views\FoodMaster\List.cshtml" />
     <Content Include="Views\FoodMaster\Create.cshtml" />
     <Content Include="Views\FoodMaster\Edit.cshtml" />
+    <Content Include="Views\AccountMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

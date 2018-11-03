@@ -138,6 +138,7 @@
     <EntitySet Name="bD_TypeGift" EntityType="Self.bD_TypeGift" />
     <EntitySet Name="bD_Video" EntityType="Self.bD_Video" />
     <EntitySet Name="bD_Images" EntityType="bdel1142_B.DeliModel.bD_Images" />
+    <EntitySet Name="bD_Account" EntityType="bdel1142_B.DeliModel.bD_Account" />
   </EntityContainer>
   <EntityType Name="bD_Images">
     <Key>
@@ -160,5 +161,13 @@
     <Property Name="Title6" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Title7" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Title8" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

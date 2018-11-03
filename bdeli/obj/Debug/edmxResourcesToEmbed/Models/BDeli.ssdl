@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="bdel1142_B.DeliModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bD_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="Username" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="bD_Booking">
     <Key>
       <PropertyRef Name="id" />
@@ -148,6 +156,7 @@
     <Property Name="Video" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="bdel1142_BDeliModelStoreContainer">
+    <EntitySet Name="bD_Account" EntityType="Self.bD_Account" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Booking" EntityType="Self.bD_Booking" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Contact" EntityType="Self.bD_Contact" Schema="bdel1142_BDeli" store:Type="Tables" />
     <EntitySet Name="bD_Food" EntityType="Self.bD_Food" Schema="bdel1142_BDeli" store:Type="Tables" />
