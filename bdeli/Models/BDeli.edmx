@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="bdel1142_B.DeliModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="bdel1142_B.DeliModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="bD_Booking">
           <Key>
             <PropertyRef Name="id" />
@@ -72,6 +72,14 @@
           <Property Name="image6" Type="nvarchar" MaxLength="50" />
           <Property Name="image7" Type="nvarchar" MaxLength="50" />
           <Property Name="image8" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title2" Type="nchar" MaxLength="10" />
+          <Property Name="Title3" Type="nchar" MaxLength="10" />
+          <Property Name="Title4" Type="nchar" MaxLength="10" />
+          <Property Name="Title5" Type="nchar" MaxLength="10" />
+          <Property Name="Title6" Type="nchar" MaxLength="10" />
+          <Property Name="Title7" Type="nchar" MaxLength="10" />
+          <Property Name="Title8" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="bD_Introduce">
           <Key>
@@ -158,8 +166,7 @@
           <EntitySet Name="bD_TypeGift" EntityType="Self.bD_TypeGift" Schema="bdel1142_BDeli" store:Type="Tables" />
           <EntitySet Name="bD_Video" EntityType="Self.bD_Video" Schema="bdel1142_BDeli" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bdel1142_B.DeliModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -216,20 +223,6 @@
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="Int32" />
           <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="bD_Images">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="image1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="image2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="image3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="image4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="image5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="image6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="image7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="image8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="bD_Introduce">
           <Key>
@@ -308,14 +301,36 @@
           <EntitySet Name="bD_Food" EntityType="Self.bD_Food" />
           <EntitySet Name="bD_FoodType" EntityType="Self.bD_FoodType" />
           <EntitySet Name="bD_Gift" EntityType="Self.bD_Gift" />
-          <EntitySet Name="bD_Images" EntityType="Self.bD_Images" />
           <EntitySet Name="bD_Introduce" EntityType="Self.bD_Introduce" />
           <EntitySet Name="bD_OpenTime" EntityType="Self.bD_OpenTime" />
           <EntitySet Name="bD_Service" EntityType="Self.bD_Service" />
           <EntitySet Name="bD_Slide" EntityType="Self.bD_Slide" />
           <EntitySet Name="bD_TypeGift" EntityType="Self.bD_TypeGift" />
           <EntitySet Name="bD_Video" EntityType="Self.bD_Video" />
+          <EntitySet Name="bD_Images" EntityType="bdel1142_B.DeliModel.bD_Images" />
         </EntityContainer>
+        <EntityType Name="bD_Images">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="image1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Title3" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Title4" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Title5" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Title6" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Title7" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Title8" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -378,21 +393,6 @@
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="bD_Images">
-            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Images">
-              <MappingFragment StoreEntitySet="bD_Images">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="image1" ColumnName="image1" />
-                <ScalarProperty Name="image2" ColumnName="image2" />
-                <ScalarProperty Name="image3" ColumnName="image3" />
-                <ScalarProperty Name="image4" ColumnName="image4" />
-                <ScalarProperty Name="image5" ColumnName="image5" />
-                <ScalarProperty Name="image6" ColumnName="image6" />
-                <ScalarProperty Name="image7" ColumnName="image7" />
-                <ScalarProperty Name="image8" ColumnName="image8" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -470,6 +470,29 @@
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Video" ColumnName="Video" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bD_Images">
+            <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Images">
+              <MappingFragment StoreEntitySet="bD_Images">
+                <ScalarProperty Name="Title8" ColumnName="Title8" />
+                <ScalarProperty Name="Title7" ColumnName="Title7" />
+                <ScalarProperty Name="Title6" ColumnName="Title6" />
+                <ScalarProperty Name="Title5" ColumnName="Title5" />
+                <ScalarProperty Name="Title4" ColumnName="Title4" />
+                <ScalarProperty Name="Title3" ColumnName="Title3" />
+                <ScalarProperty Name="Title2" ColumnName="Title2" />
+                <ScalarProperty Name="Title1" ColumnName="Title1" />
+                <ScalarProperty Name="image8" ColumnName="image8" />
+                <ScalarProperty Name="image7" ColumnName="image7" />
+                <ScalarProperty Name="image6" ColumnName="image6" />
+                <ScalarProperty Name="image5" ColumnName="image5" />
+                <ScalarProperty Name="image4" ColumnName="image4" />
+                <ScalarProperty Name="image3" ColumnName="image3" />
+                <ScalarProperty Name="image2" ColumnName="image2" />
+                <ScalarProperty Name="image1" ColumnName="image1" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

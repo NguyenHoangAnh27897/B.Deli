@@ -25,7 +25,7 @@ namespace bdeli.Controllers.WebMaster
         }
 
         [HttpPost]
-        public ActionResult Edit(HttpPostedFileBase Images1, HttpPostedFileBase Images2, HttpPostedFileBase Images3, HttpPostedFileBase Images4, HttpPostedFileBase Images5, HttpPostedFileBase Images6, HttpPostedFileBase Images7, HttpPostedFileBase Images8)
+        public ActionResult Edit(string title1, string title2, string title3, string title4, string title5, string title6, string title7, string title8, HttpPostedFileBase Images1, HttpPostedFileBase Images2, HttpPostedFileBase Images3, HttpPostedFileBase Images4, HttpPostedFileBase Images5, HttpPostedFileBase Images6, HttpPostedFileBase Images7, HttpPostedFileBase Images8)
         {
             if (Session["Authentication"] != null)
             {
@@ -134,6 +134,14 @@ namespace bdeli.Controllers.WebMaster
                 }
 
                 var home = db.bD_Images.Find(1);
+                home.Title1 = title1;
+                home.Title2 = title2;
+                home.Title3 = title3;
+                home.Title4 = title4;
+                home.Title5 = title5;
+                home.Title6 = title6;
+                home.Title7 = title7;
+                home.Title8 = title8;
                 if (images1 != "")
                 {
                     home.image1 = images1;

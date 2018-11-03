@@ -67,6 +67,14 @@
     <Property Name="image6" Type="nvarchar" MaxLength="50" />
     <Property Name="image7" Type="nvarchar" MaxLength="50" />
     <Property Name="image8" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title2" Type="nchar" MaxLength="10" />
+    <Property Name="Title3" Type="nchar" MaxLength="10" />
+    <Property Name="Title4" Type="nchar" MaxLength="10" />
+    <Property Name="Title5" Type="nchar" MaxLength="10" />
+    <Property Name="Title6" Type="nchar" MaxLength="10" />
+    <Property Name="Title7" Type="nchar" MaxLength="10" />
+    <Property Name="Title8" Type="nchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="bD_Introduce">
     <Key>

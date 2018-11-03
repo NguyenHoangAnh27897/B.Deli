@@ -39,6 +39,10 @@
 
                                 <div class="row ">
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title1" value="@Model.FirstOrDefault().Title1">
+                                        </div>
                                         @if (Model.FirstOrDefault().image1 != null)
                                         {
                                             if (Model.FirstOrDefault().image1.Contains(","))
@@ -47,7 +51,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images1" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images1" accept="image/*"/>
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -63,7 +67,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images1" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images1" accept="image/*"  />
                                                     <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image1" style="width:100%" />
                                                 </div>
                                             }
@@ -73,12 +77,16 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images1" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images1" accept="image/*"/>
                                             </div>
                                         }
                                     </div>
 
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title2" value="@Model.FirstOrDefault().Title2">
+                                        </div>
                                         @if (Model.FirstOrDefault().image2 != null)
                                         {
                                             if (Model.FirstOrDefault().image2.Contains(","))
@@ -87,7 +95,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images2" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images2" accept="image/*"/>
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -103,7 +111,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images2" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images2" accept="image/*"/>
                                                     <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image2" style="width:100%" />
                                                 </div>
                                             }
@@ -113,12 +121,16 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images2" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images2" accept="image/*" />
                                             </div>
                                         }
                                     </div>
 
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title3" value="@Model.FirstOrDefault().Title3">
+                                        </div>
                                         @if (Model.FirstOrDefault().image3 != null)
                                         {
                                             if (Model.FirstOrDefault().image3.Contains(","))
@@ -127,7 +139,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images3" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images3" accept="image/*" />
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -143,7 +155,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images3" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images3" accept="image/*"/>
                                                     <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image3" style="width:100%" />
                                                 </div>
                                             }
@@ -153,12 +165,16 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images3" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images3" accept="image/*" />
                                             </div>
                                         }
                                     </div>
 
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title4" value="@Model.FirstOrDefault().Title4">
+                                        </div>
                                         @if (Model.FirstOrDefault().image4 != null)
                                         {
                                             if (Model.FirstOrDefault().image4.Contains(","))
@@ -167,7 +183,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images4" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images4" accept="image/*"/>
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -183,7 +199,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images4" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images4" accept="image/*"/>
                                                     <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image4" style="width:100%" />
                                                 </div>
                                             }
@@ -193,12 +209,16 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images4" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images4" accept="image/*"  />
                                             </div>
                                         }
                                     </div>
 
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title5" value="@Model.FirstOrDefault().Title5">
+                                        </div>
                                         @if (Model.FirstOrDefault().image5 != null)
                                         {
                                             if (Model.FirstOrDefault().image5.Contains(","))
@@ -207,7 +227,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images5" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images5" accept="image/*"/>
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -223,7 +243,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images5" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images5" accept="image/*"/>
                                                     <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image5" style="width:100%" />
                                                 </div>
                                             }
@@ -233,12 +253,16 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images5" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images5" accept="image/*"/>
                                             </div>
                                         }
                                     </div>
 
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title6" value="@Model.FirstOrDefault().Title6">
+                                        </div>
                                         @if (Model.FirstOrDefault().image6 != null)
                                         {
                                             if (Model.FirstOrDefault().image6.Contains(","))
@@ -247,7 +271,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images6" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images6" accept="image/*" />
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -263,7 +287,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images6" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images6" accept="image/*" />
                                                     <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image6" style="width:100%" />
                                                 </div>
                                             }
@@ -273,12 +297,16 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images6" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images6" accept="image/*" />
                                             </div>
                                         }
                                     </div>
 
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title7" value="@Model.FirstOrDefault().Title7">
+                                        </div>
                                         @if (Model.FirstOrDefault().image7 != null)
                                         {
                                             if (Model.FirstOrDefault().image7.Contains(","))
@@ -287,7 +315,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images7" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images7" accept="image/*"/>
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -303,7 +331,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images7" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images7" accept="image/*"/>
                                                     <img src="~/Images/b.Deli/imageHome/@Model.FirstOrDefault().image7" style="width:100%" />
                                                 </div>
                                             }
@@ -313,12 +341,16 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images7" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images7" accept="image/*"/>
                                             </div>
                                         }
                                     </div>
 
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <input type="text" maxlength="50" class="form-control" placeholder="" name="title8" value="@Model.FirstOrDefault().Title8">
+                                        </div>
                                         @if (Model.FirstOrDefault().image8 != null)
                                         {
                                             if (Model.FirstOrDefault().image8.Contains(","))
@@ -327,7 +359,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                     <br />
-                                                    <input type="file" name="images8" accept="image/*" multiple="multiple" />
+                                                    <input type="file" name="images8" accept="image/*" />
                                                     <div class="row">
                                                         @foreach (var img in arrStr)
                                                         {
@@ -353,10 +385,11 @@
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1920x720 HOẶC LỚN HƠN)</label>
                                                 <br />
-                                                <input type="file" name="images8" accept="image/*" multiple="multiple" />
+                                                <input type="file" name="images8" accept="image/*"  />
                                             </div>
                                         }
                                     </div>
+                                </div>
                                 <input class="btn btn-primaryt" type="submit" value="Lưu" />
                             </form>
                         </div>

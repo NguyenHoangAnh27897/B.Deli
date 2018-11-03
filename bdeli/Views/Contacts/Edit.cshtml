@@ -35,7 +35,7 @@
                             <form action="/contacts/edit" method="post" enctype="multipart/form-data">
 
                                 <div class="row ">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-6">
 
                                         <div class="form-group">
                                             <label for="exampleFormControlInput4">Title (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
@@ -44,14 +44,15 @@
 
                                         <div class="form-group">
                                             <label for="exampleFormControlInput4">Description (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
-                                            <textarea name="des" class="form-control" maxlength="1000" rows="20" cols="50" style="height: 200px">@Model.FirstOrDefault().Description</textarea>
-                                        </div>
-
+                                            <textarea name="des" class="form-control" maxlength="1000" rows="20" cols="50" style="height: 240px">@Model.FirstOrDefault().Description</textarea>
+                                        </div>                                      
+                                   
+                                    </div>
+                                    <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="exampleFormControlInput4">Email (VUI LÒNG NHẬP DƯỚI 100 KÍ TỰ)</label>
                                             <input type="text" class="form-control" placeholder="" name="email" value="@Model.FirstOrDefault().Email">
                                         </div>
-
                                         <div class="form-group">
                                             <label for="exampleFormControlInput4">Address (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
                                             <input type="text" class="form-control" placeholder="" name="add" value="@Model.FirstOrDefault().Address">

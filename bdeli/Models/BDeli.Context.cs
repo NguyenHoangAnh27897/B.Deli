@@ -30,12 +30,12 @@ namespace bdeli.Models
         public virtual DbSet<bD_Food> bD_Food { get; set; }
         public virtual DbSet<bD_FoodType> bD_FoodType { get; set; }
         public virtual DbSet<bD_Gift> bD_Gift { get; set; }
-        public virtual DbSet<bD_Images> bD_Images { get; set; }
         public virtual DbSet<bD_Introduce> bD_Introduce { get; set; }
         public virtual DbSet<bD_OpenTime> bD_OpenTime { get; set; }
         public virtual DbSet<bD_Service> bD_Service { get; set; }
         public virtual DbSet<bD_Slide> bD_Slide { get; set; }
         public virtual DbSet<bD_TypeGift> bD_TypeGift { get; set; }
         public virtual DbSet<bD_Video> bD_Video { get; set; }
+        public virtual DbSet<bD_Images> bD_Images { get; set; }
     }
 }
