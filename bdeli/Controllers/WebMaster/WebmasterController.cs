@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using bdeli.Models;
 
 namespace bdeli.Controllers.WebMaster
 {
     public class WebmasterController : Controller
     {
+		bDeliEntities db = new bDeliEntities();
         // GET: Webmaster
         public ActionResult Index()
         {
@@ -28,7 +30,8 @@ namespace bdeli.Controllers.WebMaster
         {
             if (Username.Equals("admin"))
             {
-                if (Password.Equals("bdeli"))
+				var rs = db.bD_Account.Find(1);
+                if (rs.Password.Equals(Password))
                 {
                     Session["Authentication"] = true;
                     return RedirectToAction("Index");

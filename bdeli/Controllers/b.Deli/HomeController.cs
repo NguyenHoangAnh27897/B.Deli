@@ -24,6 +24,7 @@ namespace bdeli.Controllers
             var time = db.bD_OpenTime.Where(st => st.id == 1);
             var food = db.bD_Food.ToList();
             var tfood = db.bD_FoodType.ToList();
+			var account = db.bD_Account.Where(st => st.id == 1);
             //home.image = img;
             home.slide = sli;
             home.video = video;
@@ -34,6 +35,7 @@ namespace bdeli.Controllers
             home.time = time;
             home.fod = food;
             home.typ = tfood;
+			home.acc = account;
             lst.Add(home);
             return View(lst);
            

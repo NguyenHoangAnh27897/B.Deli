@@ -18,8 +18,11 @@
         <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Video" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Images" Width="1.5" PointX="5.375" PointY="8.75" />
         <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Account" Width="1.5" PointX="7.375" PointY="8.75" />
+<<<<<<< HEAD
         <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Cart" Width="1.5" PointX="9.375" PointY="6.75" />
         <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Checkout" Width="1.5" PointX="9.375" PointY="9.75" />
+=======
+>>>>>>> f783e70c7a42005607289013e5692c685b4f9ab1
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

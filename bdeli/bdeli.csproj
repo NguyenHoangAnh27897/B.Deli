@@ -172,6 +172,7 @@
     <Compile Include="Controllers\b.Deli\GiftController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
+    <Compile Include="Controllers\WebMaster\AccountMasterController.cs" />
     <Compile Include="Controllers\WebMaster\BookingController.cs" />
     <Compile Include="Controllers\WebMaster\ContactsController.cs" />
     <Compile Include="Controllers\WebMaster\FoodMasterController.cs" />
@@ -822,6 +823,7 @@
     <Content Include="Views\Checkout\Index.cshtml" />
     <Content Include="Views\OrderMaster\Index.cshtml" />
     <Content Include="Views\OrderMaster\Detaul.cshtml" />
+    <Content Include="Views\AccountMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,6 +17,7 @@ namespace bdeli.Models
         public IQueryable<bD_OpenTime> time { get; set; }
         public List<bD_Food> fod { get; set; }
         public List<bD_FoodType> typ { get; set; }
+		public IQueryable<bD_Account> acc { get; set; }
     }
     public class GiftMaster
     {
