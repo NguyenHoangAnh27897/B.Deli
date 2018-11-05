@@ -138,6 +138,9 @@
     <EntitySet Name="bD_TypeGift" EntityType="Self.bD_TypeGift" />
     <EntitySet Name="bD_Video" EntityType="Self.bD_Video" />
     <EntitySet Name="bD_Images" EntityType="bdel1142_B.DeliModel.bD_Images" />
+    <EntitySet Name="bD_Account" EntityType="bdel1142_B.DeliModel.bD_Account" />
+    <EntitySet Name="bD_Cart" EntityType="bdel1142_B.DeliModel.bD_Cart" />
+    <EntitySet Name="bD_Checkout" EntityType="bdel1142_B.DeliModel.bD_Checkout" />
   </EntityContainer>
   <EntityType Name="bD_Images">
     <Key>
@@ -160,5 +163,35 @@
     <Property Name="Title6" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Title7" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Title8" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Cart">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FoodName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="ID_Checkout" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bD_Checkout">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsChecked" Type="Boolean" />
   </EntityType>
 </Schema>

@@ -377,30 +377,30 @@
         <div class="row">
             <!-- Gallery 1st Row Start -->
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 01" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image1"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image1" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title1" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image1"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image1" alt=""></a>
             </div>
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 02" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image2"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image2" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title2" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image2"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image2" alt=""></a>
             </div>
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 03" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image3"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image3" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title3" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image3"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image3" alt=""></a>
             </div>
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 04" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image4"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image4" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title4" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image4"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image4" alt=""></a>
             </div>
             <!-- Gallery 1st Row End -->
             <!-- Gallery 2nd Row Start -->
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 05" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image5"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image5" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title5" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image5"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image5" alt=""></a>
             </div>
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 06" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image6"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image6" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title6" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image6"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image6" alt=""></a>
             </div>
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 07" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image7"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image7" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title7" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image7"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image7" alt=""></a>
             </div>
             <div class="col-sm-3">
-                <a title="Lorem Ipsum 08" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image8"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image8" alt=""></a>
+                <a title="@Model.FirstOrDefault().image.FirstOrDefault().Title8" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image8"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@Model.FirstOrDefault().image.FirstOrDefault().image8" alt=""></a>
             </div>
             <!-- Gallery 2nd Row End -->
         </div>
@@ -425,7 +425,7 @@
         <div class="modal-content video">
             <div class="modal-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe id="iframeYoutube" class="embed-responsive-item" width="816" height="459" src="~/Video/@Model.FirstOrDefault().video.FirstOrDefault().Video"></iframe>
+                    <iframe id="iframeYoutube" class="embed-responsive-item" width="786" height="409" src="~/Video/@Model.FirstOrDefault().video.FirstOrDefault().Video"></iframe>
                 </div>
             </div>
         </div>
@@ -485,27 +485,28 @@
             <div class="col-md-8 col-lg-9">
                 <div class="booking-form">
                     <h5>Đặt trước</h5>
-                    <form action="/home/save" method="post">
+                    <form action="#">
+                        @Html.AntiForgeryToken()
                         <div class="row">
                             <div class="col-md-6">
-                                <input name="name" type="text" placeholder="Họ và Tên" minlength="1" maxlength="30" required>
-                                <input name="email" type="email" placeholder="Địa chỉ Email" required>
-                                <input class="half-w" name="tel" type="tel" placeholder="Số điện thoại" required>
-                                <input class="half-w" name="guest" type="number" placeholder="Số lượng khách" required="required">
-                                <input name="date" type="text" onfocus="(this.type='date')" placeholder="Ngày đặt" required>
+                                <input id="client-name" name="name" type="text" placeholder="Họ và Tên" minlength="1" maxlength="30" required>
+                                <input id="client-email" name="email" type="email" placeholder="Địa chỉ Email" required>
+                                <input id="client-tel" class="half-w" name="tel" type="tel" placeholder="Số điện thoại" required>
+                                <input id="guest" class="half-w" name="guest" type="number" placeholder="Số lượng khách" required="required">
+                                <input id="booking-date" name="date" type="text" onfocus="(this.type='date')" placeholder="Ngày đặt" required>
                             </div>
                             <div class="col-md-6">
                                 <div>
-                                    <input class="booking-time" name="hour" type="number" placeholder="Giờ" min="1" max="12" maxlength="2" required>
+                                    <input id="booking-hour" class="booking-time" name="time" type="number" placeholder="Giờ" min="1" max="12" maxlength="2" required>
                                     &nbsp;:&nbsp;
-                                    <input class="booking-time" name="minute" type="number" placeholder="Phút" min="0" max="60" maxlength="2" required>
-                                    <select class="booking-time" name="time" required>
-                                        <option value="" disabled selected>AM/PM</option>
-                                        <option value="AM">AM</option>
-                                        <option value="PM">PM</option>
+                                    <input id="booking-minutes" class="booking-time" name="time" type="number" placeholder="Phút" min="0" max="60" maxlength="2" required>
+                                    <select id="booking-type" class="booking-time" required>
+                                        <option value="" disabled selected>SA/CH</option>
+                                        <option value="AM">SA</option>
+                                        <option value="PM">CH</option>
                                     </select>
                                 </div>
-                                <textarea name="message" cols="30" rows="10" placeholder="Lời nhắn"></textarea>
+                                <textarea name="message" id="client-message" cols="30" rows="10" placeholder="Lời nhắn"></textarea>
                                 <button class="btn cafetora-fullwidth-btn" type="submit">Đặt bàn ngay!</button>
                             </div>
                         </div>

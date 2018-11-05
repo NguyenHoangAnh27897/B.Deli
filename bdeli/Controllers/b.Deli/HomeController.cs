@@ -40,27 +40,24 @@ namespace bdeli.Controllers
         }
 
         [HttpPost]
-        public ActionResult Save(string name,string tel,int guest, string email, DateTime date, string time, string message, int hour, int minute)
+        public JsonResult save(Booking book)
         {
-            try
+            if (ModelState.IsValid)
             {
-                var book = new bD_Booking();
-                book.Name = name;
-                book.Email = email;
-                book.DateBooking = date.ToString();
-                book.TimeBooking = hour.ToString() +":"+ minute.ToString()+" " + time;
-                book.Tel = tel;
-                book.Amount = guest.ToString();
-                book.Note = message;
-                db.bD_Booking.Add(book);
+                var bok = new bD_Booking();
+                bok.Name = book.name;
+                bok.Email = book.email;
+                bok.Tel = book.tel;
+                bok.DateBooking = book.date.ToString();
+                bok.TimeBooking = book.time;
+                bok.Amount = book.amount.ToString();
+                bok.Note = book.note;
+                db.bD_Booking.Add(bok);
                 db.SaveChanges();
-                return RedirectToAction("Index", "Home");
+
+                return Json(new { status = 201, type = "Success" }, JsonRequestBehavior.AllowGet);
             }
-            catch
-            {
-                return RedirectToAction("Index", "Error");
-            }
-           
+            return Json(new { status = 400, type = "Fail" }, JsonRequestBehavior.AllowGet);
         }
     }
 }

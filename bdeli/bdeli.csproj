@@ -168,6 +168,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\b.Deli\CheckoutController.cs" />
     <Compile Include="Controllers\b.Deli\GiftController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\b.Deli\HomeController.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Controllers\WebMaster\HomeMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ImageController.cs" />
     <Compile Include="Controllers\WebMaster\OpenTimeMasterController.cs" />
+    <Compile Include="Controllers\WebMaster\OrderMasterController.cs" />
     <Compile Include="Controllers\WebMaster\ServiceMasterController.cs" />
     <Compile Include="Controllers\WebMaster\StoryMasterController.cs" />
     <Compile Include="Controllers\WebMaster\VideoController.cs" />
@@ -200,7 +202,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bDeli.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\bD_Account.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\bD_Booking.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_Cart.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_Checkout.cs">
       <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Contact.cs">
@@ -236,6 +247,8 @@
     <Compile Include="Models\bD_Video.cs">
       <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -712,6 +725,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\webmaster\icon\fav.png" />
     <Content Include="Images\webmaster\icon\if_f-cross_256_282471.png" />
     <Content Include="Images\webmaster\logo\logoa3.png" />
     <Content Include="Models\bDeli.Context.tt">
@@ -805,6 +819,9 @@
     <Content Include="Views\FoodMaster\List.cshtml" />
     <Content Include="Views\FoodMaster\Create.cshtml" />
     <Content Include="Views\FoodMaster\Edit.cshtml" />
+    <Content Include="Views\Checkout\Index.cshtml" />
+    <Content Include="Views\OrderMaster\Index.cshtml" />
+    <Content Include="Views\OrderMaster\Detaul.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

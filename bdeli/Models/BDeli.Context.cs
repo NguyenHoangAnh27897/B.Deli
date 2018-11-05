@@ -37,5 +37,8 @@ namespace bdeli.Models
         public virtual DbSet<bD_TypeGift> bD_TypeGift { get; set; }
         public virtual DbSet<bD_Video> bD_Video { get; set; }
         public virtual DbSet<bD_Images> bD_Images { get; set; }
+        public virtual DbSet<bD_Account> bD_Account { get; set; }
+        public virtual DbSet<bD_Cart> bD_Cart { get; set; }
+        public virtual DbSet<bD_Checkout> bD_Checkout { get; set; }
     }
 }

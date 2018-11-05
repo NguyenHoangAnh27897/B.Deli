@@ -1147,3 +1147,11 @@ input[type="text"], input[type="email"], .booking-form input[type="date"], .book
 	background-color: rgba(0, 0, 0, 1);
     color: #F1B41C;
 }
+
+.text-yellow {
+    color: #F1B41C;
+}
+
+.bg-darkM {
+    background-color: #000000;
+}

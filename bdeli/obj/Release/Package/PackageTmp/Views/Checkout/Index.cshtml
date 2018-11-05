@@ -1,0 +1,313 @@
+﻿@model IEnumerable<bdeli.Models.AddToCart>
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Basic Page Needs
+    ============================================ -->
+    <title>B.Deli</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!-- Mobile Specific Metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/png" href="~/Content/b.Deli/Assets/img/favicon.png">
+
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/font-awesome.min.css">
+
+    <!-- Animate CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/animate.css">
+
+    <!-- OwlCarousel CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/owl.theme.default.min.css">
+
+    <!-- Magnific Popup CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/magnific-popup.css">
+
+    <!-- Slicknav CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/slicknav.min.css">
+
+    <!-- Main CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/style.css">
+
+    <!-- Responsive CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/Content/b.Deli/Assets/css/responsive.css">
+    <script src="https://unpkg.com/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Area Start -->
+    <div class="header-area" id="cafetoraHeader">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-12 col-lg-3">
+                    <div class="logo">
+                        <a href="/home/index">
+                            <h1><img src="~/Content/b.Deli/Assets/img/logo.png" alt="Logo"></h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-12 col-lg-9">
+                    <div class="main-menu">
+                        <ul id="navigation">
+                            <!-- <li class="active"><a data-scroll href="#our-menu">Thực đơn</a></li> -->
+                            <li><a href="/home/index">b.deli</a></li>
+                            @*<li><a href="/">Dịch vụ</a></li>
+                                <li><a href="/">Hình ảnh</a></li>*@
+                            <!-- <li><a data-scroll href="#testimonials">Góp ý</a></li>-->
+                            <li><a data-scroll href="#reservation">Tặng quà ngay</a></li>
+                            <li>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-warning btn-cart" data-toggle="modal" data-target="#cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <span class="badge badge-dark bg-darkM"><small class="text-yellow counter">0</small></span>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Mobile Menu Area Start -->
+                    <div class="responsive-menu-wrap"></div>
+                    <!-- Mobile Menu Area End -->
+                </div>
+            </div>
+        </div>
+        <!-- Header Area Start -->
+    </div>
+    <!-- Main Header Area End -->
+    <!-- The Modal -->
+    <div class="modal" id="cart">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Giỏ hàng</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom">
+                            <thead>
+                                <tr>
+                                    @*<th nowrap class="text-center">Chọn</th>*@
+                                    <th nowrap>Hình ảnh</th>
+                                    <th nowrap>Thông tin sản phẩm</th>
+                                    <th nowrap class="text-center">Số lượng</th>
+                                    <th nowrap class="text-center">Giá</th>
+                                    <th nowrap class="text-right">Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbodyCart"></tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Đặt hàng</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Menu Area Start -->
+    <div scroll-spy="true" id="our-menu" class="our-menu-block section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h1>Quà tặng</h1>
+                        <div class="section-border"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Breakfast Slider Start -->
+             
+                <div class="col-md-12">
+                     <div class="booking-form" style="margin-left:600px">
+                    <h5 style="margin-bottom:20px">Đặt quà</h5>
+                    <form action="/checkout/addtocart" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input id="client-name" name="name" type="text" placeholder="Họ và Tên" minlength="1" maxlength="30" required>
+                                <input id="client-email" name="address" type="text" placeholder="Địa chỉ" required>
+                                <input id="client-tel" class="half-w" name="phone" type="tel" placeholder="Số điện thoại" required>
+                                <input id="guest" class="half-w" name="email" type="email" placeholder="Địa chỉ Email" required="required">
+                                @*<input id="guest" class="half-w" name="guest" type="number" placeholder="Số lượng khách" required="required">*@
+                                <button class="btn cafetora-fullwidth-btn" type="submit">Đặt</button>
+                            </div>                         
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-response"></div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-top-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h5>@Model.FirstOrDefault().con.Title</h5>
+                            <p>@Model.FirstOrDefault().con.Description</p>
+                            <div class="footer-contact">
+                                <ul>
+                                    <li><a><i class="fa fa-envelope-o"></i>@Model.FirstOrDefault().con.Email</a></li>
+                                    <li><a target="_blank"><i class="fa fa-map-marker"></i>@Model.FirstOrDefault().con.Address </a></li>
+                                    <li><a><i class="fa fa-phone"></i>@Model.FirstOrDefault().con.Phone</a></li>
+                                    <li><a><i class="fa fa-phone"></i>@Model.FirstOrDefault().con.Hotline</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-social">
+                                <ul>
+                                    <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                    <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                                    <li><a href="http://linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href="http://pinterest.com/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h5>Fanpage</h5>
+                            @*<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>*@
+                            <div id="fb-root"></div>
+                            <div class="fb-page" data-href="https://www.facebook.com/bdeli.vn/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://www.facebook.com/bdeli.vn/" class="fb-xfbml-parse-ignore">
+                                    <a href="https://www.facebook.com/bdeli.vn/">b.deli</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h5>Thông báo</h5>
+                            <p>Nhận thông báo từ chúng tôi sớm nhất.</p>
+                            <div class="newsletter-form">
+                                <form action="" method="post" target="_blank">
+                                    <input id="newsletter-email" type="email" name="EMAIL" placeholder="địa chỉ email của bạn">
+                                    <button class="btn cafetora-small-btn" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Top Area End -->
+        <!-- Footer Copyright Area Start -->
+        <div class="footer-copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        &copy; Copyright 2018 b.deli | All Rights Reserved
+                    </div>
+                    <div class="col-md-6 foot-credit">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Copyright Area End -->
+        <!-- Go to Top Area Start -->
+        <a data-scroll href="#top" class="go-top">Top <i class="fa fa-long-arrow-up"></i></a>
+        <!-- Go to Top Area End -->
+        <!-- Our Menu Area End -->
+        <!-- jQuery
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/jquery-3.3.1.min.js"></script>
+
+
+        <!-- Bootstrap JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/bootstrap.min.js"></script>
+
+        <!-- Magnific Popup JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/jquery.magnific-popup.min.js"></script>
+
+        <!-- OwlCarousel JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/owl.carousel.min.js"></script>
+
+        <!-- SlickNav JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/jquery.slicknav.min.js"></script>
+
+        <!-- SmoothScroll JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/smooth-scroll.min.js"></script>
+
+        <!-- WOW JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/wow.min.js"></script>
+
+        <!-- Modal JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/modal.js"></script>
+
+        <!-- Moving Letters JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/anime.min.js"></script>
+
+        <!-- Sticky Header JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/sticky-header.js"></script>
+
+        <!-- Instagram JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/instafeed.min.js"></script>
+
+        <!-- jQuery Map JS
+        ============================================ -->
+        <script src="https://maps.google.com/maps/api/js?key=AIzaSyDGqTyqoPIvYxhn_Sa7ZrK5bENUWhpCo0w"></script>
+        <script src="~/Content/b.Deli/Assets/js/gmaps.min.js"></script>
+
+        <!-- Main JS
+        ============================================ -->
+        <script src="~/Content/b.Deli/Assets/js/active.js"></script>
+
+</body>
+
+</html>
+
+

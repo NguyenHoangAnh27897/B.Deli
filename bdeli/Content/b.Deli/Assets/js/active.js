@@ -1,8 +1,13 @@
+var loadCart;
+var orderArr = Object.assign([], JSON.parse(localStorage.getItem('order')));
+
 (function ($) {
     "use strict";
 
     $(document).ready(function () {
-
+        const $cart = $("tbody.tbodyCart");
+        const $count = $("small.counter");
+        const $order = $("button.order");
         // Our Menu Sliding Tab
         $('.menu-slider').owlCarousel({
             items: 1,
@@ -135,7 +140,7 @@
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=179319576211993&autoLogAppEvents=1';
+            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=179319576211993&autoLogAppEvents=1';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
@@ -143,8 +148,8 @@
         $(function () {
             var map = new GMaps({
                 el: "#map1",
-                lat: 10.823099, //To show your address on above Map, change the Latitude from here.
-                lng: 106.629662, //To show your address on above Map, change the Longitude from here.
+                lat: 10.811830, //To show your address on above Map, change the Latitude from here.
+                lng: 106.664841, //To show your address on above Map, change the Longitude from here.
                 zoom: 15,
                 styles: [
                 {
@@ -463,8 +468,8 @@
             });
 
             map.addMarker({
-                lat: 10.823099, //To show your address on above Map, change the Latitude from here.
-                lng: 106.629662, //To show your address on above Map, change the Longitude from here.
+                lat: 10.811830, //To show your address on above Map, change the Latitude from here.
+                lng: 106.664841, //To show your address on above Map, change the Longitude from here.
                 title: 'b.deli',
                 animation: google.maps.Animation.BOUNCE,
                 icon: {
@@ -476,10 +481,86 @@
             });
         });
 
+        $count.text(orderArr.length);
+
+        //Ajax
+        $("a.cart-gf").bind("click", function () {
+            let id = $(this).data("id");
+
+            $.ajax({
+                async: true,
+                type: 'GET',
+                url: '/gift/addcart/'+ id,
+                dataType: "json",
+                cache: false,
+                //dataType: "json",
+                error: function (data) {
+                    console.log('error:' + data + ';' + JSON.stringify(data, null, 4));
+                    $('.form-response').html('Something went wrong!');
+                },
+                success: function (data) {
+                    delete data.data.Type;
+                    let as = orderArr.some(x => x.ID == parseInt(id));
+                    if (!as) {
+                        data.data.Quantity = 1;
+                        orderArr.push(data.data);
+                        if (typeof (Storage) !== "undefined") {
+                            localStorage.setItem('order', JSON.stringify(orderArr));
+                            $count.text(orderArr.length);
+                        } else {
+                            console.log("dont have local storage");
+                        }
+                    } else {
+                        for (var i in orderArr) {
+                            if (orderArr[i].ID == parseInt(id)) {
+                                orderArr[i].Quantity++;
+                                break;
+                            }
+                        }
+                        localStorage.setItem('order', JSON.stringify(orderArr));
+                    }
+                }
+            });
+        });
+
+        //save order
+        $order.bind("click", function () {
+
+            $.ajax({
+                async: true,
+                type: 'POST',
+                url: '/Gift/AddToCart',
+                cache: false,
+                dataType: "json",
+                data: JSON.stringify(orderArr),
+                error: function (data) {
+                    console.log('error:' + data + ';' + JSON.stringify(data, null, 4));
+                    $('.form-response').html('Something went wrong!');
+                },
+                success: function (data) {
+                    location.href = "/Checkout/Index";
+                }
+            });
+        });
+
+        loadCart = function () {
+            const dataLength = orderArr.length;
+            $cart.html("");
+            $count.text(orderArr.length);
+            (!dataLength) ? $order.attr("disabled", "disabled") : $order.removeAttr("disabled");
+            for (let i = 0; i < dataLength; i++) {
+                $cart.append(pre(orderArr[i]));
+            }
+        };
+
+        //open cart
+        $("button.btn-cart").bind("click", function () {
+            loadCart();
+        });
     });
 
     $(window).on('load', function () {
-
+        
         jQuery(".cafetora-site-preloader-wrap").fadeOut(500);
 
         // Wrap every letter in a span
@@ -530,3 +611,26 @@
     });
 
 }(jQuery));
+
+//delete cart
+var deleteCart = (id) => {
+    orderArr = orderArr.filter(x => x.ID != id);
+    localStorage.setItem('order', JSON.stringify(orderArr));
+    loadCart();
+}
+
+var FormatCurrency = (value) => {
+    let $dola = value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    return $dola.slice(1, $dola.indexOf(".00"));
+}
+
+var pre = (data) => {
+    let DOM = `<tr>
+                <td><img src="../Images/b.Deli/imageGift/${data.Image}" class ="img-thumbnail img-fluid" alt="Cinque Terre" width="150" height="68"></td>
+                <td>${data.Name}</td>
+                <td><input type="number" class ="form-control" value="${data.Quantity}" min="1" max="999" value="1"></td>
+                <td nowrap class="text-center">${FormatCurrency(data.Price * data.Quantity)}</td>
+                <td><div class ="text-right"><a href="javascript:void(0);" onclick="deleteCart(${data.ID})" class ="badge badge-warning badge-pill">&times; </a></div></td>
+            </tr>`;
+    return DOM;
+}

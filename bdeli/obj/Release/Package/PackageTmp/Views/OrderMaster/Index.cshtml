@@ -1,0 +1,85 @@
+﻿@model IEnumerable<bdeli.Models.bD_Checkout>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<style>
+    .isDisabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        text-decoration: none;
+    }
+</style>
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí Đơn hàng</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Start table basic -->
+        <div class="basic-table">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-table">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Danh sách đơn hàng</h4>
+                            </div>
+                        </div>
+                        <div class="section-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover progress-table text-white text-center" border="0" style="border-width:0px;border-style:None;border-collapse:collapse;">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Tên khách hàng</th>
+                                            <th>Địa chỉ</th>
+                                            <th>SĐT</th>
+                                            <th>Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            if (item.IsChecked == false)
+                                            {
+                                                <tr class="alert-danger">
+                                                    <td><a href="/ordermaster/Detaul/@item.ID">@item.ID.Substring(0, 5)</a></td>
+                                                    <td>@item.Name</td>
+                                                    <td>@item.Address</td>
+                                                    <td>@item.Phone</td>
+                                                    <td>@item.Email</td>
+                                                </tr>
+                                            }
+                                            else
+                                            {
+                                                <tr class="alert-success isDisabled">
+                                                    <td>@item.ID.Substring(0, 5)</td>
+                                                    <td>@item.Name</td>
+                                                    <td>@item.Address</td>
+                                                    <td>@item.Phone</td>
+                                                    <td>@item.Email</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

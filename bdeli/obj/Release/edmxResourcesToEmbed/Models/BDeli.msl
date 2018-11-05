@@ -60,21 +60,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="bD_Images">
-      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Images">
-        <MappingFragment StoreEntitySet="bD_Images">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="image1" ColumnName="image1" />
-          <ScalarProperty Name="image2" ColumnName="image2" />
-          <ScalarProperty Name="image3" ColumnName="image3" />
-          <ScalarProperty Name="image4" ColumnName="image4" />
-          <ScalarProperty Name="image5" ColumnName="image5" />
-          <ScalarProperty Name="image6" ColumnName="image6" />
-          <ScalarProperty Name="image7" ColumnName="image7" />
-          <ScalarProperty Name="image8" ColumnName="image8" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="bD_Introduce">
       <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Introduce">
         <MappingFragment StoreEntitySet="bD_Introduce">
@@ -149,6 +134,62 @@
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Video" ColumnName="Video" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Images">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Images">
+        <MappingFragment StoreEntitySet="bD_Images">
+          <ScalarProperty Name="Title8" ColumnName="Title8" />
+          <ScalarProperty Name="Title7" ColumnName="Title7" />
+          <ScalarProperty Name="Title6" ColumnName="Title6" />
+          <ScalarProperty Name="Title5" ColumnName="Title5" />
+          <ScalarProperty Name="Title4" ColumnName="Title4" />
+          <ScalarProperty Name="Title3" ColumnName="Title3" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="image8" ColumnName="image8" />
+          <ScalarProperty Name="image7" ColumnName="image7" />
+          <ScalarProperty Name="image6" ColumnName="image6" />
+          <ScalarProperty Name="image5" ColumnName="image5" />
+          <ScalarProperty Name="image4" ColumnName="image4" />
+          <ScalarProperty Name="image3" ColumnName="image3" />
+          <ScalarProperty Name="image2" ColumnName="image2" />
+          <ScalarProperty Name="image1" ColumnName="image1" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Account">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Account">
+        <MappingFragment StoreEntitySet="bD_Account">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Cart">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Cart">
+        <MappingFragment StoreEntitySet="bD_Cart">
+          <ScalarProperty Name="ID_Checkout" ColumnName="ID_Checkout" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Checkout">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Checkout">
+        <MappingFragment StoreEntitySet="bD_Checkout">
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

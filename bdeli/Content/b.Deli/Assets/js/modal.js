@@ -6,7 +6,6 @@ jQuery(document).ready(function($){
 
 function changeVideo(vId){
   var iframe=document.getElementById("iframeYoutube");
-  iframe.src="https://www.youtube.com/embed/"+vId;
 
   $("#myModal").modal("show");
 }

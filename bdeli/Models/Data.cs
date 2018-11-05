@@ -36,4 +36,10 @@ namespace bdeli.Models
         public List<bD_FoodType> type { get; set; }
         public IEnumerable<bD_Food> food { get; set; }
     }
+
+    public class AddToCart
+    {
+        public bD_Contact con { get; set; }
+
+    }
 }

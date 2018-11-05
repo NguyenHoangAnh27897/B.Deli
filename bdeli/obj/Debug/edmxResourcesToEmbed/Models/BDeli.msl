@@ -160,5 +160,38 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="bD_Account">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Account">
+        <MappingFragment StoreEntitySet="bD_Account">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Cart">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Cart">
+        <MappingFragment StoreEntitySet="bD_Cart">
+          <ScalarProperty Name="ID_Checkout" ColumnName="ID_Checkout" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bD_Checkout">
+      <EntityTypeMapping TypeName="bdel1142_B.DeliModel.bD_Checkout">
+        <MappingFragment StoreEntitySet="bD_Checkout">
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

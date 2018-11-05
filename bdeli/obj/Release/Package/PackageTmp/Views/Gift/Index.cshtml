@@ -80,13 +80,14 @@
                                 <li><a href="/">Hình ảnh</a></li>*@
                             <!-- <li><a data-scroll href="#testimonials">Góp ý</a></li>-->
                             <li><a data-scroll href="#reservation">Tặng quà ngay</a></li>
-                            @*<li>
+                            <li>
                                 <div class="dropdown">
-                                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="modal" data-target="#cart">
+                                    <button type="button" class="btn btn-warning btn-cart" data-toggle="modal" data-target="#cart">
                                         <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <span class="badge badge-dark bg-darkM"><small class="text-yellow counter">0</small></span>
                                     </button>
                                 </div>
-                            </li>*@
+                            </li>
                         </ul>
                     </div>
                     <!-- Mobile Menu Area Start -->
@@ -115,48 +116,15 @@
                         <table class="table table-hover table-custom">
                             <thead>
                                 <tr>
-                                    <th nowrap class="text-center">Chọn</th>
-                                    <th nowrap class="text-center">Hình ảnh</th>
-                                    <th nowrap class="text-center">Thông tin sản phẩm</th>
+                                    @*<th nowrap class="text-center">Chọn</th>*@
+                                    <th nowrap>Hình ảnh</th>
+                                    <th nowrap>Thông tin sản phẩm</th>
                                     <th nowrap class="text-center">Số lượng</th>
                                     <th nowrap class="text-center">Giá</th>
-                                    <th nowrap class="text-center">Xóa</th>
+                                    <th nowrap class="text-right">Xóa</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="checkbox" class="form-control" checked></td>
-                                    <td><img src="~/Content/b.Deli/Assets/img/menu-img-1.png" class="img-thumbnail img-fluid" alt="Cinque Terre" width="97" height="68"></td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</td>
-                                    <td><input type="number" class="form-control" min="1" max="999" value="1"></td>
-                                    <td nowrap>1,530,200 VNĐ</td>
-                                    <td><div class="text-right"><a href="javascript:void(0);" class="badge badge-warning badge-pill">&times;</a></div></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-control" checked></td>
-                                    <td><img src="~/Content/b.Deli/Assets/img/menu-img-1.png" class="img-thumbnail img-fluid" alt="Cinque Terre" width="97" height="68"></td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</td>
-                                    <td><input type="number" class="form-control" min="1" max="999" value="1"></td>
-                                    <td nowrap>1,530,200 VNĐ</td>
-                                    <td><div class="text-right"><a href="javascript:void(0);" class="badge badge-warning badge-pill">&times;</a></div></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-control" checked></td>
-                                    <td><img src="~/Content/b.Deli/Assets/img/menu-img-1.png" class="img-thumbnail img-fluid" alt="Cinque Terre" width="97" height="68"></td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</td>
-                                    <td><input type="number" class="form-control" min="1" max="999" value="1"></td>
-                                    <td nowrap>1,530,200 VNĐ</td>
-                                    <td><div class="text-right"><a href="javascript:void(0);" class="badge badge-warning badge-pill">&times;</a></div></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-control" checked></td>
-                                    <td><img src="~/Content/b.Deli/Assets/img/menu-img-1.png" class="img-thumbnail img-fluid" alt="Cinque Terre" width="97" height="68"></td>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</td>
-                                    <td><input type="number" class="form-control" min="1" max="999" value="1"></td>
-                                    <td nowrap>1,530,200 VNĐ</td>
-                                    <td><div class="text-right"><a href="javascript:void(0);" class="badge badge-warning badge-pill">&times;</a></div></td>
-                                </tr>
-                            </tbody>
+                            <tbody class="tbodyCart"></tbody>
                         </table>
                     </div>
 
@@ -164,7 +132,7 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Đặt hàng</button>
+                    <button type="button" class="btn btn-warning order" data-dismiss="modal">Đặt hàng</button>
                 </div>
 
             </div>
@@ -205,7 +173,7 @@
                                                 <div class="col-md-8">
                                                     <h5>@item.Name</h5>
                                                     <p class="pricing">@string.Format("{0:n0}", item.Price)</p>
-                                                    @*<a href="javascript:void(0);" class="pricing"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>*@
+                                                    <a href="javascript:void(0);" class="pricing cart-gf" data-id="@item.ID"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
                                                     <p>@item.Description</p>
                                                 </div>
                                             </div>
@@ -237,22 +205,23 @@
                                 @foreach (var item in Model.FirstOrDefault().tpe)
                                 {
                                     <a href="#" class="list-group-item">@item.Type</a>
-                                    
+
                                 }
 
                             </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 pl-0">
-                            <hr class="gap-escape mt-0" />
-                            <hr class="gap-escape" />
                         </div>
-                    </div>
-                   
-                </div>
-                <!-- End -->
-            </div>
+                        <div class="row">
+                            <div class="col-sm-12 pl-0">
+                                <hr class="gap-escape mt-0" />
+                                <hr class="gap-escape" />
+                            </div>
+                        </div>
 
+                    </div>
+                    <!-- End -->
+                </div>
+
+            </div>
         </div>
     </div>
     <div class="footer-top-area section-padding">
@@ -285,19 +254,11 @@
                         <h5>Fanpage</h5>
                         @*<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>*@
                         <div id="fb-root"></div>
-                        <div class="fb-page"
-                             data-href="https://www.facebook.com/Chohoanhaem-457004028153673"
-                             data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
-                             data-hide-cover="false" data-show-facepile="false">
-                            <blockquote cite="https://www.facebook.com/Chohoanhaem-457004028153673" class="fb-xfbml-parse-ignore">
-                                <a href="https://www.facebook.com/Chohoanhaem-457004028153673">Chohoanhaem</a>
+                        <div class="fb-page" data-href="https://www.facebook.com/bdeli.vn/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/bdeli.vn/" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/bdeli.vn/">b.deli</a>
                             </blockquote>
                         </div>
-                        @*<div class="fb-page"
-                            data-href="https://www.facebook.com/Chohoanhaem-457004028153673"
-                            data-width="380"
-                            data-hide-cover="false"
-                            data-show-facepile="false"></div>*@
                     </div>
                 </div>
                 <div class="col-md-4">

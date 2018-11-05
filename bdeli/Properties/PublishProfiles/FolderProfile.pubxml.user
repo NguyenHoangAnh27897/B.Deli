@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:04:55</publishTime>
     </File>
     <File Include="bin/bdeli.dll">
-      <publishTime>11/01/2018 01:36:32</publishTime>
+      <publishTime>11/05/2018 16:14:28</publishTime>
     </File>
     <File Include="bin/bdeli.pdb">
-      <publishTime>11/01/2018 01:36:32</publishTime>
+      <publishTime>11/05/2018 16:14:28</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/30/2018 04:51:46</publishTime>
@@ -415,7 +415,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:32:13</publishTime>
     </File>
     <File Include="Content/b.Deli/Assets/js/active.js">
-      <publishTime>10/25/2018 01:51:22</publishTime>
+      <publishTime>11/04/2018 22:16:57</publishTime>
     </File>
     <File Include="Content/b.Deli/Assets/js/anime.min.js">
       <publishTime>10/19/2018 23:32:13</publishTime>
@@ -424,7 +424,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:32:13</publishTime>
     </File>
     <File Include="Content/b.Deli/Assets/js/form-send.js">
-      <publishTime>10/19/2018 23:32:13</publishTime>
+      <publishTime>11/03/2018 18:59:58</publishTime>
     </File>
     <File Include="Content/b.Deli/Assets/js/gmaps.min.js">
       <publishTime>10/19/2018 23:32:14</publishTime>
@@ -442,7 +442,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:32:14</publishTime>
     </File>
     <File Include="Content/b.Deli/Assets/js/modal.js">
-      <publishTime>10/19/2018 23:32:14</publishTime>
+      <publishTime>11/04/2018 23:35:46</publishTime>
     </File>
     <File Include="Content/b.Deli/Assets/js/owl.carousel.min.js">
       <publishTime>10/19/2018 23:32:14</publishTime>
@@ -457,7 +457,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:32:15</publishTime>
     </File>
     <File Include="Content/b.Deli/Assets/style.css">
-      <publishTime>11/01/2018 01:25:19</publishTime>
+      <publishTime>11/03/2018 19:00:03</publishTime>
     </File>
     <File Include="Content/Webmaster/css/bootstrap.min.css">
       <publishTime>10/20/2018 11:19:00</publishTime>
@@ -1743,6 +1743,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>10/19/2018 23:00:31</publishTime>
     </File>
+    <File Include="Images/webmaster/icon/fav.png">
+      <publishTime>11/05/2018 16:01:29</publishTime>
+    </File>
     <File Include="Images/webmaster/icon/if_f-cross_256_282471.png">
       <publishTime>10/20/2018 11:29:07</publishTime>
     </File>
@@ -1750,7 +1753,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/20/2018 11:29:07</publishTime>
     </File>
     <File Include="Models/BDeli.edmx.diagram">
-      <publishTime>10/27/2018 15:31:25</publishTime>
+      <publishTime>11/04/2018 02:20:23</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>10/19/2018 23:01:46</publishTime>
@@ -1794,8 +1797,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Booking/List.cshtml">
       <publishTime>10/21/2018 12:07:25</publishTime>
     </File>
+    <File Include="Views/Checkout/Index.cshtml">
+      <publishTime>11/04/2018 23:27:10</publishTime>
+    </File>
     <File Include="Views/Contacts/Edit.cshtml">
-      <publishTime>10/25/2018 20:25:33</publishTime>
+      <publishTime>11/02/2018 18:34:37</publishTime>
     </File>
     <File Include="Views/Error/Index.cshtml">
       <publishTime>10/20/2018 11:16:04</publishTime>
@@ -1810,7 +1816,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2018 14:19:14</publishTime>
     </File>
     <File Include="Views/Gift/Index.cshtml">
-      <publishTime>11/01/2018 01:34:43</publishTime>
+      <publishTime>11/04/2018 22:36:37</publishTime>
     </File>
     <File Include="Views/GiftMaster/Create.cshtml">
       <publishTime>10/27/2018 14:19:14</publishTime>
@@ -1822,25 +1828,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2018 14:19:14</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/01/2018 01:22:16</publishTime>
+      <publishTime>11/04/2018 23:32:15</publishTime>
     </File>
     <File Include="Views/HomeMaster/Edit.cshtml">
-      <publishTime>10/31/2018 22:56:01</publishTime>
+      <publishTime>11/02/2018 19:52:06</publishTime>
     </File>
     <File Include="Views/Image/Edit.cshtml">
-      <publishTime>10/22/2018 18:32:25</publishTime>
+      <publishTime>11/01/2018 16:43:35</publishTime>
     </File>
     <File Include="Views/OpenTimeMaster/Edit.cshtml">
       <publishTime>10/31/2018 22:56:01</publishTime>
+    </File>
+    <File Include="Views/OrderMaster/Detaul.cshtml">
+      <publishTime>11/05/2018 00:05:01</publishTime>
+    </File>
+    <File Include="Views/OrderMaster/Index.cshtml">
+      <publishTime>11/04/2018 23:13:21</publishTime>
     </File>
     <File Include="Views/ServiceMaster/Edit.cshtml">
       <publishTime>10/27/2018 14:19:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/01/2018 01:34:38</publishTime>
+      <publishTime>11/05/2018 00:02:18</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/05/2018 16:02:34</publishTime>
     </File>
     <File Include="Views/StoryMaster/Edit.cshtml">
       <publishTime>10/25/2018 20:25:33</publishTime>
@@ -1855,13 +1867,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/20/2018 12:32:46</publishTime>
     </File>
     <File Include="Views/Webmaster/Login.cshtml">
-      <publishTime>10/25/2018 20:25:33</publishTime>
+      <publishTime>11/05/2018 16:13:06</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>10/19/2018 23:00:31</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/27/2018 15:33:59</publishTime>
+      <publishTime>11/04/2018 23:46:16</publishTime>
     </File>
   </ItemGroup>
 </Project>
