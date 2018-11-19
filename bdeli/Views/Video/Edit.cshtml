@@ -13,7 +13,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Chỉnh sửa video</li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí video</li>
                     </ol>
                 </nav>
             </div>
@@ -34,12 +34,12 @@
                         <div class="section-body">
                             <form action="/video/edit" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput4">Title (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
                                     <input type="text" class="form-control" placeholder="" name="title" value="@Model.FirstOrDefault().Title">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput4">Description (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
+                                    <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
                                     <textarea name="des" class="form-control" maxlength="1000" rows="20" cols="50" style="height: 200px">@Model.FirstOrDefault().Description</textarea>
                                 </div>
 
@@ -48,8 +48,8 @@
                                     <div class="form-group">
                                         <label for="exampleFormControlFile1">Video hiển thị</label>
                                         <br />
-                                        <input type="file" name="video" accept="video/*" />
-                                        <video  muted loop autoplay>
+                                        <input type="file" name="video" accept="video/*" /><br />
+                                        <video  muted loop autoplay style="width:80%">
                                             <source src="~/Video/@Model.FirstOrDefault().Video" type="video/mp4">
                                             <source src="~/Content/NaturalLife/video/naturalLife.ogg" type="video/ogg">
                                             Your browser does not support the video tag.
