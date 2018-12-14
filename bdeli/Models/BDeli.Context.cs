@@ -25,20 +25,23 @@ namespace bdeli.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<bD_Account> bD_Account { get; set; }
         public virtual DbSet<bD_Booking> bD_Booking { get; set; }
+        public virtual DbSet<bD_Cart> bD_Cart { get; set; }
+        public virtual DbSet<bD_Checkout> bD_Checkout { get; set; }
         public virtual DbSet<bD_Contact> bD_Contact { get; set; }
+        public virtual DbSet<bD_Drink> bD_Drink { get; set; }
+        public virtual DbSet<bD_DrinkType> bD_DrinkType { get; set; }
         public virtual DbSet<bD_Food> bD_Food { get; set; }
         public virtual DbSet<bD_FoodType> bD_FoodType { get; set; }
         public virtual DbSet<bD_Gift> bD_Gift { get; set; }
+        public virtual DbSet<bD_Images> bD_Images { get; set; }
         public virtual DbSet<bD_Introduce> bD_Introduce { get; set; }
         public virtual DbSet<bD_OpenTime> bD_OpenTime { get; set; }
         public virtual DbSet<bD_Service> bD_Service { get; set; }
         public virtual DbSet<bD_Slide> bD_Slide { get; set; }
         public virtual DbSet<bD_TypeGift> bD_TypeGift { get; set; }
         public virtual DbSet<bD_Video> bD_Video { get; set; }
-        public virtual DbSet<bD_Images> bD_Images { get; set; }
-        public virtual DbSet<bD_Account> bD_Account { get; set; }
-        public virtual DbSet<bD_Cart> bD_Cart { get; set; }
-        public virtual DbSet<bD_Checkout> bD_Checkout { get; set; }
+        public virtual DbSet<bD_ValueHour> bD_ValueHour { get; set; }
     }
 }

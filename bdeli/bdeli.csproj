@@ -51,7 +51,16 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="GridMvc">
+      <HintPath>..\..\..\..\source\repos\MNPOST\MNPOSTWEBSITE\bin\GridMvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>..\..\..\..\source\repos\MNPOST\MNPOSTWEBSITE\bin\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\..\..\..\source\repos\MNPOST\MNPOSTWEBSITE\bin\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -175,6 +184,7 @@
     <Compile Include="Controllers\WebMaster\AccountMasterController.cs" />
     <Compile Include="Controllers\WebMaster\BookingController.cs" />
     <Compile Include="Controllers\WebMaster\ContactsController.cs" />
+    <Compile Include="Controllers\WebMaster\DrinkMasterController.cs" />
     <Compile Include="Controllers\WebMaster\FoodMasterController.cs" />
     <Compile Include="Controllers\WebMaster\GiftMasterController.cs" />
     <Compile Include="Controllers\WebMaster\HomeMasterController.cs" />
@@ -218,6 +228,12 @@
     <Compile Include="Models\bD_Contact.cs">
       <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\bD_Drink.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_DrinkType.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\bD_Food.cs">
       <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
@@ -243,6 +259,9 @@
       <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_TypeGift.cs">
+      <DependentUpon>bDeli.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bD_ValueHour.cs">
       <DependentUpon>bDeli.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bD_Video.cs">
@@ -824,6 +843,9 @@
     <Content Include="Views\OrderMaster\Index.cshtml" />
     <Content Include="Views\OrderMaster\Detaul.cshtml" />
     <Content Include="Views\AccountMaster\Edit.cshtml" />
+    <Content Include="Views\DrinkMaster\List.cshtml" />
+    <Content Include="Views\DrinkMaster\Create.cshtml" />
+    <Content Include="Views\DrinkMaster\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

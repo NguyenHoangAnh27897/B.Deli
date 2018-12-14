@@ -1,7 +1,13 @@
-﻿@model IEnumerable<bdeli.Models.bD_Food>
-@{
+﻿@using PagedList.Mvc;
+@using GridMvc.Html;
+@model PagedList.IPagedList<bdeli.Models.bD_Food>
+    @using bdeli.Models
+@{ 
     ViewBag.Title = "List";
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    bDeliEntities db = new bDeliEntities();
+    var lst = db.bD_FoodType.ToList();
+    int i = 1;
 }
 
 <div class="main-wrapper">
@@ -39,7 +45,6 @@
                                             <th>ID</th>
                                             <th>Tên món ăn</th>
                                             <th>Giá tiền</th>
-                                            <th>Mô tả </th>
                                             <th>Loại món ăn</th>
                                             <th>Hình ảnh</th>
                                             <th>Xóa</th>
@@ -48,29 +53,30 @@
                                     <tbody>
                                         @foreach (var item in Model)
                                         {
-                                            <tr>
-                                                <td>@item.ID</td>
-                                                <td><a href="/foodmaster/edit/@item.ID">@item.Name</a></td>
-                                                <td>@item.Price</td>
-                                                @if (item.Description != null)
+                                        <tr>
+                                            <td>@item.ID</td>
+                                            <td><a href="/foodmaster/edit/@item.ID">@item.Name</a></td>
+                                            <td>@string.Format("{0:n0}", item.Price)</td>
+                                            @foreach (var it in lst)
+                                            {
+                                                if (it.ID == item.Type)
                                                 {
-                                                    if (item.Description.Count() > 25)
-                                                    {
-                                                        <td>@item.Description.Substring(0, 25) ...</td>
-                                                    }
-                                                    else
-                                                    {
-                                                        <td>@item.Description</td>
-                                                    }
+                                                    <td>@it.FoodType</td>
                                                 }
-                                                <td>@item.Type</td>
-                                                <td>@item.Image</td>
-                                                <td><a href="/foodmaster/delete/@item.ID"><img src="~/Images/webmaster/icon/if_f-cross_256_282471.png" /></a></td>
-                                            </tr>
+                                            }
+                                            <td>@item.Image</td>
+                                            <td><a href="/foodmaster/delete/@item.ID"><img src="~/Images/webmaster/icon/if_f-cross_256_282471.png" /></a></td>
+                                        </tr>
+                                            i++;
                                         }
                                     </tbody>
                                 </table>
-
+                                <div class="pagination-total-pages">
+                                    <div class="pagination-style">
+                                        <strong style="margin: 12px;"> Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount</strong>
+                                        @Html.PagedListPager(Model, page => Url.Action("List", new { page }))
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

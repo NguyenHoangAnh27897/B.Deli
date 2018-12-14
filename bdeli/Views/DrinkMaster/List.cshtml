@@ -1,12 +1,12 @@
 ﻿@using PagedList.Mvc;
 @using GridMvc.Html;
-@model PagedList.IPagedList<bdeli.Models.bD_Food>
+@model PagedList.IPagedList<bdeli.Models.bD_Drink>
     @using bdeli.Models
-@{ 
+@{
     ViewBag.Title = "List";
     Layout = "~/Views/Shared/_LayoutMaster.cshtml";
     bDeliEntities db = new bDeliEntities();
-    var lst = db.bD_FoodType.ToList();
+    var lst = db.bD_DrinkType.ToList();
     int i = 1;
 }
 
@@ -31,10 +31,10 @@
                     <div class="single-form">
                         <div class="section-head">
                             <div class="title">
-                                <h4>Danh sách món ăn</h4>
+                                <h4>Danh sách thức uống</h4>
                             </div>
                             <div class="align-self-center">
-                                <a class="btn btn-success" style="position:absolute;top:15px;right:37px" href="/foodmaster/create">Thêm</a>
+                                <a class="btn btn-success" style="position:absolute;top:15px;right:37px" href="/drinkmaster/create">Thêm</a>
                             </div>
                         </div>
                         <div class="section-body">
@@ -43,9 +43,9 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tên món ăn</th>
+                                            <th>Tên thức uống</th>
                                             <th>Giá tiền</th>
-                                            <th>Loại món ăn</th>
+                                            <th>Loại thức uống</th>
                                             <th>Hình ảnh</th>
                                             <th>Xóa</th>
                                         </tr>
@@ -55,17 +55,17 @@
                                         {
                                         <tr>
                                             <td>@item.ID</td>
-                                            <td><a href="/foodmaster/edit/@item.ID">@item.Name</a></td>
+                                            <td><a href="/drinkmaster/edit/@item.ID">@item.Name</a></td>
                                             <td>@string.Format("{0:n0}", item.Price)</td>
                                             @foreach (var it in lst)
                                             {
                                                 if (it.ID == item.Type)
                                                 {
-                                                    <td>@it.FoodType</td>
+                                                    <td>@it.DrinkType</td>
                                                 }
                                             }
                                             <td>@item.Image</td>
-                                            <td><a href="/foodmaster/delete/@item.ID"><img src="~/Images/webmaster/icon/if_f-cross_256_282471.png" /></a></td>
+                                            <td><a href="/drinkmaster/delete/@item.ID"><img src="~/Images/webmaster/icon/if_f-cross_256_282471.png" /></a></td>
                                         </tr>
                                             i++;
                                         }

@@ -806,3 +806,6 @@ C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.csproj.CoreComp
 C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.csproj.CopyComplete
 C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.dll
 C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.pdb
+C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\GridMvc.dll
+C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\PagedList.dll
+C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\PagedList.Mvc.dll

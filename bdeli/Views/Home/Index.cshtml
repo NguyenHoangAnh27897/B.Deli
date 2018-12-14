@@ -242,7 +242,7 @@
                             <!-- Breakfast Slider Start -->
                             <div>
                                 <div class="row">
-                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    @foreach (var item in Model.FirstOrDefault().dri)
                                     {
                                         if (item.Type == 1)
                                         {
@@ -275,7 +275,7 @@
                             <!-- Lunch Slider Start -->
                             <div>
                                 <div class="row">
-                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    @foreach (var item in Model.FirstOrDefault().dri)
                                     {
                                         if (item.Type == 2)
                                         {
@@ -308,7 +308,7 @@
                             <!-- Dinner Slider Start -->
                             <div>
                                 <div class="row">
-                                    @foreach (var item in Model.FirstOrDefault().fod)
+                                    @foreach (var item in Model.FirstOrDefault().dri)
                                     {
                                         if (item.Type == 3)
                                         {
@@ -342,9 +342,9 @@
                         </div>
                         <div class="owl-theme">
                             <div class="owl-dots dotsCont-2">
-                                @foreach (var item in Model.FirstOrDefault().typ)
+                                @foreach (var item in Model.FirstOrDefault().typdri)
                                 {
-                                    <div class="owl-dot">@item.FoodType</div>
+                                    <div class="owl-dot">@item.DrinkType</div>
                                 }
 
                             </div>
