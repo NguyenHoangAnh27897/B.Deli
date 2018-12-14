@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using bdeli.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace bdeli.Controllers.WebMaster
 {
@@ -12,12 +14,14 @@ namespace bdeli.Controllers.WebMaster
     {
         bDeliEntities db = new bDeliEntities();
         // GET: GiftMaster
-        public ActionResult List()
+        public ActionResult List(int? page = 1)
         {
             if (Session["Authentication"] != null)
             {
+                int pageSize = 7;
+                int pageNumber = (page ?? 1);
                 var lst = db.bD_Gift.ToList();
-                return View(lst);
+                return View(lst.ToPagedList(pageNumber, pageSize));
             }
             else
             {
@@ -54,21 +58,25 @@ namespace bdeli.Controllers.WebMaster
                         Image += fname;
                     }
                 }
-                gia = gia.Replace(",","");
-            int price = int.Parse(gia);
-            int typequa = int.Parse(loaigift);
-            var ls = new bD_Gift();
-            ls.Name = namgift;
-            ls.Price = price;
-            ls.Description = mota;
-            ls.Type = typequa;
+
+                int typequa = int.Parse(loaigift);
+                var ls = new bD_Gift();
+                ls.Name = namgift;
+                if (gia != "")
+                {
+                    gia = gia.Replace(",", "");
+                    int price = int.Parse(gia);
+                    ls.Price = price;
+                }
+                ls.Description = mota;
+                ls.Type = typequa;
                 if (Image != "")
                 {
                     ls.Image = Image;
                 }
-            db.bD_Gift.Add(ls);
-            db.SaveChanges();
-                
+                db.bD_Gift.Add(ls);
+                db.SaveChanges();
+
                 return RedirectToAction("list", "giftmaster");
             }
             else
@@ -104,7 +112,7 @@ namespace bdeli.Controllers.WebMaster
             return View(ls);
         }
         [HttpPost]
-        public ActionResult Edit(int id,string namgift, string gia, string mota, string loaigift, HttpPostedFileBase image)
+        public ActionResult Edit(int id, string namgift, string gia, string mota, string loaigift, HttpPostedFileBase image)
         {
 
             if (Session["Authentication"] != null)
@@ -122,12 +130,15 @@ namespace bdeli.Controllers.WebMaster
                         Image += fname;
                     }
                 }
-                gia = gia.Replace(",", "");
-                int price = int.Parse(gia);
                 int typequa = int.Parse(loaigift);
                 var ls = db.bD_Gift.Find(id);
                 ls.Name = namgift;
-                ls.Price = price;
+                if (gia != "")
+                {
+                    gia = gia.Replace(",", "");
+                    int price = int.Parse(gia);
+                    ls.Price = price;
+                }
                 ls.Description = mota;
                 ls.Type = typequa;
                 if (Image != "")

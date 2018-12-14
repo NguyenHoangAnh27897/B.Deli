@@ -200,3 +200,6 @@ D:\PROJECT\bDeli\B.Deli\bdeli\obj\Release\bdeli.csproj.CoreCompileInputs.cache
 D:\PROJECT\bDeli\B.Deli\bdeli\obj\Release\bdeli.csproj.CopyComplete
 D:\PROJECT\bDeli\B.Deli\bdeli\obj\Release\bdeli.dll
 D:\PROJECT\bDeli\B.Deli\bdeli\obj\Release\bdeli.pdb
+C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\GridMvc.dll
+C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\PagedList.dll
+C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\PagedList.Mvc.dll

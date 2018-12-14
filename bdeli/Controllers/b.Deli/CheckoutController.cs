@@ -22,22 +22,22 @@ namespace bdeli.Controllers.b.Deli
         }
 
         [HttpPost]
-        public ActionResult AddToCart(string name, string phone, string address, string email)
+        public JsonResult AddToCart(bD_Checkout check)
         {
             if(Session["Order"] != null)
             {
                 bD_Checkout od = new bD_Checkout();
                 od.ID = Session["Order"].ToString();
-                od.Name = name;
-                od.Phone = phone;
-                od.Address = address;
-                od.Email = email;
+                od.Name = check.Name;
+                od.Phone = check.Phone;
+                od.Address = check.Address;
+                od.Email = check.Email;
                 od.IsChecked = false;
                 db.bD_Checkout.Add(od);
                 db.SaveChanges();
-                return RedirectToAction("Index", "Gift");
+                return Json(new { Message = "Đặt hàng thành công", status = "200" }, JsonRequestBehavior.AllowGet);
             }
-            return RedirectToAction("Index", "Home");
+            return Json(new { Message = "Đặt hàng không thành công. Vui lòng thử lại !", status = "200" }, JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -10,17 +10,17 @@ using PagedList.Mvc;
 
 namespace bdeli.Controllers.WebMaster
 {
-    public class FoodMasterController : Controller
+    public class DrinkMasterController : Controller
     {
         bDeliEntities db = new bDeliEntities();
         // GET: FoodMaster
         public ActionResult List(int? page = 1)
         {
-            if(Session ["Authentication"] != null)
+            if (Session["Authentication"] != null)
             {
                 int pageSize = 7;
                 int pageNumber = (page ?? 1);
-                var list = db.bD_Food.ToList();
+                var list = db.bD_Drink.ToList();
                 return View(list.ToPagedList(pageNumber, pageSize));
             }
             else
@@ -30,10 +30,10 @@ namespace bdeli.Controllers.WebMaster
         }
         public ActionResult Create()
         {
-            if(Session ["Authentication"] != null)
+            if (Session["Authentication"] != null)
             {
-                var ltf = db.bD_FoodType.ToList();
-            return View(ltf);
+                var ltf = db.bD_DrinkType.ToList();
+                return View(ltf);
             }
             else
             {
@@ -57,9 +57,9 @@ namespace bdeli.Controllers.WebMaster
                         image.SaveAs(path);
                         Image += fname;
                     }
-                }               
+                }
                 int typequa = int.Parse(loaimonan);
-                var lis = new bD_Food();
+                var lis = new bD_Drink();
                 lis.Name = tenmonan;
                 if (gia != "")
                 {
@@ -73,7 +73,7 @@ namespace bdeli.Controllers.WebMaster
                 {
                     lis.Image = Image;
                 }
-                db.bD_Food.Add(lis);
+                db.bD_Drink.Add(lis);
                 db.SaveChanges();
 
                 return RedirectToAction("list");
@@ -88,7 +88,7 @@ namespace bdeli.Controllers.WebMaster
         {
             if (Session["Authentication"] != null)
             {
-                var de = db.bD_Food.Find(id);
+                var de = db.bD_Drink.Find(id);
                 db.Entry(de).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();
                 return RedirectToAction("list");
@@ -100,12 +100,12 @@ namespace bdeli.Controllers.WebMaster
         }
         public ActionResult Edit(int id)
         {
-            var fd = db.bD_Food.Where(st => st.ID == id);
-            var tp = db.bD_FoodType.ToList();
-            FoodMaster data = new FoodMaster();
-            data.food = fd;
+            var fd = db.bD_Drink.Where(st => st.ID == id);
+            var tp = db.bD_DrinkType.ToList();
+            DrinkMaster data = new DrinkMaster();
+            data.drink = fd;
             data.type = tp;
-            List <FoodMaster> ls = new List<FoodMaster>();
+            List<DrinkMaster> ls = new List<DrinkMaster>();
             ls.Add(data);
             return View(ls);
         }
@@ -128,7 +128,7 @@ namespace bdeli.Controllers.WebMaster
                     }
                 }
                 int loaimon = int.Parse(loaimonan);
-                var ls = db.bD_Food.Find(id);
+                var ls = db.bD_Drink.Find(id);
                 ls.Name = tenmonan;
                 if (gia != "")
                 {

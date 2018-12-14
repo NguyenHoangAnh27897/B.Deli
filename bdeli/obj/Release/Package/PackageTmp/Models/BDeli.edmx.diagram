@@ -5,24 +5,31 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3102b8b25d3e4bb88a72d21b98df958e" Name="Diagram1">
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Booking" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Contact" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Food" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_FoodType" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Gift" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Introduce" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_OpenTime" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Service" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Slide" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_TypeGift" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Video" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Images" Width="1.5" PointX="5.375" PointY="8.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Account" Width="1.5" PointX="7.375" PointY="8.75" />
-<<<<<<< HEAD
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Cart" Width="1.5" PointX="9.375" PointY="6.75" />
-        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Checkout" Width="1.5" PointX="9.375" PointY="9.75" />
+        <<<<<<< HEAD
+        
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Account" Width="1.5" PointX="5.198257351852142" PointY="15.838829345926097" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Booking" Width="1.5" PointX="10.804171710649586" PointY="23.210012029488578" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Cart" Width="1.5" PointX="10.864716275997793" PointY="26.07340578458896" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Checkout" Width="1.5" PointX="5.7685059522131947" PointY="5.15565911175481" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Contact" Width="1.5" PointX="9.2379524452788537" PointY="12.183031043123002" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Drink" Width="1.5" PointX="3.4460001194132497" PointY="3.8528332281172428" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_DrinkType" Width="1.5" PointX="2.4985886134666337" PointY="10.473765109886307" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Food" Width="1.5" PointX="6.4221669446780192" PointY="14.445859304836885" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_FoodType" Width="1.5" PointX="1.516979613116467" PointY="25.543379914734224" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Gift" Width="1.5" PointX="11.111317494470308" PointY="24.480964105800243" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Images" Width="1.5" PointX="7.7997700757345978" PointY="26.187367913400461" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Introduce" Width="1.5" PointX="0.25359348592050068" PointY="2.294483558411935" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_OpenTime" Width="1.5" PointX="11.328545858770863" PointY="5.9934488413824925" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Service" Width="1.5" PointX="10.390148083861055" PointY="6.8713882597495743" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Slide" Width="1.5" PointX="2.89951979690209" PointY="5.1500437581679055" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_TypeGift" Width="1.5" PointX="2.1387504535441986" PointY="2.3632310341872418" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_Video" Width="1.5" PointX="11.938787570194709" PointY="23.181252788371058" />
+        <EntityTypeShape EntityType="bdel1142_B.DeliModel.bD_ValueHour" Width="1.5" PointX="11.741579269869988" PointY="28.593930958115465" />
+        
+        
+        
 =======
->>>>>>> f783e70c7a42005607289013e5692c685b4f9ab1
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; f783e70c7a42005607289013e5692c685b4f9ab1
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

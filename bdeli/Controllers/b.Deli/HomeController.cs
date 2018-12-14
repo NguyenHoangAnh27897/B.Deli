@@ -25,6 +25,8 @@ namespace bdeli.Controllers
             var food = db.bD_Food.ToList();
             var tfood = db.bD_FoodType.ToList();
 			var account = db.bD_Account.Where(st => st.id == 1);
+            var drink = db.bD_Drink.ToList();
+            var drinktype = db.bD_DrinkType.ToList();
             //home.image = img;
             home.slide = sli;
             home.video = video;
@@ -36,6 +38,8 @@ namespace bdeli.Controllers
             home.fod = food;
             home.typ = tfood;
 			home.acc = account;
+            home.dri = drink;
+            home.typdri = drinktype;
             lst.Add(home);
             return View(lst);
            
