@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:04:55</publishTime>
     </File>
     <File Include="bin/bdeli.dll">
-      <publishTime>11/05/2018 16:14:28</publishTime>
+      <publishTime>11/09/2018 16:26:12</publishTime>
     </File>
     <File Include="bin/bdeli.pdb">
-      <publishTime>11/05/2018 16:14:28</publishTime>
+      <publishTime>11/09/2018 16:26:12</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/30/2018 04:51:46</publishTime>
@@ -1753,7 +1753,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/20/2018 11:29:07</publishTime>
     </File>
     <File Include="Models/BDeli.edmx.diagram">
-      <publishTime>11/04/2018 02:20:23</publishTime>
+      <publishTime>11/05/2018 16:24:04</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>10/19/2018 23:01:46</publishTime>
@@ -1794,50 +1794,53 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/modernizr-2.8.3.js">
       <publishTime>10/19/2018 23:03:10</publishTime>
     </File>
+    <File Include="Views/AccountMaster/Edit.cshtml">
+      <publishTime>11/05/2018 16:24:03</publishTime>
+    </File>
     <File Include="Views/Booking/List.cshtml">
-      <publishTime>10/21/2018 12:07:25</publishTime>
+      <publishTime>11/09/2018 16:25:23</publishTime>
     </File>
     <File Include="Views/Checkout/Index.cshtml">
       <publishTime>11/04/2018 23:27:10</publishTime>
     </File>
     <File Include="Views/Contacts/Edit.cshtml">
-      <publishTime>11/02/2018 18:34:37</publishTime>
+      <publishTime>11/09/2018 15:38:36</publishTime>
     </File>
     <File Include="Views/Error/Index.cshtml">
       <publishTime>10/20/2018 11:16:04</publishTime>
     </File>
     <File Include="Views/FoodMaster/Create.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/09/2018 15:19:22</publishTime>
     </File>
     <File Include="Views/FoodMaster/Edit.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/09/2018 15:19:16</publishTime>
     </File>
     <File Include="Views/FoodMaster/List.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/09/2018 16:24:01</publishTime>
     </File>
     <File Include="Views/Gift/Index.cshtml">
       <publishTime>11/04/2018 22:36:37</publishTime>
     </File>
     <File Include="Views/GiftMaster/Create.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/09/2018 15:22:20</publishTime>
     </File>
     <File Include="Views/GiftMaster/Edit.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/09/2018 15:22:28</publishTime>
     </File>
     <File Include="Views/GiftMaster/List.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/09/2018 16:24:42</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>11/04/2018 23:32:15</publishTime>
     </File>
     <File Include="Views/HomeMaster/Edit.cshtml">
-      <publishTime>11/02/2018 19:52:06</publishTime>
+      <publishTime>11/09/2018 15:18:38</publishTime>
     </File>
     <File Include="Views/Image/Edit.cshtml">
-      <publishTime>11/01/2018 16:43:35</publishTime>
+      <publishTime>11/09/2018 15:21:22</publishTime>
     </File>
     <File Include="Views/OpenTimeMaster/Edit.cshtml">
-      <publishTime>10/31/2018 22:56:01</publishTime>
+      <publishTime>11/09/2018 15:18:07</publishTime>
     </File>
     <File Include="Views/OrderMaster/Detaul.cshtml">
       <publishTime>11/05/2018 00:05:01</publishTime>
@@ -1846,19 +1849,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/04/2018 23:13:21</publishTime>
     </File>
     <File Include="Views/ServiceMaster/Edit.cshtml">
-      <publishTime>10/27/2018 14:19:14</publishTime>
+      <publishTime>11/09/2018 15:20:21</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>11/05/2018 00:02:18</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>11/05/2018 16:02:34</publishTime>
+      <publishTime>11/05/2018 16:36:22</publishTime>
     </File>
     <File Include="Views/StoryMaster/Edit.cshtml">
-      <publishTime>10/25/2018 20:25:33</publishTime>
+      <publishTime>11/09/2018 15:41:31</publishTime>
     </File>
     <File Include="Views/Video/Edit.cshtml">
-      <publishTime>10/31/2018 22:56:01</publishTime>
+      <publishTime>11/09/2018 15:59:44</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>10/19/2018 23:00:31</publishTime>
@@ -1873,7 +1876,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:00:31</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/04/2018 23:46:16</publishTime>
+      <publishTime>11/05/2018 16:37:35</publishTime>
     </File>
   </ItemGroup>
 </Project>

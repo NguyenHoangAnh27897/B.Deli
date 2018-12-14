@@ -13,7 +13,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/webmaster/index">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Chỉnh sửa liên hệ</li>
+                        <li class="breadcrumb-item active" aria-current="page">Quản lí liên hệ</li>
                     </ol>
                 </nav>
             </div>
@@ -38,12 +38,12 @@
                                     <div class="col-lg-6">
 
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput4">Title (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <label for="exampleFormControlInput4">Tiêu đề (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
                                             <input type="text" maxlength="50" class="form-control" placeholder="" name="title" value="@Model.FirstOrDefault().Title">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput4">Description (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
+                                            <label for="exampleFormControlInput4">Miêu tả (VUI LÒNG NHẬP DƯỚI 1000 KÍ TỰ)</label>
                                             <textarea name="des" class="form-control" maxlength="1000" rows="20" cols="50" style="height: 240px">@Model.FirstOrDefault().Description</textarea>
                                         </div>                                      
                                    
@@ -54,11 +54,11 @@
                                             <input type="text" class="form-control" placeholder="" name="email" value="@Model.FirstOrDefault().Email">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput4">Address (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                            <label for="exampleFormControlInput4">Địa chỉ (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
                                             <input type="text" class="form-control" placeholder="" name="add" value="@Model.FirstOrDefault().Address">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlInput4">Phone (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                            <label for="exampleFormControlInput4">Số điện thoại (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
                                             <input type="text" class="form-control" placeholder="" name="sdt" value="@Model.FirstOrDefault().Phone">
                                         </div>
                                         <div class="form-group">

@@ -23,5 +23,21 @@ namespace bdeli.Controllers.WebMaster
             }
         }
 
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            if (Session["Authentication"] != null)
+            {
+                var typ = db.bD_Booking.Find(id);
+                db.Entry(typ).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+                return RedirectToAction("List");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Webmaster");
+            }
+        }
     }
 }
