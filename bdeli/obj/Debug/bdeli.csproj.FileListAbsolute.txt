@@ -1,4 +1,4 @@
-C:\Users\Yuu2412\Source\Repos\bdeli\bdeli\bin\ApplicationInsights.config
+﻿C:\Users\Yuu2412\Source\Repos\bdeli\bdeli\bin\ApplicationInsights.config
 C:\Users\Yuu2412\Source\Repos\bdeli\bdeli\bin\bdeli.dll.config
 C:\Users\Yuu2412\Source\Repos\bdeli\bdeli\bin\bdeli.dll
 C:\Users\Yuu2412\Source\Repos\bdeli\bdeli\bin\bdeli.pdb
@@ -806,7 +806,6 @@ C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.csproj.CoreComp
 C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.csproj.CopyComplete
 C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.dll
 C:\Users\Yuu2412\Desktop\New folder\B.Deli\bdeli\obj\Debug\bdeli.pdb
-<<<<<<< HEAD
 C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\B.Deli\bdeli\bin\ApplicationInsights.config
 C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\B.Deli\bdeli\bin\bdeli.dll.config
 C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\B.Deli\bdeli\bin\bdeli.dll
@@ -908,8 +907,6 @@ C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\B.Deli\bdeli
 C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\B.Deli\bdeli\obj\Debug\bdeli.csproj.CopyComplete
 C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\B.Deli\bdeli\obj\Debug\bdeli.dll
 C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\B.Deli\bdeli\obj\Debug\bdeli.pdb
-=======
 C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\GridMvc.dll
 C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\PagedList.dll
 C:\Users\hoang\OneDrive\Desktop\bDeli\bdeli\bin\PagedList.Mvc.dll
->>>>>>> 83977c8205a009b917fd1993bb95f7d1cf4e0e57
